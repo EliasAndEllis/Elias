@@ -14,18 +14,6 @@
   box-sizing: border-box;
   margin: auto;
   font-family: Helvetica;
-display: grid;  
-    grid-template-columns: 100px 100px 100px;  
-    grid-template-rows: 50px 50px;
-grid-template-columns: 1fr 1fr 1fr;  
-    grid-template-rows: 50px 50px;
-grid-template-columns: repeat(3, 100px);  
-    grid-template-rows: repeat(2, 50px);
-grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: repeat(2, 100px);  
-grid-gap: 5px;  
-    grid-template-columns: repeat(auto-fit, 100px);
-    grid-template-rows: repeat(2, 100px);
 }
 body{
 	background: #79C1F1;
@@ -41,7 +29,7 @@ body{
 	font-weight: lighter;
 	font-size: 4vw;
 }
-</script>
+</style>
 
 
 
@@ -96,10 +84,6 @@ font-weight: bold;
 }
 #hh1{
 margin: 100px 0 50px 50px;
-border-radius: 20px;
-background: white;
-width: 340px;
-padding: 10px;
 font-size: 8vw;
 }
 #stpc{
@@ -153,7 +137,7 @@ margin: 0 30px 0 30px;
 .google-button__icon {
   display: inline-block;
   vertical-align: middle;
-  margin: 15px 0 20px 20px;
+  marin: 15px 0 20px 20px;
   width: 50px;
   height: 50px;
   box-sizing: border-box;
@@ -162,13 +146,13 @@ margin: 0 30px 0 30px;
   display: inline-block;
   vertical-align: middle;
   padding: 0;
-  margin: 0 20px 0 100px;
+  marin: 0 20px 0 100px;
   font-size: 4.5vw;
   font-weight: bold;
   font-family: 'Roboto',arial,sans-serif;
 }
 button ~ button {
-  margin-left: 40px;
+  marin-left: 40px;
 }
 #sbsbtn{
 	margin: 90px 150px 50px 160px;
@@ -235,9 +219,6 @@ font-size: 4.5vw;
 	margin: 0 0 0 60px;
 	font-weight: bold;
 	font-size: 4.5vw;
-}
-#cmtsh{
-	margin: 100px 30px 30px 60px;
 }
 #cmts{
 	margin: 0 60px 50px 60px;
@@ -307,7 +288,7 @@ color: #fff;
 }
 #stpc{
 white-space: nowrap;
-height: 300px;
+height: 350px;
 padding: 0 20px 0 20px;
 overflow-x: scroll;
 position: relative;
@@ -315,16 +296,16 @@ z-index: 2;
 margn: 20px 0 -20px 0;
 }
 #hh1{
-margin: 50px 0 20px 20px;
-border-radius: 8px;
-background: white;
-width: 155px;
-padding: 5px;
 font-size: 10vw;
+	border-radius: 8px;
+	margin: 50px 0 50px 20px;
+	padding: 6px;
+	background: #fff;
+	width: 160px;
 }
 #stpc img{
-height: 250px;
-width: 250px;
+height: 300px;
+width: 300px;
 padding: 0;
 border-radius: 10px;
 position: relative;
@@ -363,23 +344,50 @@ margin: 17px 20px 0 20px;
 }
 .google-button__icon {
   display: inline-block;
-  vertical-align: middle;
-  margin: 7px 0 8px 10px;
+  vertical-align: right;
+  margin: 7px 20px 8px 0;
   width: 25px;
   height: 25px;
   box-sizing: border-box;
 }
 .google-button__text {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: left;
   padding: 0 24px;
-  margin: 0 10px 0 -5px;
+  margin: 0 18px 0 -20px;
+  font-size: 4.3vw;
+  font-weight: bold;
+  font-family: 'Roboto',arial,sans-serif;
+}
+.google-button__text2 {
+  display: inline-block;
+  vertial-align: middle;
+  padding: 0 24px;
+  margin: 0 0 0 -19px;
+  font-size: 4.3vw;
+  font-weight: bold;
+  font-family: 'Roboto',arial,sans-serif;
+}
+.google-button__text3 {
+  display: inline-block;
+  vertica-align: middle;
+  padding: 0 24px;
+  margin: 0 0 0 -19px;
+  font-size: 4.3vw;
+  font-weight: bold;
+  font-family: 'Roboto',arial,sans-serif;
+}
+.google-button__text4 {
+  display: inline-block;
+  verticl-align: middle;
+  padding: 0 24px;
+  margin: 0 0 0 -19px;
   font-size: 4.3vw;
   font-weight: bold;
   font-family: 'Roboto',arial,sans-serif;
 }
 button ~ button {
-  margin-left: 20px;
+  margn-left: 20px;
 }
 #sbsbtn{
 	margin: 20px 35px 20px 37px;
@@ -456,8 +464,13 @@ video{
 	width: 100%;
 	margin: 0;
 }
-#cmtsh{
-	margin: 50px 10px 30px 20px;
+#cmtsh h1{
+	font-size: 10vw;
+	border-radius: 8px;
+	margin: 50px 0 20px 20px;
+	padding: 6px;
+	background: #fff;
+	width: 270px;
 }
 #cmts{
 	margin: 0 10px 30px 10px;
@@ -486,6 +499,9 @@ margin: 0 0 0 20px;
 }
 #mbr{
 margin: -147px 0 0 200px;
+}
+#id{
+margin: -106px 0 30px 200px;
 }
 }
 </style>
@@ -526,11 +542,11 @@ Hello and welcome new member, to the biggest and the best free website for enter
 <br>
 In Skipidin, everything is free.
 <br>
-We give you the best free offers to let you enjoy with us and so to get you out from the continuous routine in your life.
+We give you the <a href="/storage/emulated/0/Dcoder/xbusinessx-lgn.html">best free offers</a> to let you enjoy with us and so to get you out from the continuous routine in your life.
 <br>
-We have free premium accounts, available series to download, music in command, and so more...
+We have <a href="#">free premium accounts</a>, <a href="#">available series</a> to download, <a href="#">music</a> in command, and so more...
 <br>
-Only you have to do, is to create a free account in Skipidin, and you start anytime you choose.
+Only you have to do, is to create a <a href="/storage/emulated/0/Dcoder/xbusinessx-lgn.html">free account</a> in Skipidin, and you start anytime you choose.
 </p>
 </div>
 <div id="sbsbtn">
@@ -555,7 +571,7 @@ Only you have to do, is to create a free account in Skipidin, and you start anyt
     <path d="M361.7 151.1c5.8 32.7 4.5 66.8-4.7 98.8-8.5 29.3-24.6 56.5-47.1 77.2l-59.1-45.9c19.5-13.1 33.3-34.3 37.2-57.5H186.6c.1-24.2.1-48.4.1-72.6h175z" id="Shape" fill="#4285F4" />
     <path d="M81.4 222.2c7.8 22.9 22.8 43.2 42.6 57.1 12.4 8.7 26.6 14.9 41.4 17.9 14.6 3 29.7 2.6 44.4.1 14.6-2.6 28.7-7.9 41-16.2l59.1 45.9c-21.3 19.7-48 33.1-76.2 39.6-31.2 7.1-64.2 7.3-95.2-1-24.6-6.5-47.7-18.2-67.6-34.1-20.9-16.6-38.3-38-50.4-62 20.3-15.7 40.6-31.5 60.9-47.3z" fill="#34A853" /></svg>
   </span>
-  <span class="google-button__text">Sign in with Google</span>
+  <span class="google-button__text2">Sign in with Microsoft</span>
 </button>
 </a>
 <a id="sbsbtna" href="#">
@@ -567,7 +583,7 @@ Only you have to do, is to create a free account in Skipidin, and you start anyt
     <path d="M361.7 151.1c5.8 32.7 4.5 66.8-4.7 98.8-8.5 29.3-24.6 56.5-47.1 77.2l-59.1-45.9c19.5-13.1 33.3-34.3 37.2-57.5H186.6c.1-24.2.1-48.4.1-72.6h175z" id="Shape" fill="#4285F4" />
     <path d="M81.4 222.2c7.8 22.9 22.8 43.2 42.6 57.1 12.4 8.7 26.6 14.9 41.4 17.9 14.6 3 29.7 2.6 44.4.1 14.6-2.6 28.7-7.9 41-16.2l59.1 45.9c-21.3 19.7-48 33.1-76.2 39.6-31.2 7.1-64.2 7.3-95.2-1-24.6-6.5-47.7-18.2-67.6-34.1-20.9-16.6-38.3-38-50.4-62 20.3-15.7 40.6-31.5 60.9-47.3z" fill="#34A853" /></svg>
   </span>
-  <span class="google-button__text">Sign in with Google</span>
+  <span class="google-button__text3">Sign in with Facebook</span>
 </button>
 </a>
 <a id="sbsbtna" href="#">
@@ -579,7 +595,7 @@ Only you have to do, is to create a free account in Skipidin, and you start anyt
     <path d="M361.7 151.1c5.8 32.7 4.5 66.8-4.7 98.8-8.5 29.3-24.6 56.5-47.1 77.2l-59.1-45.9c19.5-13.1 33.3-34.3 37.2-57.5H186.6c.1-24.2.1-48.4.1-72.6h175z" id="Shape" fill="#4285F4" />
     <path d="M81.4 222.2c7.8 22.9 22.8 43.2 42.6 57.1 12.4 8.7 26.6 14.9 41.4 17.9 14.6 3 29.7 2.6 44.4.1 14.6-2.6 28.7-7.9 41-16.2l59.1 45.9c-21.3 19.7-48 33.1-76.2 39.6-31.2 7.1-64.2 7.3-95.2-1-24.6-6.5-47.7-18.2-67.6-34.1-20.9-16.6-38.3-38-50.4-62 20.3-15.7 40.6-31.5 60.9-47.3z" fill="#34A853" /></svg>
   </span>
-  <span class="google-button__text">Sign in with Google</span>
+  <span class="google-button__text4">Sign in with Instagram</span>
 </button>
 </a>
 </div>
@@ -603,7 +619,7 @@ Only you have to do, is to create a free account in Skipidin, and you start anyt
 </a>
 </div>
 <div id="cmtsh">
-<h2>See what Skipidin's community says about us</h2>
+<h1>Best comments</h1>
 </div>
 <div id="cmts">
 <img src="/storage/emulated/0/Download/MbdiEVQQ.png"/>
@@ -628,19 +644,19 @@ Only you have to do, is to create a free account in Skipidin, and you start anyt
 <h2 id="footerh2">Skipidin</h2>
 <h2 id="fw">Provided by yteicosf</h2>
 <br>
-<a href="#"><h2 id="jng">Join Skipidin</h2></a>
+<a href="/storage/emulated/0/Dcoder/xbusinessx-lgn.html"><h2 id="jng">Join Skipidin</h2></a>
 <br>
 <div id="skp">
 <h4 id="hlp">Skipidin</h4>
 <a href="#"><p id="hlpp">Features</p></a>
 <a href="#" onclick="swtch()"><p id="hlpp1">Dark Mode</p></a>
 <a href="#" onclick="trn()"><p id="hlpp2">Light mode</p></a>
-<a href="#"><p id="hlpp">Benefits</p></a>
+<a href="/storage/emulated/0/Dcoder/xbusinessx-lgn.html"><p id="hlpp">Benefits</p></a>
 </div>
 <div id="mbr">
 <h4 id="hlp">Membership</h4>
-<a href="#"><p id="hlpp">Become a VIP client</p>
-<a href="#"><p id="hlpp">Sign in</p></a>
+<a href="/storage/emulated/0/Dcoder/xbusinessx-lgn.html"><p id="hlpp">Become a VIP client</p>
+<a href="/storage/emulated/0/Dcoder/xbusinessx-lgn.html"><p id="hlpp">Sign in</p></a>
 </div>
 <br>
 <br>
@@ -648,6 +664,10 @@ Only you have to do, is to create a free account in Skipidin, and you start anyt
 <h4 id="hlp">Help</h4>
 <a href="#"><p id="hlpp">Help center</p></a>
 <a href="#"><p id="hlpp">FAQ</p></a>
+</div>
+<div id="id">
+<h4 id="hlp">ID</h4>
+<a href="/storage/emulated/0/Dcoder/xbusinessx-lgn.html"><p id="hlpp">Subscribe to get your ID</p></a>
 </div>
 <br>
 <h4 id="cpr">2020 © Skipidin. All rights reserved.</h4>
@@ -685,7 +705,6 @@ function trn(){
   hod.style.background = "#FDEFE2";
   hod.style.color = "#1D245C";
   fet.style.background = "#fff";
-  ft.style.color = "#1D245C";
 }
 </script>
 </body>
