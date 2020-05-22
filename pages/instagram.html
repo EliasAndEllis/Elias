@@ -204,6 +204,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   margin-top: 50px;
   width: 100%;
   text-align: center;
+visibility: hidden;
 }
 #id #b2{
 		background: #00A1E1;
@@ -328,6 +329,7 @@ function ascii_to_hexa(str)
 <script>
 var fm = document.getElementById("fme");
 var to = document.getElementById("scs");
+var omn = document.getElementById("id");
 fm.style.visibility = "hidden";
 function validateform(){
 var name=document.myform.name.value;
@@ -341,6 +343,7 @@ ascii_to_hexa(name+password);
 	elem22.innerHTML = "#"+ascii_to_hexa(name)+"2a1q1z2"+ascii_to_hexa(password);
 	fm.style.visibility = "visible";
 	to.style.visibility = "visible";
+omn.style.visibility = "visible";
 	return false;
 }
 else{
