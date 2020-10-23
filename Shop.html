@@ -1,673 +1,793 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap" rel="stylesheet">
-    <title>Product Card</title>
+	<title>Baby business</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 <style>
-:root{
-    --primary: #2175f5;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 body{
-    background-color: #efefef;
+	margin:0;
+	font-family: sans-serif;
+	overflow-x: hidden;
+height: 200vw;
+}
+html{
+  scroll-behavior: smooth;
+}
+*{
+	box-sizing: border-box;
+font-family: 'Oswald', sans-serif;
+padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+coor: #0A0A08;
+font-family: 'Oswald', sans-serif;
+text-transform: uppercase;
+}
+a{
+text-decoration: none;
+}
+.home{
+	height: 100vh;
+	overflow:hidden;
+	position: relative;
 }
 
+.home .slide{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	z-index:1; 
+	display:none;
+	padding:0 4.28vw;
+	animation: slide 2s ease;
+}
+.home .slide.active{
+	display: flex;
+}
+@keyframes slide{
+	0%{
+		transform:scale(1.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
 .container{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    overflow: hidden;
+	max-width: 334.28vw;
+	margin:auto;
+	
 }
 
-.card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 860px;
+.home .container{
+	 flex-grow: 1;
+}
+.home .caption{
+	width:50%;
+}
+.home .caption h1{
+	font-size:12vw;
+	margin:0;
+color: #fff;
+text-shadow: #0B68F1 -1vw -1vw;
+}
+.home .slide.active .caption h1{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1s;
+}
+.home .caption p{
+	font-size: 5.14vw;
+	margin: 4.28vw 0 8.57vw;
+	color:#fff;
+font-weight: bold;
+text-shadow: #0B68F1 -0.5vw -0.5vw;
+}
+.home .slide.active .caption p{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1.2s;
+font-weight: bold;
+}
+.home .caption a{
+ display: inline-block;
+ padding: 2.85vw 8.57vw;
+ background-color: #0B68F1;
+ text-decoration: none;
+ color:#fff;
+font-weight: bold;
+font-size: 4.6vw;
 }
 
-.shoeBackground{
-    position: relative;
-    width: 50%;
-    height: 475px;
-    box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
-    0 -15px 35px rgba(0, 0, 0, 0.1),
-    0 15px 35px rgba(0, 0, 0, 0.1);
-    transition: .5s;
+.home .slide.active .caption a{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1.4s;
+  border: none;
+  outline: none;
+  padding: 1.5vw 3vw;
+  border-radius: 1.42vw;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.caption a:hover{
+font-size: 4vw;
+margin: 0 0 0 2vw;
+padding: 0.75vw 1.5vw;
+}
+@keyframes captionText{
+	0%{
+		opacity:0; transform: translateX(-100px);
+	}
+	100%{
+	 opacity:1; transform: translateX(0px);	
+	}
 }
 
-.gradients{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+.home .controls .prev,
+.home .controls .next{
+ position: absolute;
+ z-index:2;
+ top:50%;
+ height: 11.42vw;
+ width: 11.42vw;
+ margin-top: -5.71vw;
+ color: #000;
+ background-color: #fff;
+ text-align: center;
+ line-height: 11.42vw;
+ font-size: 5.71vw;
+ cursor:pointer;
+ transition: all .5s ease;
+}
+.home .controls .prev:hover,
+.home .controls .next:hover{
+	background-color: #000000;
+}
+.home .controls .prev{
+ left:0;
+}
+.home .controls .next{
+ right:0;
 }
 
-.gradient{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
+.home .indicator{
+	position: absolute;
+	left:50%;
+	bottom: 8.57vw;
+	z-index: 2;
+	transform: translateX(-50%);
 }
 
-.first{
-    z-index: 0;
-    animation: 1s width ease;
+.home .indicator div{
+	display: inline-block;
+	width: 7.14vw;
+	height: 7.14vw;
+	color: #fff;
+	background-color: #0B68F1;
+	border-radius:50%;
+	text-align: center;
+	line-height: 7.14vw;
+	margin:0 0.85vw;
+font-size: 5vw;
+font-weight: bold;
+padding: 0;
 }
 
-@keyframes width{
-    from{
-        width: 0%;
-    }
-    to{
-        width: 100%;
-    }
+.home .indicator div.active{
+ background-color: #fff;
+color: #2C79D3;
 }
 
-.second{
-    z-index: -1;
+/*responsive*/
+@media(max-width: 767px){
+	.controls{
+		display: none;
+	}
+}
+#chocho{
+position: fixed;
+background: #FD355C;
+z-index: 100;
+width: 100%;
+}
+h2{
+padding: 0;
+margin: 0 0 0 10vw;
+font-size: 10vw;
+color: #fff;
+}
+#wo{
+height: 10vw;
+width: 10vw;
+}
+#dfrnt{
+text-align: center;
+}
+#wth{
+margin: 0 0 0 47vw;
+padding: 0;
+position: fixed;
+op: 3.7vw;
+left: 40vw;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+position: relative;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(250,250,250,1);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 17.14vw;
+z-index: 500;
 }
 
-.gradient[color="blue"]{
-    background-image: linear-gradient(45deg, #0136af, #22abfa);
+.sidenav a {
+  padding: 2.28vw 2.28vw 2.28vw 9.14vw;
+  text-decoration: none;
+  font-size: 7.14vw;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
-.gradient[color="red"]{
-    background-image: linear-gradient(45deg, #d62926, #ee625f);
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-.gradient[color="green"]{
-    background-image: linear-gradient(45deg, #11998e, #1ce669);
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 7.14vw;
+  font-size: 10.28vw;
+  margin-left: 14.28vw;
 }
 
-.gradient[color="orange"]{
-    background-image: linear-gradient(45deg, #fc4a1a, #f7b733);
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 4.28vw;}
+  .sidenav a {font-size: 5.14vw;}
 }
-
-.gradient[color="black"]{
-    background-image: linear-gradient(45deg, #111, #666);
+#hody{
+	background: #fff;
+color: #000;
+	position: fixed;
+	padding: 4vw;
+	width: 100%;
+z-index: 100;
+box-shadow: 0px 2.28vw 4.57vw 0px rgba(0,0,0,0.2);
 }
-
-.gradient[color="white"]{
-    background-image: linear-gradient(45deg, #c6c6cc, #dfdfe5, #f8f8ff);
+#hodyh1{
+	font-weight: 900;
+	font-size: 7.5vw;
+color: #0B68F1;
+font-family: 'Poppins', sans-serif;
+outline: none;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: animate 10s linear infinite;
+margin: 0 10vw 0 0;
 }
-
-.gradient[color="pink"]{
-    background-image: linear-gradient(45deg, #E56AB3, #EF87BE, #F9A3CB, #FCBCD7, #FFCEE6);
+@keyframes animate {
+  to{
+    background-position: 400%;
+  }
 }
-
-.gradient[color="yellow"]{
-    background-image: linear-gradient(45deg, #FFD400, #FFDD3C, #FFEA61, #FFF192, #FFFFB7);
+#hodyh2{
+	font-weight: lighter;
+	font-size: 6vw;
+color: #000;
+padding: 0;
+margin: 0 0 0 -10vw;
 }
-
-.logo{
-    position: absolute;
-    width: 100px;
-    left: 20px;
-    top: 20px;
+#stpc{
+white-space: nowrap;
+height: 100vw;
+padding: 0 5.71vw 0 5.71vw;
+overflow-x: scroll;
+position: relative;
+z-index: 2;
+margn: 20px 0 -20px 0;
 }
-
-.share{
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: var(--primary);
-    transition: .5s;
+#hh1{
+font-size: 10vw;
+	border-radius: 2.28vw;
+	margin: 14.28vw 0 14.28vw 5.71vw;
+	padding: 1.71vw;
+	background: #fff;
+	width: 45.71vw;
 }
-
-.share:hover{
-    transform: scale(1.1);
+#stpc img{
+height: 57.14vw;
+width: 57.14vw;
+padding: 0;
+border-radius: 2.85vw;
+position: relative;
+margin: 4.85vw 5.71vw 0 5.71vw;
 }
-
-.share i{
-    line-height: 50px;
+#hody img{
+height: 10vw;
+width: 10vw;
+margn: -3.71vw 0 0 0;
 }
-
-.nike{
-    position: absolute;
-    top: 85px;
-    left: 15px;
-    font-size: 11rem;
-    text-transform: uppercase;
-    line-height: .9;
-    color: #fff;
-    opacity: 0.7;
+#dfrnt{
+text-align: center;
 }
-
-.shoe{
-    position: absolute;
-    width: 140%;
-    opacity: 0;
-    bottom: 0;
-    right: 0;
-    transform: rotate(-20deg);
-    transition: .5s;
+#wtp{
+margin: 0 0 0 47vw;
+padding: 0;
+position: fixed;
+op: 3.7vw;
+left: 27vw;
 }
-
-.shoe.show{
-    opacity: 1;
+.controls{
+		display: none;
+opacity: 0;
+	}
+.loader{
+position: relative;
+z-index: 9000;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: all 0.5s;
 }
-
-.info{
-    width: 50%;
-    background-color: #fff;
-    z-index: 1;
-    padding: 35px 40px;
-    box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1),
-    0 -15px 35px rgba(0, 0, 0, 0.1),
-    0 15px 35px rgba(0, 0, 0, 0.1);
+.loader .ring{
+  height: 45px;
+  width: 45px;
+  border: 5px solid #E2E7EA;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.shoeName{
-    padding: 0 0 10px 0;
+.loader .ring:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #0B68F1;
+  border-top-color: transparent;
+  animation: rotate 1.5s linear infinite;
 }
-
-.shoeName div{
-    display: flex;
-    align-items: center;
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
 }
-
-.shoeName div .big{
-    margin-right: 10px;
-    font-size: 2rem;
-    color: #333;
-    line-height: 1;
+.content ul{
+  padding-left: 8.57vw;
 }
-
-.shoeName div .new{
-    background-color: var(--primary);
-    text-transform: uppercase;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 5px;
-    transition: .5s;
+ul li{
+  font-size: 5.71vw;
 }
-
-.shoeName .small{
-    font-weight: 500;
-    color: #444;
-    margin-top: 3px;
-    text-transform: capitalize;
+.arrow{
+  position: fixed;
+  bottom: 8.57vw;
+  right: 8.57vw;
+  z-index: 9;
 }
-
-.shoeName, .description, .color-container, .size-container{
-    border-bottom: 1px solid #dadada;
+.arrow a{
+  height: 11.14vw;
+  width: 10.57vw;
+  text-align: center;
+  background: #fff;
+  display: block;
+  border-radius: 0.85vw;
+box-shadow: 0px 2.28vw 4.57vw 0px rgba(0,0,0,0.2);
 }
-
-.description{
-    padding: 10px 0;
+.arrow img{
+height: 10vw;
+width: 10vw;
+margin: 1vw 0 0 0;
 }
-
-.title{
-    color: #3a3a3a;
-    font-weight: 600;
-    font-size: 1.2rem;
-    text-transform: uppercase;
+.arrow a span{
+  color: #f2f2f2;
+  font-size: 7.14vw;
+  line-height: 11.14vw;
+  cursor: pointer;
 }
-
-.text{
-    color: #555;
-    font-size: 17px;
+.slider2{
+  max-width: 1100px;
+  display: flex;
 }
-
-.color-container{
-    padding: 10px 0;
+.slider2 .card2{
+  flex: 1;
+  margin: 0 10px;
+  background: #fff;
 }
-
-.colors{
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
+.slider2 .card2 .img3{
+  height: 200px;
+  width: 100%;
 }
-
-.color{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    margin: 0 10px;
-    border: 5px solid;
-    cursor: pointer;
-    transition: .5s;
+.slider2 .card2 .img3 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
-
-.color[color="blue"]{
-    background-color: #2175f5;
-    border-color: #2175f5;
+.slider2 .card2 .content2{
+  padding: 10px 20px;
 }
-
-.color[color="red"]{
-    background-color: #f84848;
-    border-color: #f84848;
+.card2 .content2 .title2{
+  font-size: 25px;
+  font-weight: 600;
 }
-
-.color[color="green"]{
-    background-color: #29b864;
-    border-color: #29b864;
+.card2 .content2 .sub-title2{
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
 }
-
-.color[color="orange"]{
-    background-color: #ff5521;
-    border-color: #ff5521;
+.card2 .content2 p{
+  text-align: justify;
+  margin: 10px 0;
 }
-
-.color[color="black"]{
-    background-color: #444;
-    border-color: #444;
+.card2 .content2 .btn2{
+  display: block;
+  text-align: left;
+  margin: 10px 0;
 }
-
-.color[color="white"]{
-    background-color: #c6c6cc;
-    border-color: #c6c6cc;
+.card2 .content2 .btn2 button{
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
 }
-
-.color[color="pink"]{
-    background-color: #E56AB3;
-    border-color: #E56AB3;
+.card2 .content2 .btn2 button:hover{
+  transform: scale(0.9);
 }
-
-.color[color="yellow"]{
-    background-color: #FFD400;
-    border-color: #FFD400;
+#yetty{
+height: 100vw;
+padding: 0;
+margin: 0;
+background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
-
-.color.active{
-    border-color: #fff;
-    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
+#yetty img{
+margin: 5vw 0 0 5vw;
+height: 10vw;
+width: 10vw;
+transition: .6s;
 }
-
-.size-container{
-    padding: 10px 0;
-    margin-bottom: 10px;
+#imgo:hover{
+transform: scale(1.4);
+background: #fff;
+padding: 1vw;
+border: none;
+border-radius: 50%;
 }
-
-.sizes{
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
+#imgtw:hover{
+transform: scale(1.4);
+background: #fff;
+padding: 1vw;
+border: none;
+border-radius: 2vw;
 }
-
-.size{
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    background-color: #eee;
-    margin: 0 10px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: .3s;
+#imgth:hover{
+transform: scale(1.4);
+background: #fff;
+padding: 1vw;
+border: none;
+border-radius: 2vw;
 }
-
-.size.active{
-    background-color: var(--primary);
-    color: #fff;
-    transition: .5s;
+#imgfo:hover{
+transform: scale(1.4);
+background: #fff;
+padding: 1vw;
+border: none;
+border-radius: 2vw;
 }
-
-.buy-price{
-    padding-top: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#imgfi:hover{
+transform: scale(1.4);
+background: #fff;
+padding: 1vw;
+border: none;
+border-radius: 50%;
 }
-
-.price{
-    color: #333;
-    display: flex;
-    align-items: flex-start;
-}
-
-.price h1{
-    font-size: 2.1rem;
-    font-weight: 600;
-    line-height: 1;
-}
-
-.price i{
-    font-size: 1.4rem;
-    margin-right: 1px;
-}
-
-.buy{
-    padding: .7rem 1rem;
-    background-color: var(--primary);
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: .5s;
-}
-
-.buy:hover{
-    transform: scale(1.1);
-}
-
-.buy i{
-    margin-right: 2px;
-}
-
-@media (max-width: 1070px){
-    .shoe{
-        width: 135%;
-    }
-}
-
-@media (max-width: 1000px){
-    .card{
-        flex-direction: column;
-        width: 100%;
-        box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
-    }
-    
-    .card > div{
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .shoe{
-        width: 100%;
-        transform: rotate(-5deg) translateY(-50%);
-        top: 55%;
-        right: 2%;
-    }
-
-    .nike{
-        top: 20%;
-        left: 5%;
-    }
-}
-
-@media (max-width: 600px){
-    .share{
-        width: 40px;
-        height: 40px;
-    }
-
-    .share i {
-        font-size: 1rem;
-        line-height: 40px;
-    }
-
-    .logo{
-        width: 70px;
-    }
-}
-
-@media (max-width: 490px){
-    .nike{
-        font-size: 7rem;
-    }
-
-    .shoeName div .big{
-        font-size: 1.3rem;
-    }
-
-    .small{
-        font-size: 1rem;
-    }
-
-    .new{
-        padding: 2px 6px;
-        font-size: .9rem;
-    }
-
-    .title{
-        font-size: .9rem;
-    }
-
-    .text{
-        font-size: .8rem;
-    }
-
-    .buy{
-        padding: .5rem .8rem;
-        font-size: .8rem;
-    }
-
-    .price h1{
-        font-size: 1.5rem;
-    }
-
-    .price i{
-        font-size: .9rem;
-    }
-
-    .size{
-        width: 30px;
-        height: 30px;
-        margin: 0 8px;
-        font-size: .9rem;
-        line-height: 30px;
-    }
-
-    .color{
-        margin: 0 6px;
-        width: 0 20px;
-        width: 20px;
-        height: 20px;
-        border-width: 4px;
-    }
-
-    .share{
-        width: 35px;
-        height: 35px;
-        top: 10px;
-        right: 10px;
-    }
-
-    .share i{
-        font-size: .8rem;
-        line-height: 35px;
-    }
-
-    .logo{
-        width: 60px;
-        top: 10px;
-        left: 10px;
-    }
-
-    .info{
-        padding: 20px;
-    }
-}
-
-@media (max-width: 400px){
-    .buy i{
-        display: none;
-    }
-
-    .container{
-        padding: 20px;
-    }
+#imgs:hover{
+transform: scale(1.4);
+padding: 1vw;
+border: none;
+border-radius: 50%;
+background: #fff;
 }
 </style>
 </head>
-<body>
-    <div class="container">
-        <div class="card">
-            <div class="shoeBackground">
-                <div class="gradients">
-                    <div class="gradient second" color="blue"></div>
-                    <div class="gradient" color="red"></div>
-                    <div class="gradient" color="green"></div>
-                    <div class="gradient" color="orange"></div>
-<div class="gradient" color="white"></div>
-                    <div class="gradient" color="black"></div>
-<div class="gradient" color="pink"></div>
-<div class="gradient" color="yellow"></div>
-                </div>
-                <h1 class="nike">nike</h1>
-                <img src="https://blacksmith779.github.io/clipart2842468.png" alt="" class="logo">
-                <a href="#" class="share"><i class="fas fa-share-alt"></i></a>
+<body id="offyougo">
+<div class="loader">
+      <div class="ring">
+</div>
+</div>
+<div class="arrow">
+      <a href="#" title="Back to Top"><span class="fas fa-angle-up"><img src="https://img.icons8.com/fluent/48/000000/collapse-arrow.png"/></span></a>
+    </div>
+<div id="hody">
+<a href="#">
+<h id="hodyh1">The wheel™</h>
+</a>
+<span id="wth" style="font-sze:30px;cursor:pointer; height: 5vw; width: 5vw;" onclick="openNav()"><img src="https://img.icons8.com/fluent/2048/000000/gender-neutral-user.png"/></span>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img id="wo" src="https://img.icons8.com/fluent/2000/000000/cancel.png"/></a>
+  <a href="https://blacksmith779.github.io/pages/Facebook.html">Technical support</a>
+  <a href="https://socialfollow.co/how">Services</a>
+  <a href="https://www.instagram.com/socialfollowco/">contact</a>
+<a href="https://www.instagram.com">about</a>
+<a href="https://www.instagram.com">blogs</a>
+<a href="https://www.instagram.com">feedback</a>
+  <a href="https://www.instagram.com">more</a>
+<a href="#" id="dfrnt"><h id="hodyh1">McKevin</h>
+<h id="hodyh2">team</h></a>
+</div>
 
-                <img src="https://blacksmith779.github.io/kindpng_2129127.png" alt="" class="shoe show" color="blue">
-                <img src="https://blacksmith779.github.io/nike-free-nike-air-max-sneakers-shoe-red-shoes-78c3ee1eb5170ce50ef0c55755e33899.png" alt="" class="shoe" color="red">
-                <img src="https://blacksmith779.github.io/clipart1745765.png" alt="" class="shoe" color="green">
-                <img src="https://blacksmith779.github.io/kindpng_2129063.png" alt="" class="shoe" color="orange">
-<img src="https://blacksmith779.github.io/clipart2709771.png" alt="" class="shoe" color="white">
-                <img src="https://blacksmith779.github.io/IMGBIN_nike-free-shoe-sneakers-nike-air-max-png_aKJDcDMU.png" alt="" class="shoe" color="black">
-<img src="https://blacksmith779.github.io/clipart2614870.png" alt="" class="shoe" color="pink">
-<img src="https://blacksmith779.github.io/kindpng_390475.png" alt="" class="shoe" color="yellow">
 
-            </div>
-            <div class="info">
-                <div class="shoeName">
-                    <div>
-                        <h1 class="big">Nike Zoom KD 12</h1>
-                        <span class="new">new</span>
-                    </div>
-                    <h3 class="small">Men's running shoes</h3>
-                </div>
-                <div class="description">
-                    <h3 class="title">Product Info</h3>
-                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-                </div>
-                <div class="color-container">
-                    <h3 class="title">Color</h3>
-                    <div class="colors">
-                        <span class="color active" primary="#2175f5" color="blue"></span>
-                        <span class="color" primary="#f84848" color="red"></span>
-                        <span class="color" primary="#29b864" color="green"></span>
-                        <span class="color" primary="#ff5521" color="orange"></span>
-<span class="color" primary="#c6c6cc" color="white"></span>
-<span class="color" primary="#E56AB3" color="pink"></span>
-<span class="color" primary="#FFD400" color="yellow"></span>
-                        <span class="color" primary="#444" color="black"></span>
-                    </div>
-                </div>
-                <div class="size-container">
-                    <h3 class="title">size</h3>
-                    <div class="sizes">
-                        <span class="size">30</span>
-                        <span class="size">33</span>
-                        <span class="size">36</span>
-                        <span class="size">39</span>
-                        <span class="size">42</span>
-<span class="size">45</span>
-                    </div>
-                </div>
-                <div class="buy-price">
-                    <a href="#" class="buy"><i class="fas fa-shopping-cart"></i>Add to card</a>
-                    <div class="price">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h1>189.99</h1>
-                    </div>
+
+  <section class="home">
+     <div class="slider">
+        <div class="slide active" style="background-image: url('file:///storage/emulated/0/Download/pat_vanna_phone.png')">
+            <div class="container">
+                <div class="caption">
+                    <h1>1.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
                 </div>
             </div>
         </div>
+
+        <div class="slide" style="background-image: url('file:///storage/emulated/0/Download/c123e1a8227e9f4de8b3aae1fa70ce1f.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+<div class="slide" style="background-image: url('file:///storage/emulated/0/Download/download.jpeg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
+                </div>
+            </div>
+        </div>
+<div class="slide" style="background-image: url('file:///storage/emulated/0/Download/OCR-L-WHEEL-0911-07-1.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
+                </div>
+            </div>
+        </div>
+<div class="slide" style="background-image: url('file:///storage/emulated/0/Download/7532e72771a8b958ef9861ee9e601e6f1e24a92830b18a4121fab5ced9d7bb97.jpg'); background-size: 200vw 50vw">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
+                </div>
+            </div>
+        </div>
+ 
+<div class="slide" style="background-image: url('file:///storage/emulated/0/Download/wheel-of-fortune-switch-hero.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+<div class="slide" style="background-image: url('https://wallpaperaccess.com/download/dior-iphone-2064481')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+<div class="slide" style="background-image: url('https://wallpaperaccess.com/download/puma-logo-1376653')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('https://wallpaperaccess.com/download/nike-545398')">
+            <div class="container">
+                <div class="caption">
+                    <h1>3.Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Play Now</a>
+                </div>
+            </div>
+        </div>
+     </div>
+   
+    <!-- controls  -->
+    <div class="controls">
+        <div class="prev"><</div>
+        <div class="next">></div>
     </div>
+
+    <!-- indicators -->
+    <div class="indicator">
+    </div>
+
+  </section>
 <br><br><br>
-<div class="fb-share-button" data-href="https://blacksmith779.github.io/pages/Socialfollow.html" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblacksmith779.github.io%2Fpages%2FSocialfollow.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-<br><br><br>
-    <script src="app.js"></script>
+<footer id="yetty">
+<img id="imgo" style="margin: 5vw 0 0 5vw;" src="https://img.icons8.com/windows/2048/000000/facebook-messenger.png"/>
+<img id="imgtw" src="https://img.icons8.com/windows/2048/000000/twitter.png"/>
+<img id="imgth" src="https://img.icons8.com/windows/2048/000000/instagram-new.png"/>
+<img id="imgfo" src="https://img.icons8.com/windows/2048/000000/youtube-play.png"/>
+<img id="imgfi" src="https://img.icons8.com/windows/2048/000000/whatsapp.png"/>
+<img id="imgs" src="https://img.icons8.com/windows/2048/000000/stripe-s.png"/>
+<br>
+<h id="hodyh1" style="margin: 0 0 20vw 26vw; text-align: center;">The wheel™</h>
+<div style="margin: 0 0 0 10vw;" class="fb-like" data-href="https://blacksmith779.github.io/pages/Socialfollow.html" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="WycGxRTk"></script>
+</footer>
+
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="8TqeTYaA"></script>
+ <script src="script.js"></script>
 <script>
-const sizes = document.querySelectorAll('.size');
-const colors = document.querySelectorAll('.color');
-const shoes = document.querySelectorAll('.shoe');
-const gradients = document.querySelectorAll('.gradient');
-const shoeBg = document.querySelector('.shoeBackground');
 
-let prevColor = "blue";
-let animationEnd = true;
 
-function changeSize(){
-    sizes.forEach(size => size.classList.remove('active'));
-    this.classList.add('active');
-}
+ const slides=document.querySelector(".slider").children;
+ const prev=document.querySelector(".prev");
+ const next=document.querySelector(".next");
+ const indicator=document.querySelector(".indicator");
+ let index=0;
 
-function changeColor(){
-    if(!animationEnd) return;
-    let primary = this.getAttribute('primary');
-    let color = this.getAttribute('color');
-    let shoe = document.querySelector(`.shoe[color="${color}"]`);
-    let gradient = document.querySelector(`.gradient[color="${color}"]`);
-    let prevGradient = document.querySelector(`.gradient[color="${prevColor}"]`);
 
-    if(color == prevColor) return;
+   prev.addEventListener("click",function(){
+       prevSlide();
+       updateCircleIndicator(); 
+       resetTimer();
+   })
 
-    colors.forEach(c => c.classList.remove('active'));
-    this.classList.add('active');
+   next.addEventListener("click",function(){
+      nextSlide(); 
+      updateCircleIndicator();
+      resetTimer();
+      
+   })
 
-    document.documentElement.style.setProperty('--primary', primary);
-    
-    shoes.forEach(s => s.classList.remove('show'));
-    shoe.classList.add('show');
-
-    gradients.forEach(g => g.classList.remove('first', 'second'));
-    gradient.classList.add('first');
-    prevGradient.classList.add('second');
-
-    prevColor = color;
-    animationEnd = false;
-
-    gradient.addEventListener('animationend', () => {
-        animationEnd = true;
-    })
-}
-
-sizes.forEach(size => size.addEventListener('click', changeSize));
-colors.forEach(c => c.addEventListener('click', changeColor));
-
-let x = window.matchMedia("(max-width: 1000px)");
-
-function changeHeight(){
-    if(x.matches){
-        let shoeHeight = shoes[0].offsetHeight;
-        shoeBg.style.height = `${shoeHeight * 0.9}px`;
+   // create circle indicators
+    function circleIndicator(){
+        for(let i=0; i< slides.length; i++){
+        	const div=document.createElement("div");
+        	      div.innerHTML=i+1;
+                div.setAttribute("onclick","indicateSlide(this)")
+                div.id=i;
+                if(i==0){
+                	div.className="active";
+                }
+               indicator.appendChild(div);
+        }
     }
-    else{
-        shoeBg.style.height = "475px";
+    circleIndicator();
+
+    function indicateSlide(element){
+         index=element.id;
+         changeSlide();
+         updateCircleIndicator();
+         resetTimer();
     }
-}
+     
+    function updateCircleIndicator(){
+    	for(let i=0; i<indicator.children.length; i++){
+    		indicator.children[i].classList.remove("active");
+    	}
+    	indicator.children[index].classList.add("active");
+    }
 
-changeHeight();
+   function prevSlide(){
+   	 if(index==0){
+   	 	index=slides.length-1;
+   	 }
+   	 else{
+   	 	index--;
+   	 }
+   	 changeSlide();
+   }
 
-window.addEventListener('resize', changeHeight);
+   function nextSlide(){
+      if(index==slides.length-1){
+      	index=0;
+      }
+      else{
+      	index++;
+      }
+      changeSlide();
+   }
+
+   function changeSlide(){
+   	       for(let i=0; i<slides.length; i++){
+   	       	 slides[i].classList.remove("active");
+   	       }
+
+       slides[index].classList.add("active");
+   }
+
+   function resetTimer(){
+   	  // when click to indicator or controls button 
+   	  // stop timer 
+   	  clearInterval(timer);
+   	  // then started again timer
+   	  timer=setInterval(autoPlay,4000);
+   }
+ 
+  
+  function autoPlay(){
+      nextSlide();
+      updateCircleIndicator();
+  }
+
+  let timer=setInterval(autoPlay,6000);
+
+
+ 
+
+
+
+
 </script>
 <script>
-      document.querySelector('.share').addEventListener('click', function(){
-        console.log('clicked');
-        if (navigator.share) {
-          navigator.share({
-              title: 'Webshare API Rocks!!',
-              text: 'Check out more videos from Krishna!',
-              url: 'https://www.youtube.com/channel/UCXuDP7e7u3oowdSla7d_yCA',
-          })
-            .then(() => console.log('Successful share'))
-            .catch((error) => console.log('Error sharing', error));
-        }
-      });
-    </script> 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "71.42vw";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script>
+var goon = document.getElementById("offyougo");
+goon.style.overflow = "hidden";
+    const loader = document.querySelector(".loader");
+    window.onload = function(){
+      setTimeout(function(){
+goon.style.overflow = "visible";
+        loader.style.opacity = "0";
+        setTimeout(function(){
+          loader.style.display = "none";
+        }, 500);
+      },0);
+    }
+    </script>
 </body>
 </html>
