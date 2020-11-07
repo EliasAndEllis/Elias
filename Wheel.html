@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wheel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.boxx{
+background: #E20074;
+padding: 1vw;
+border-radius: 3vw;
+text-align: center;
+margin: 0 5vw 0 5vw;
+}
+.counter{
+font-size: 6vw;
+font-weight: 300;
+color: #fff;
+padding: 0;
+}
+#fookya{
+font-size: 6vw;
+font-weight: bold;
+color: #fff;
+padding: 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+body{
+	margin:0;
+	font-family: sans-serif;
+	overflow-x: hidden;
+height: 200vw;
+}
+html{
+  scroll-behavior: smooth;
+}
+*{
+	box-sizing: border-box;
+font-family: 'Oswald', sans-serif;
+padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+coor: #0A0A08;
+font-family: 'Oswald', sans-serif;
+text-transform: uppercase;
+}
+a{
+text-decoration: none;
+}
+.home{
+	height: 100vh;
+	overflow:hidden;
+	position: relative;
+}
+
+.home .slide{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	z-index:1; 
+	display:none;
+	padding:0 4.28vw;
+	animation: slide 2s ease;
+}
+.home .slide.active{
+	display: flex;
+}
+@keyframes slide{
+	0%{
+		transform:scale(1.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.container{
+	max-width: 334.28vw;
+	margin:auto;
+	
+}
+
+.home .container{
+	 flex-grow: 1;
+}
+.home .caption{
+	width:50%;
+}
+.home .caption h1{
+	font-size:12vw;
+	margin:0;
+color: #fff;
+text-shadow: #0B68F1 -1vw -1vw;
+}
+.home .slide.active .caption h1{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1s;
+}
+.home .caption p{
+	font-size: 5.14vw;
+	margin: 4.28vw 0 8.57vw;
+	color:#fff;
+font-weight: bold;
+text-shadow: #0B68F1 -0.5vw -0.5vw;
+}
+.home .slide.active .caption p{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1.2s;
+font-weight: bold;
+}
+.home .caption a{
+ display: inline-block;
+ padding: 2.85vw 8.57vw;
+ background-color: #0B68F1;
+ text-decoration: none;
+ color:#fff;
+font-weight: bold;
+font-size: 4.6vw;
+}
+
+.home .slide.active .caption a{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1.4s;
+  border: none;
+  outline: none;
+  padding: 2vw 4vw;
+  border-radius: 1.42vw;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.caption a:hover{
+font-size: 4.3vw;
+margin: 0 0 0 2.15vw;
+padding: 0.75vw 1.5vw;
+}
+@keyframes captionText{
+	0%{
+		opacity:0; transform: translateX(-100px);
+	}
+	100%{
+	 opacity:1; transform: translateX(0px);	
+	}
+}
+
+.home .controls .prev,
+.home .controls .next{
+ position: absolute;
+ z-index:2;
+ top:50%;
+ height: 11.42vw;
+ width: 11.42vw;
+ margin-top: -5.71vw;
+ color: #000;
+ background-color: #fff;
+ text-align: center;
+ line-height: 11.42vw;
+ font-size: 5.71vw;
+ cursor:pointer;
+ transition: all .5s ease;
+}
+.home .controls .prev:hover,
+.home .controls .next:hover{
+	background-color: #000000;
+}
+.home .controls .prev{
+ left:0;
+}
+.home .controls .next{
+ right:0;
+}
+
+.home .indicator{
+	position: absolute;
+	left:50%;
+	bottom: 8.57vw;
+	z-index: 2;
+	transform: translateX(-50%);
+}
+
+.home .indicator div{
+	display: inline-block;
+	width: 7.14vw;
+	height: 7.14vw;
+	color: #fff;
+	background-color: #0B68F1;
+	border-radius:50%;
+	text-align: center;
+	line-height: 7.14vw;
+	margin:0 0.85vw;
+font-size: 5vw;
+font-weight: bold;
+padding: 0;
+}
+
+.home .indicator div.active{
+ background-color: #fff;
+color: #2C79D3;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+	.controls{
+		display: none;
+	}
+}
+#chocho{
+position: fixed;
+background: #FD355C;
+z-index: 100;
+width: 100%;
+}
+h2{
+padding: 0;
+margin: 0 0 0 10vw;
+font-size: 10vw;
+color: #fff;
+}
+#wo{
+height: 10vw;
+width: 10vw;
+}
+#dfrnt{
+text-align: center;
+}
+#wth{
+margin: 0 0 0 47vw;
+padding: 0;
+position: fixed;
+op: 3.7vw;
+left: 40vw;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+position: relative;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(250,250,250,1);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 17.14vw;
+z-index: 500;
+}
+
+.sidenav a {
+  padding: 2.28vw 2.28vw 2.28vw 9.14vw;
+  text-decoration: none;
+  font-size: 6.2vw;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 7.14vw;
+  font-size: 10.28vw;
+  margin-left: 14.28vw;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 4.28vw;}
+  .sidenav a {font-size: 5.14vw;}
+}
+#hody{
+	background: #fff;
+color: #000;
+	position: fixed;
+	padding: 4vw;
+	width: 100%;
+z-index: 100;
+box-shadow: 0px 2.28vw 4.57vw 0px rgba(0,0,0,0.2);
+}
+#hodyh1{
+	font-weight: 900;
+	font-size: 7.5vw;
+color: #0B68F1;
+font-family: 'Poppins', sans-serif;
+outline: none;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: animate 10s linear infinite;
+margin: 0 10vw 0 0;
+}
+@keyframes animate {
+  to{
+    background-position: 400%;
+  }
+}
+#hodyh2{
+	font-weight: lighter;
+	font-size: 6vw;
+color: #000;
+padding: 0;
+margin: 0 0 0 -10vw;
+}
+#stpc{
+white-space: nowrap;
+height: 100vw;
+padding: 0 5.71vw 0 5.71vw;
+overflow-x: scroll;
+position: relative;
+z-index: 2;
+margn: 20px 0 -20px 0;
+}
+#hh1{
+font-size: 10vw;
+	border-radius: 2.28vw;
+	margin: 14.28vw 0 14.28vw 5.71vw;
+	padding: 1.71vw;
+	background: #fff;
+	width: 45.71vw;
+}
+#stpc img{
+height: 57.14vw;
+width: 57.14vw;
+padding: 0;
+border-radius: 2.85vw;
+position: relative;
+margin: 4.85vw 5.71vw 0 5.71vw;
+}
+#hody img{
+height: 10vw;
+width: 10vw;
+margn: -3.71vw 0 0 0;
+}
+#dfrnt{
+text-align: center;
+}
+#wtp{
+margin: 0 0 0 47vw;
+padding: 0;
+position: fixed;
+op: 3.7vw;
+left: 27vw;
+}
+.controls{
+		display: none;
+opacity: 0;
+	}
+.loader{
+position: relative;
+z-index: 9000;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: all 0.5s;
+}
+.loader .ring{
+  height: 45px;
+  width: 45px;
+  border: 5px solid #E2E7EA;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .ring:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #0B68F1;
+  border-top-color: transparent;
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.content ul{
+  padding-left: 8.57vw;
+}
+ul li{
+  font-size: 5.71vw;
+}
+.arrow{
+  position: fixed;
+  bottom: 8.57vw;
+  right: 8.57vw;
+  z-index: 9;
+  margin: 0;
+padding: 0;
+}
+.arrow a{
+  height: 11.14vw;
+  width: 10.57vw;
+  text-align: center;
+  background: #fff;
+  display: block;
+  border-radius: 0.85vw;
+box-shadow: 0px 2.28vw 4.57vw 0px rgba(0,0,0,0.2);
+margin: 0;
+padding: 0;
+}
+.arrow img{
+height: 10vw;
+width: 10vw;
+position: relative;
+}
+.arrow a span{
+  color: #f2f2f2;
+  font-size: 7.14vw;
+  line-height: 11.14vw;
+  cursor: pointer;
+}
+.slider2{
+  max-width: 1100px;
+  display: flex;
+}
+.slider2 .card2{
+  flex: 1;
+  margin: 0 10px;
+  background: #fff;
+}
+.slider2 .card2 .img3{
+  height: 200px;
+  width: 100%;
+}
+.slider2 .card2 .img3 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slider2 .card2 .content2{
+  padding: 10px 20px;
+}
+.card2 .content2 .title2{
+  font-size: 25px;
+  font-weight: 600;
+}
+.card2 .content2 .sub-title2{
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
+}
+.card2 .content2 p{
+  text-align: justify;
+  margin: 10px 0;
+}
+.card2 .content2 .btn2{
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+}
+.card2 .content2 .btn2 button{
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card2 .content2 .btn2 button:hover{
+  transform: scale(0.9);
+}
+#yetty{
+height: 135vw;
+padding: 0;
+margin: 0;
+background: #E20074;
+color: #fff;
+margin: 5vw 0 0 0;
+}
+#yetty img{
+margin: 5vw 0 0 5vw;
+height: 10vw;
+width: 10vw;
+transition: .6s;
+}
+#yetty img:hover{
+opacity: 0.5;
+}
+.fb-like{
+margin: 20vw 0 0 10vw;
+position: relative;
+top: 2%;
+}
+#ais1{
+margin: 0 0 0 0;
+text-align: center;
+display: block;
+  transition: 0.3s;
+}
+#ais1 a:hover{
+color: #F280BA;
+}
+#ais2{
+text-align: center;
+display: block;
+  transition: 0.3s;
+}
+#ais2 a:hover{
+color: #F280BA;
+}
+#ais1 a{
+text-decoration: none;
+color: #fff;
+font-weight: 300;
+marin: 0 5vw 0 5vw;
+text-transform: Capitalize;
+font-size: 5.5vw;
+padding: 2vw;
+}
+#ais2 a{
+text-decoration: none;
+color: #fff;
+font-weight: 300;
+margin: 0 1vw 0 0;
+text-transform: Capitalize;
+font-size: 5.5vw;
+padding: 2vw;
+}
+#twenky{
+font-weight: bold;
+color: #F280BA;
+txt-shadow: white -0.2vw -0.5vw;
+font-size: 4.6vw;
+text-align: center;
+margin: 20vw 0 0 0;
+transition: .5s;
+}
+#twenky:hover{
+color: #fff;
+}
+#twenky h{
+margin: 0 2vw 0 2vw;
+}
+#jocer{
+text-align: left;
+margin: 10vw 0 0 2vw;
+}
+#jocer b{
+color: #fff;
+text-algn: right;
+position: relative;
+}
+#jocer input{
+padding: 1vw 41vw 1vw 2vw;
+height: 20vw;
+text-align: left;
+margin: 2vw 0 6vw 0;
+color: #000;
+font-weight: bold;
+border: none;
+}
+#jocer a{
+width: 90%;
+padding: 3vw 44.6vw 3vw 40vw;
+font-weight: bold;
+background: #26D2A2;
+color: white;
+border: none;
+font-size: 4.5vw;
+  transition: 0.3s;
+}
+#jocer a:hover{
+color: #26D2A2;
+background: white;
+}
+#ton8{
+font-weight: 900;
+	font-size: 7.5vw;
+color: #0B68F1;
+font-family: 'Poppins', sans-serif;
+outline: none;
+  text-transform: uppercase;
+  background: #fff;
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: animate 10s linear infinite;
+margin: 0 10vw 0 0;
+}
+.wrapper{
+margin: 5vw 0 0 0;
+  width: 100%;
+}
+.carousel{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .card{
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 250px;
+  font-size: 90px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+.carousel .card-1{
+  background: #ed1c24;
+}
+.carousel .card-2{
+  background: #0072bc;
+}
+.carousel .card-3{
+  background: #39b54a;
+}
+.carousel .card-4{
+  background: #f26522;
+}
+.carousel .card-5{
+  background: #630460;
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+.card-1{
+width: 83.5vw;
+height: 50vw;
+padding: 0;
+margin: 0;
+align-items: center;
+}
+.card-2{
+width: 83.5vw;
+height: 50vw;
+padding: 0;
+margin: 0;
+align-items: center;
+}
+.card-3{
+width: 83.5vw;
+height: 50vw;
+padding: 0;
+margin: 0;
+align-items: center;
+}
+.card-4{
+width: 83.5vw;
+height: 50vw;
+padding: 5vw;
+margin: 0;
+align-items: center;
+}
+.card-5{
+width: 83.5vw;
+height: 50vw;
+padding: 0;
+margin: 0;
+align-items: center;
+}
+</style>
+</head>
+<body id="offyougo">
+<div class="loader">
+      <div class="ring">
+</div>
+</div>
+<div class="arrow">
+      <a href="#" title="Back to Top"><span class="fas fa-angle-up"><img src="https://img.icons8.com/fluent/0/000000/collapse-arrow.png"/></span></a>
+    </div>
+<div id="hody">
+<a href="#">
+<h id="hodyh1">The wheel™</h>
+</a>
+<span id="wth" style="font-sze:30px;cursor:pointer; height: 5vw; width: 5vw;" onclick="openNav()"><img id="iconz" src="https://img.icons8.com/fluent/2048/000000/gender-neutral-user.png"/></span>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img id="wo" src="https://img.icons8.com/fluent/2000/000000/cancel.png"/></a>
+  <a href="https://blacksmith779.github.io/pages/Facebook.html">Assistance</a>
+  <a href="https://blacksmith779.github.io/pages/Wheel.html">Cadeaux</a>
+  <a href="https://www.instagram.com/socialfollowco/">À propos</a>
+  <a href="https://www.instagram.com/socialfollowco/">partagez</a>
+<a href="https://www.instagram.com">contact</a>
+<!-- <a href="https://www.instagram.com">blogs</a>
+<a --> <a href="https://www.instagram.com">feedback</a>
+  <a href="https://www.instagram.com">Plus</a>
+<a href="#" id="dfrnt"><h id="hodyh1">McKevin</h>
+<h id="hodyh2">team</h></a>
+</div>
+
+
+
+  <section class="home">
+     <div class="slider">
+        <div class="slide active" style="background-image: url('https://blacksmith779.github.io/shopping.jpeg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>1.Gagnez un iPhone 12 pro maintenant.</h1>
+                    <p>Jouez au Quiz mondial et gagnez.</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">Jouer</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('https://blacksmith779.github.io/130647965-illustration-new-year-2020-vector-people-tweet-and-have-fun-around-numbers-youth-celebrate-christmas.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Notre Collection 2020</h1>
+                    <p>2020 est une grande année n'est ce pas?!</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                </div>
+            </div>
+        </div>
+
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/lite-01_4_cropped.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>3.Une console Switch lite vous attend.</h1>
+                    <p>Jouez maintenant pour la gagner.</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">Jouez</a>
+                </div>
+            </div>
+        </div>
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/0f75391f-4ad5-498c-ba20-941754553f5c-AP_Election_2020_Trump-Biden.jpeg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>3.Trump Vs Biden, qui gagnera??</h1>
+                    <p>Découvrez les nouveautés des Etats Unis.</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                </div>
+            </div>
+        </div>
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/shopping.jpeg');">
+            <div class="container">
+                <div class="caption">
+                    <h1>5.Iphone 12 pro est disponible.</h1>
+                    <p>Apple lançe son nouveau telephone, l'Iphone 12 pro.</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                </div>
+            </div>
+        </div>
+        </div>
+     </div>
+   
+    <!-- controls  -->
+    <div class="controls">
+        <div class="prev"><</div>
+        <div class="next">></div>
+    </div>
+
+    <!-- indicators -->
+    <div class="indicator">
+    </div>
+
+  </section>
+
+<div class="wrapper">
+      <div class="carousel owl-carousel">
+        <!-- <div class="card card-1"> -->
+<a href="https://blacksmith779.github.io/pages/Wheel.html"><img  class="card card-1" src="https://blacksmith779.github.io/wheel-of-fortune-switch-hero.jpg"></a>
+<!-- </div> -->
+<!-- <div class="card card-2"> -->
+<a href="https://blacksmith779.github.io/pages/Wheel.html"><img class="card card-2" src="https://blacksmith779.github.io/INTRO.png"></a>
+<!-- </div> -->
+<!-- <div class="card card-2"> -->
+<a href="https://blacksmith779.github.io/pages/Wheel.html"><img class="card card-3" src="https://blacksmith779.github.io/GettyImages-889538316.jpg"></a>
+<!-- </div> -->
+<!-- <div class="card card-2"> -->
+<a href="https://blacksmith779.github.io/pages/Wheel.html"><img class="card card-4" src="https://blacksmith779.github.io/wp6ojoyuh6fwdidy_1598513829.jpeg"></a>
+<!-- </div> -->
+<!-- <div class="card card-2"> -->
+<a href="https://blacksmith779.github.io/pages/Wheel.html"><img class="card card-5" src="https://blacksmith779.github.io/Notes_201027_220617_4ba.jpg"></a>
+<!-- </div> -->
+</div>
+
+<br><br>
+<div class="sectionn"></div>
+  <div class="wrapperr">	
+  </div>
+  <div class="counterr-up">
+    <div class="contentt">
+      <div class="boxx">
+        <div class="iconn"><i class="fas fa-history"></i></div>
+        <div class="all">
+<h class="counter">86202</h>
+<h id="fookya">Utilisateurs</h>
+        </div>
+      <div class="boxx">
+        <div class="iconn"><i class="fas fa-gift"></i></div>
+        <h class="counter">45300</h>
+<h id="fookya">Cadeaux</h>
+      </div>
+      <div class="boxx">
+        <div class="iconn"><i class="fas fa-users"></i></div>
+        <h class="counter">9377</h>
+<h id="fookya">Gagnants</h>
+      </div>
+      <div class="boxx">
+        <div class="iconn"><i class="fas fa-award"></i></div>
+        <h class="counter">32</h>
+<h id="fookya">Jeux</h>
+      </div>
+    </div>
+  </div>
+  
+  
+
+<footer id="yetty">
+<a href="https://m.me/fitzely.77"><img id="imgo" style="margin: 5vw 0 0 5vw;" src="https://img.icons8.com/windows/2048/000000/facebook-messenger.png"/></a>
+<img id="imgtw" src="file:///storage/emulated/0/Download/icon-twitter.svg"/>
+<img id="imgth" src="https://img.icons8.com/windows/2048/000000/instagram-new.png"/>
+<img id="imgfo" src="file:///storage/emulated/0/Download/icon-youtube.svg"/>
+<a href="https://api.whatsapp.com/send/?phone=%2B212645296768&text&app_absent=0"><img id="imgfi" src="https://img.icons8.com/windows/2048/000000/whatsapp.png"/></a>
+<img id="imgi" src="file:///storage/emulated/0/Download/icon-facebook.svg"/>
+<h id="ton8" style="margin: 20vw 0 20vw 26vw; text-align: center;color: #fff;">The wheel™</h>
+<div style="margin: 0 0 0 30vw;" class="fb-like" data-href="https://blacksmith779.github.io/pages/Socialfollow.html" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+<div id="fb-root"></div><br>
+<div id="ais1">
+<a href="https://blacksmith779.github.io/pages/Wheel.html">Assistance</a>
+<a href="https://blacksmith779.github.io/pages/Wheel.html">cadeaux</a>
+<a href="https://blacksmith779.github.io/pages/Wheel.html">à propos</a>
+</div>
+<div id="ais2">
+<a href="https://blacksmith779.github.io/pages/Wheel.html">partagez</a>
+<a href="https://blacksmith779.github.io/pages/Wheel.html">contact</a>
+<a href="https://blacksmith779.github.io/pages/Wheel.html">feedback</a>
+<a href="https://blacksmith779.github.io/pages/Wheel.html">plus</a>
+</div>
+<div id="jocer">
+				<b>Message*</b>
+<input id="putta" placeholder=" Write your message here" required><br>
+<a onclick="begn()">Send</a>
+</div>
+<div id="twenky">
+<h>©2020 McKevin, Inc.</h>
+<h>©2020 The Wheel.</h>
+</div>
+</footer>
+
+<script>
+  $(document).ready(function(){
+    $('.counter').counterUp({
+      delay: 10,
+      time: 1200
+    });
+  });
+  </script>
+
+
+<script>
+      $(".carousel").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items:1,
+            nav: false
+          },
+          600:{
+            items:2,
+            nav: false
+          },
+          1000:{
+            items:3,
+            nav: false
+          }
+        }
+      });
+    </script>
+
+
+<script>
+var ikho = document.getElementById("putta");
+function begn(){
+if (ikho.value != ""){
+alert("Message sent successfully!");
+ikho.value = "";
+}
+}
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="8TqeTYaA"></script>
+ <script src="script.js"></script>
+<script>
+
+
+ const slides=document.querySelector(".slider").children;
+ const prev=document.querySelector(".prev");
+ const next=document.querySelector(".next");
+ const indicator=document.querySelector(".indicator");
+ let index=0;
+
+
+   prev.addEventListener("click",function(){
+       prevSlide();
+       updateCircleIndicator(); 
+       resetTimer();
+   })
+
+   next.addEventListener("click",function(){
+      nextSlide(); 
+      updateCircleIndicator();
+      resetTimer();
+      
+   })
+
+   // create circle indicators
+    function circleIndicator(){
+        for(let i=0; i< slides.length; i++){
+        	const div=document.createElement("div");
+        	      div.innerHTML=i+1;
+                div.setAttribute("onclick","indicateSlide(this)")
+                div.id=i;
+                if(i==0){
+                	div.className="active";
+                }
+               indicator.appendChild(div);
+        }
+    }
+    circleIndicator();
+
+    function indicateSlide(element){
+         index=element.id;
+         changeSlide();
+         updateCircleIndicator();
+         resetTimer();
+    }
+     
+    function updateCircleIndicator(){
+    	for(let i=0; i<indicator.children.length; i++){
+    		indicator.children[i].classList.remove("active");
+    	}
+    	indicator.children[index].classList.add("active");
+    }
+
+   function prevSlide(){
+   	 if(index==0){
+   	 	index=slides.length-1;
+   	 }
+   	 else{
+   	 	index--;
+   	 }
+   	 changeSlide();
+   }
+
+   function nextSlide(){
+      if(index==slides.length-1){
+      	index=0;
+      }
+      else{
+      	index++;
+      }
+      changeSlide();
+   }
+
+   function changeSlide(){
+   	       for(let i=0; i<slides.length; i++){
+   	       	 slides[i].classList.remove("active");
+   	       }
+
+       slides[index].classList.add("active");
+   }
+
+   function resetTimer(){
+   	  // when click to indicator or controls button 
+   	  // stop timer 
+   	  clearInterval(timer);
+   	  // then started again timer
+   	  timer=setInterval(autoPlay,4000);
+   }
+ 
+  
+  function autoPlay(){
+      nextSlide();
+      updateCircleIndicator();
+  }
+
+  let timer=setInterval(autoPlay,6000);
+
+
+ 
+
+
+
+
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "71.42vw";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script>
+var goon = document.getElementById("offyougo");
+goon.style.overflow = "hidden";
+    const loader = document.querySelector(".loader");
+    window.onload = function(){
+      setTimeout(function(){
+goon.style.overflow = "visible";
+        loader.style.opacity = "0";
+        setTimeout(function(){
+          loader.style.display = "none";
+        }, 500);
+      },0);
+    }
+    </script>
+</body>
+</html>
