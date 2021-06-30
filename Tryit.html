@@ -58,7 +58,6 @@ justify-content: center;
   align-items: center;
   z-index: 10000;
 box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
-width: 100%;
 }
 .texter{
   font-weight: 500;
@@ -69,13 +68,13 @@ width: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   animation: animate 10s linear infinite;
-  margin: 0 85vw 0 0;
+  margin: 0 63vw 0 0;
   justify-content: center;
   align-items: center;
   padding: 0;
 }
 .texter a{
-font-size: 5vh;
+font-size: 300%;
 }
 @keyframes animate {
   to{
@@ -83,8 +82,8 @@ font-size: 5vh;
   }
 }
 ul img{
-width: 5vh;
-height: 5vh;
+width: 5vw;
+height: 5vw;
     padding: 0;
    margin: 0;
 }
@@ -92,7 +91,21 @@ ul{
 display: flex;
     justify-content: ;
     list-style: none;
-    padding: 10vw;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+.li2{
+padding: 0;
+margin: -2vw 0 0 0;
+justify-content: center;
+align-items: center;
+opacity: 0;
+}
+.li3{
+padding: 0;
+margin: 0 0 0 0;
+justify-content: center;
+align-items: center;
 }
 .sidenav {
   height: 100%;
@@ -184,6 +197,7 @@ background: #5D35B0;
 <div class="header">
 <ul>
 <li spellcheck="true" class="texter" contentediable="true"><a href="#">Colazione</a></li>
+<li class="li2"><a href="#"><img src="https://img.icons8.com/color/2048/000000/new-moon.png"/></a></li>
 <li class="li3"><img id="wth" onclick="openNav()" src="https://img.icons8.com/cotton/64/000000/list.png"/></li>
 </ul>
 </div>
