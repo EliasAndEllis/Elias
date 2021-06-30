@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Breakfast.com</title>
+<title>Colazione.com</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,6 @@ padding: 0;
 margin: 0;
 box-sizing: border-box;
 font-family: 'Karantina', cursive;
-font-size: 8vw;
 }
 a{
 text-decoration: none;
@@ -54,14 +53,14 @@ text-decoration: none;
   }
 }
 .header{
-padding: 1.5vw;
+padding: 1vw 0 1vw 3vw;
 justify-content: center;
   align-items: center;
   z-index: 10000;
 box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
 }
 .texter{
-  font-weight: 8000;
+  font-weight: 500;
   outline: none;
   text-transform: uppercase;
   background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
@@ -69,13 +68,13 @@ box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   animation: animate 10s linear infinite;
-  margin: 1vw 40vw 0 5vw;
+  margin: 0 63vw 0 0;
   justify-content: center;
   align-items: center;
   padding: 0;
 }
 .texter a{
-font-size: 8vw;
+font-size: 7vw;
 }
 @keyframes animate {
   to{
@@ -83,14 +82,14 @@ font-size: 8vw;
   }
 }
 ul img{
-width: 10vw;
-height: 10vw;
+width: 7vw;
+height: 7vw;
     padding: 0;
-   margin: 2vw 5vw 0 0;
+   margin: 0;
 }
 ul{
 display: flex;
-    justify-content: center;
+    justify-content: ;
     list-style: none;
     margin: 0 0 0 0;
     padding: 0;
@@ -104,36 +103,33 @@ opacity: 0;
 }
 .li3{
 padding: 0;
-margin: -2vw 0 0 0;
+margin: 0 0 0 0;
 justify-content: center;
 align-items: center;
 }
 .sidenav {
   height: 100%;
   width: 0;
-position: relative;
-  position: fixed;
+position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
+  top: 0;  
   background-color: #301B92;
   overflow-x: hidden;
   transition: 0.6s;
-  padding-top: 0vw;
 z-index: 500;
+display: block;
 }
 .sidenav img{
-height: 10vw;
-width: 10vw;
-padding: 0;
+height: 7vw;
+width: 7vw;
 }
 .sidenav a {
   text-decoration: none;
-  font-size: 9vw;
+  font-size: 150%;
   color: #fff;
   display: block;
   transition: 0.8s;
-  padding: 3vw 3vw 3vw 8vw;
+  padding: 1vw 0 1vw 3vw;
 }
 
 .sidenav a:hover {
@@ -142,13 +138,13 @@ padding: 0;
 }
 #dwordvar{
 display: flex;
-padding: 4vw 4vw 4vw 0;
+padding: 1vw 0 1vw 3vw;
 transition: 0s;
 }
 #wordvar{
 padding: 0;
 margin: 0 0 0 -50vw;
-font-size: 10vw;
+font-size: 200%;
 color: #fff;
 transition: 1.5s;
 }
@@ -167,18 +163,18 @@ width: 10vw;
 text-align: center;
 }
 .sidtexter{
-font-weight: 8000;
+font-weight: 500;
   outline: none;
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 20%;
+  left: 30%;
   margin: 5vw 0 0 0;
   opacity: 0.5;
 }
 .sidtexter a{
-font-size: 12vw;
+font-size: 500%;
 display: inline;
 }
 .sidtexter a:hover{
@@ -211,10 +207,6 @@ background: #5D35B0;
 <img href="javascript:void(0)" class="closebtn" onclick="closeNav()" src="https://img.icons8.com/ios/2048/ffffff/delete-sign.png"/>
 </div>
   <hr>  
-  <a href="#">Colazione</a>
-  <hr>
-  <a href="#">Colazione</a>
-  <hr>
   <a href="#">Colazione</a>
   <hr>
   <a href="#">Colazione</a>
