@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Colazione.com</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karantina&display=swap" rel="stylesheet">
+<style>	
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Karantina', cursive;
+font-size: 8vw;
+}
+a{
+text-decoration: none;
+}
+.loader{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #051B6D;
+  transition: all 0.5s;
+  z-index: 100000;
+}
+.loader .ring{
+  height: 45px;
+  width: 45px;
+  border: 5px solid grey;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .ring:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-top-color: transparent;
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.header{
+padding: 1.5vw;
+justify-content: center;
+  align-items: center;
+  z-index: 10000;
+box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
+}
+.texter{
+  font-weight: 8000;
+  outline: none;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background-size: 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: animate 10s linear infinite;
+  margin: 1vw 40vw 0 5vw;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.texter a{
+font-size: 8vw;
+}
+@keyframes animate {
+  to{
+    background-position: 400%;
+  }
+}
+ul img{
+width: 10vw;
+height: 10vw;
+    padding: 0;
+   margin: 2vw 5vw 0 0;
+}
+ul{
+display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+.li2{
+padding: 0;
+margin: -2vw 0 0 0;
+justify-content: center;
+align-items: center;
+opacity: 0;
+}
+.li3{
+padding: 0;
+margin: -2vw 0 0 0;
+justify-content: center;
+align-items: center;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+position: relative;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #301B92;
+  overflow-x: hidden;
+  transition: 0.6s;
+  padding-top: 0vw;
+z-index: 500;
+}
+.sidenav img{
+height: 10vw;
+width: 10vw;
+padding: 0;
+}
+.sidenav a {
+  text-decoration: none;
+  font-size: 10vw;
+  color: #fff;
+  display: block;
+  transition: 0.8s;
+  padding: 4vw 4vw 4vw 8vw;
+}
+
+.sidenav a:hover {
+  background: #5D35B0;
+  color: #9576CD;
+}
+#dwordvar{
+display: flex;
+margin: 5vw 5vw 5vw 0;
+transition: 0s;
+}
+#wordvar{
+padding: 0;
+margin: 0 0 0 -50vw;
+font-size: 10vw;
+color: #fff;
+transition: 1.5s;
+}
+.closebtn {
+  height: 10vw;
+  width: 10vw;
+  position: absolute;
+  left: 85%;
+  transform: rotate(-90deg);
+}
+#wo{
+height: 10vw;
+width: 10vw;
+}
+#dfrnt{
+text-align: center;
+}
+.sidtexter{
+font-weight: 8000;
+  outline: none;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 20%;
+  margin: 5vw 0 0 0;
+  opacity: 0.5;
+}
+.sidtexter a{
+font-size: 12vw;
+display: inline;
+}
+.sidtexter a:hover{
+background: transparent;
+}
+#wth{
+transform: rotate(180deg);
+}
+hr{
+border: 0.01vw solid #5D35B0;
+background: #5D35B0;
+}
+</style>
+</head>
+<body id="body">
+<div class="loader">
+<div class="ring">
+</div>
+</div>
+<div class="header">
+<ul>
+<li spellcheck="true" class="texter" contentediable="true"><a href="#">Colazione</a></li>
+<li class="li2"><a href="#"><img src="https://img.icons8.com/color/2048/000000/new-moon.png"/></a></li>
+<li class="li3"><img id="wth" onclick="openNav()" src="https://img.icons8.com/cotton/64/000000/list.png"/></li>
+</ul>
+</div>
+<div id="mySidenav" class="sidenav">
+				<div id="dwordvar">
+				<span id="wordvar">Ciao</span>
+<img href="javascript:void(0)" class="closebtn" onclick="closeNav()" src="https://img.icons8.com/ios/2048/ffffff/delete-sign.png"/>
+</div>
+  <hr>  
+  <a href="#">Colazione</a>
+  <hr>
+  <a href="#">Colazione</a>
+  <hr>
+  <a href="#">Colazione</a>
+  <hr>
+  <a href="#">Colazione</a>
+  <hr>
+<p class="sidtexter"><a href="#">Colazione</a></p></div>
+
+<script>
+    const loader = document.querySelector(".loader");
+    window.onload = function(){
+      setTimeout(function(){
+        loader.style.opacity = "0";
+        setTimeout(function(){
+          loader.style.display = "none";
+        }, 0);
+      },0);
+    }
+    </script>
+    <script>
+function openNav(){
+document.getElementById("mySidenav").style.width = "80%";
+document.getElementById("wordvar").style.margin = "0 0 0 10%";
+}
+function closeNav(){
+document.getElementById("mySidenav").style.width = "0";
+document.getElementById("wordvar").style.margin = "0 0 0 -50vw";
+}
+</script>
+<script>
+			$(function () {
+  count = 0;
+  wordsArray = ["Salut", "Welcome", "bienvenido", "Velkommen"];
+  setInterval(function () {
+    count++;
+    $("#wordvar").fadeOut(400, function () {
+      $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+    });
+  }, 3000);
+});
+</script>
+</body>
+</html>
