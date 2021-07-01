@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <title>Colazione.com</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,9 +13,7 @@
 *{
 padding: 0;
 margin: 0;
-box-sizing: border-box;
 font-family: 'Karantina', cursive;
-font-size: 8vw;
 }
 a{
 text-decoration: none;
@@ -54,12 +55,9 @@ text-decoration: none;
   }
 }
 .header{
-justify-content: center;
-  align-items: center;
+padding: 3vh 0 3vh 0;
   z-index: 10000;
 box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
-width: 100%;
-padding: 0 .5em 0 .5em;
 }
 .texter{
   font-weight: 8000;
@@ -70,10 +68,12 @@ padding: 0 .5em 0 .5em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   animation: animate 10s linear infinite;
-margin: -0.25em 10em 0 0;
+  margin: 0 55vw 0 5vw;
+  padding: 0;
+  letter-spacing: 0;
 }
 .texter a{
-font-size: 40%;
+font-size: 2em;
 }
 @keyframes animate {
   to{
@@ -81,22 +81,12 @@ font-size: 40%;
   }
 }
 ul img{
-width: 0.5em;
-    padding: 0;
-    margin: 0 0 0 0;
+width: 2em;
+   margin: 0 0 0 0;
 }
 ul{
 display: flex;
-    justify-content: center;
     list-style: none;
-    margin: 0 0 0 0;
-    padding: 0;
-}
-.li3{
-padding: 0;
-margin: -.1em 0 0 0;
-justify-content: center;
-align-items: center;
 }
 .sidenav {
   height: 100%;
@@ -188,7 +178,7 @@ background: #5D35B0;
 <div class="header">
 <ul>
 <li spellcheck="true" class="texter" contentediable="true"><a href="#">Colazione</a></li>
-<li class="li3"><a onclick="openNav()" href="#"><img src="https://img.icons8.com/glyph-neue/2048/4a90e2/menu.png"/></a></li>
+<li class="li2"><a onclick="openNav()" href="#"><img src="https://img.icons8.com/ios-filled/2048/4a90e2/menu-rounded.png"/></a></li>
 </ul>
 </div>
 <div id="mySidenav" class="sidenav">
