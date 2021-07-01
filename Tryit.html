@@ -68,9 +68,11 @@ box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   animation: animate 10s linear infinite;
-  margin: 0 55vw 0 5vw;
+  margin: 0 0 0 0;
   padding: 0;
   letter-spacing: 0;
+  position: relative;
+  left: 5%;
 }
 .texter a{
 font-size: 2em;
@@ -80,9 +82,10 @@ font-size: 2em;
     background-position: 400%;
   }
 }
-ul img{
+.li2{
 width: 2em;
-   margin: 0 0 0 0;
+   position: fixed;
+  right: 5%;
 }
 ul{
 display: flex;
@@ -178,7 +181,7 @@ background: #5D35B0;
 <div class="header">
 <ul>
 <li spellcheck="true" class="texter" contentediable="true"><a href="#">Colazione</a></li>
-<li class="li2"><a onclick="openNav()" href="#"><img src="https://img.icons8.com/ios-filled/2048/4a90e2/menu-rounded.png"/></a></li>
+<li><a onclick="openNav()" href="#"><img class="li2" src="https://img.icons8.com/ios-filled/2048/4a90e2/menu-rounded.png"/></a></li>
 </ul>
 </div>
 <div id="mySidenav" class="sidenav">
