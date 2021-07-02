@@ -108,18 +108,13 @@ position: relative;
   padding-top: 0vw;
 z-index: 500;
 }
-.sidenav img{
-height: 10vw;
-width: 10vw;
-padding: 0;
-}
 .sidenav a {
   text-decoration: none;
-  font-size: 10vw;
+  font-size: 2em;
   color: #fff;
   display: block;
   transition: 0.8s;
-  padding: 4vw 4vw 4vw 8vw;
+  padding: 3vh 0 3vh 8vw;
 }
 
 .sidenav a:hover {
@@ -128,26 +123,23 @@ padding: 0;
 }
 #dwordvar{
 display: flex;
-margin: 5vw 5vw 5vw 0;
+padding: 1.5vh 0 1.5vh 0;
 transition: 0s;
 }
 #wordvar{
 padding: 0;
-margin: 0 0 0 -50vw;
-font-size: 10vw;
+position: relative;
+left: -35%;
+opacity: 0;
+font-size: 3em;
 color: #fff;
 transition: 1.5s;
 }
 .closebtn {
-  height: 10vw;
-  width: 10vw;
+  width: 2.5em;
   position: absolute;
-  left: 85%;
+  left: 82%;
   transform: rotate(-90deg);
-}
-#wo{
-height: 10vw;
-width: 10vw;
 }
 #dfrnt{
 text-align: center;
@@ -160,11 +152,11 @@ font-weight: 8000;
   align-items: center;
   position: relative;
   left: 20%;
-  margin: 5vw 0 0 0;
+  margin: 3vh 0 0 0;  
   opacity: 0.5;
 }
 .sidtexter a{
-font-size: 12vw;
+font-size: 3em;
 display: inline;
 }
 .sidtexter a:hover{
@@ -217,23 +209,27 @@ background: #5D35B0;
     <script>
 function openNav(){
 document.getElementById("mySidenav").style.width = "80%";
-document.getElementById("wordvar").style.margin = "0 0 0 10%";
+document.getElementById("wordvar").style.position= "relative";
+document.getElementById("wordvar").style.left= "10%";
+document.getElementById("wordvar").style.opacity= "1";
 }
 function closeNav(){
 document.getElementById("mySidenav").style.width = "0";
-document.getElementById("wordvar").style.margin = "0 0 0 -50vw";
+document.getElementById("wordvar").style.position= "relative";
+document.getElementById("wordvar").style.left= "-35%";
+document.getElementById("wordvar").style.opacity= "0";
 }
 </script>
 <script>
 			$(function () {
   count = 0;
-  wordsArray = ["Salut", "Welcome", "bienvenido", "Velkommen"];
+  wordsArray = ["Salut", "Welcome", "Bienvenido", "Velkommen"];
   setInterval(function () {
     count++;
     $("#wordvar").fadeOut(400, function () {
       $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
     });
-  }, 3000);
+  }, 4000);
 });
 </script>
 </body>
