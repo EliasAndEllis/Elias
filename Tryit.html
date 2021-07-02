@@ -248,10 +248,22 @@ background: #5D35B0;
     </script>
     <script>
 function openNav(){
+function myFunction(x) {
+  if (x.matches) { // If media query matches
 document.getElementById("mySidenav").style.width = "70%";
 document.getElementById("wordvar").style.position= "relative";
 document.getElementById("wordvar").style.left= "10%";
 document.getElementById("wordvar").style.opacity= "1";
+  } else {
+document.getElementById("mySidenav").style.width = "20%";
+document.getElementById("wordvar").style.position= "relative";
+document.getElementById("wordvar").style.left= "10%";
+document.getElementById("wordvar").style.opacity= "1";
+  }
+}
+var x = window.matchMedia("(max-width: 500px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction)
 }
 function closeNav(){
 document.getElementById("mySidenav").style.width = "0";
