@@ -14,6 +14,10 @@
 padding: 0;
 margin: 0;
 font-family: 'Karantina', cursive;
+z-index: 0;
+ -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s; 
 }
 a{
 text-decoration: none;
@@ -54,13 +58,18 @@ text-decoration: none;
     transform: rotate(360deg);
   }
 }
-.header{
-padding: 1.5vh 0 1.5vh 0;
-  z-index: 10000;
+#header{
 -ms-box-shadow: 0px 3px 5px #444444;
 -moz-box-shadow: 0px 3px 5px #444444;
 -webkit-box-shadow: 0px 3px 5px #444444;
 box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
+position: fixed;
+background: white;
+width: 100%;
+padding: 1.5vh 0 1.5vh 0;
+  z-index: 1;
+  transition: 1s;
+  top: 0;
 }
 .texter{
   font-weight: 8000;
@@ -74,6 +83,7 @@ box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
   letter-spacing: 0;
   position: relative;
   left: 5%;
+  z-index: 10000000;
 }
 .texter a{
 font-size: 1.5em;
@@ -85,8 +95,8 @@ font-size: 1.5em;
 }
 .li2{
 width: 1.5em;
-   position: fixed;
-  right: 5%;
+position: absolute;
+left: 90%;
 }
 ul{
 display: flex;
@@ -169,6 +179,163 @@ hr{
 border: 0.01vw solid #5D35B0;
 background: #5D35B0;
 }
+.home{
+	overflow:hidden;
+	position: relative;	
+height: 80vh;
+font-size: 1em;
+margin: 5vh 0 0 0;
+}
+
+.home .slide{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	z-index:1; 
+	display:none;
+	padding: 2vh 0 0 7vw;
+	animation: slide 2s ease;
+}
+.home .slide.active{
+	display: flex;
+}
+@keyframes slide{
+	0%{
+		transform:scale(2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.home .container{
+	 flex-grow: 1;
+}
+.home .caption{
+	width: 70%;
+}
+.home .caption h1{
+	font-size: 2em;
+	margin:0;
+color: #fff;
+text-shadow: #0B68F1 -1vw -1vw;
+}
+.home .slide.active .caption h1{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1s;
+}
+.home .caption p{
+	font-size: 1.5em;
+	margin: 1vh 0 1vh 0;
+	color:#fff;
+font-weight: bold;
+text-shadow: #0B68F1 -0.5vw -0.5vw;
+}
+.home .slide.active .caption p{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1.2s;
+font-weight: bold;
+}
+.home .caption a{
+ display: inline-block;
+ padding: 5vh 5vw;
+ background-color: #0B68F1;
+ text-decoration: none;
+ color:#fff;
+font-weight: 700;
+font-size: 1em;
+}
+
+.home .slide.active .caption a{
+	opacity:0;
+	animation: captionText .5s ease forwards;
+	animation-delay:1.4s;
+  border: none;
+  outline: none;
+  padding: 1.5vh 3vw 1.5vh 3vw;
+  border-radius: .3em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.caption a:hover{
+font-size: 1.1em;
+margin: 0 0 0 3vw;
+color: #0B68F1;
+background: #fff;
+}
+@keyframes captionText{
+	0%{
+		opacity:0; transform: translateX(-100px);
+	}
+	100%{
+	 opacity:1; transform: translateX(0px);	
+	}
+}
+
+.home .controls .prev,
+.home .controls .next{
+ position: absolute;
+ z-index:2;
+ top:50%;
+ height: 11.42vw;
+ width: 11.42vw;
+ margin-top: -5.71vw;
+ color: #000;
+ background-color: #fff;
+ text-align: center;
+ line-height: 11.42vw;
+ font-size: 5.71vw;
+ cursor:pointer;
+ transition: all .5s ease;
+}
+.home .controls .prev:hover,
+.home .controls .next:hover{
+	background-color: #000000;
+}
+.home .controls .prev{
+ left:0;
+}
+.home .controls .next{
+ right:0;
+}
+
+.home .indicator{
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	z-index: 2;
+	transform: translateX(-50%);
+}
+
+.home .indicator div{
+	display: inline-block;
+	color: #fff;
+	background-color: #0B68F1;
+	border-radius:50%;
+	text-align: center;
+	line-height: 100%;
+font-size: 1.5em;
+font-weight: bold;
+padding: .5vw 1vh .5vw 1vh;
+margin: 0 1vw 0 0;
+}
+
+.home .indicator div.active{
+ background-color: #fff;
+color: #2C79D3;
+}
+.controls{
+visibility: hidden;
+}
+p{
+font-size: 10vw;
+margin: 10vw;
+}
 </style>
 </head>
 <body id="body">
@@ -176,7 +343,7 @@ background: #5D35B0;
 <div class="ring">
 </div>
 </div>
-<div class="header">
+<div id="header">
 <ul>
 <li spellcheck="true" class="texter" contentediable="true"><a href="#">La marmellata</a></li>
 <li><a onclick="openNav()" href="#"><img class="li2" src="https://img.icons8.com/ios-filled/2048/4a90e2/menu-rounded.png"/></a></li>
@@ -236,6 +403,73 @@ background: #5D35B0;
   </ul>
   </a>
   </div>
+  </div>
+<section class="home">
+     <div class="slider">
+        <div class="slide active" style="background-image: url('https://blacksmith779.github.io/shopping.jpeg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>1.Gagnez un iPhone 12 pro maintenant.</h1>
+                    <p>Jouez au Quiz mondial et gagnez.</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">Jouer</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('https://blacksmith779.github.io/130647965-illustration-new-year-2020-vector-people-tweet-and-have-fun-around-numbers-youth-celebrate-christmas.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>2.Notre Collection 2020</h1>
+                    <p>2020 est une grande année n'est ce pas?!</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                </div>
+            </div>
+        </div>
+
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/lite-01_4_cropped.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>3.Une console Switch lite vous attend.</h1>
+                    <p>Jouez maintenant pour la gagner.</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">Jouez</a>
+                </div>
+            </div>
+        </div>
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/0f75391f-4ad5-498c-ba20-941754553f5c-AP_Election_2020_Trump-Biden.jpeg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>3.Trump Vs Biden, qui gagnera??</h1>
+                    <p>Découvrez les nouveautés des Etats Unis.</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                </div>
+            </div>
+        </div>
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/shopping.jpeg');">
+            <div class="container">
+                <div class="caption">
+                    <h1>5.Iphone 12 pro est disponible.</h1>
+                    <p>Apple lançe son nouveau telephone, l'Iphone 12 pro.</p>
+                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                </div>
+            </div>
+        </div>
+        </div>
+     </div>
+   
+    <!-- controls  -->
+    <div class="controls">
+        <div class="prev"><</div>
+        <div class="next">></div>
+    </div>
+
+    <!-- indicators -->
+    <div class="indicator">
+    </div>
+
+  </section>
+<p>magnis postea eum vituperatoribus qui autem ius minim rhoncus justo eum theophrastus felis aperiri epicurei persecuti fabellas oratio urbanitas epicurei habeo quis ei quas civibus magna error quaestio vel definitiones eloquentiam solet tellus taciti putent invenire vivamus urna cum eripuit graece saepe his quod sententiae libris laoreet blandit venenatis commodo</p>
+
+
   <script>
     const loader = document.querySelector(".loader");
     window.onload = function(){
@@ -246,6 +480,23 @@ background: #5D35B0;
         }, 0);
       },0);
     }
+    </script>
+    <script>
+      var lastScrollTop = 200;
+      var navbar = document.getElementById("header");
+ window.addEventListener("scroll",function()
+      {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          if (scrollTop > lastScrollTop)
+          {
+              navbar.style.top="-15vh";
+          }
+          else
+          {
+              navbar.style.top="0px";
+          }
+          lasScrollTop = scrollTop;
+      });
     </script>
     <script>
 function openNav(){
@@ -326,6 +577,109 @@ document.getElementById("wordvar").style.opacity= "0";
     });
   }, 4500);
 });
+</script>
+<script>
+
+
+ const slides=document.querySelector(".slider").children;
+ const prev=document.querySelector(".prev");
+ const next=document.querySelector(".next");
+ const indicator=document.querySelector(".indicator");
+ let index=0;
+
+
+   prev.addEventListener("click",function(){
+       prevSlide();
+       updateCircleIndicator(); 
+       resetTimer();
+   })
+
+   next.addEventListener("click",function(){
+      nextSlide(); 
+      updateCircleIndicator();
+      resetTimer();
+      
+   })
+
+   // create circle indicators
+    function circleIndicator(){
+        for(let i=0; i< slides.length; i++){
+        	const div=document.createElement("div");
+        	      div.innerHTML=i+1;
+                div.setAttribute("onclick","indicateSlide(this)")
+                div.id=i;
+                if(i==0){
+                	div.className="active";
+                }
+               indicator.appendChild(div);
+        }
+    }
+    circleIndicator();
+
+    function indicateSlide(element){
+         index=element.id;
+         changeSlide();
+         updateCircleIndicator();
+         resetTimer();
+    }
+     
+    function updateCircleIndicator(){
+    	for(let i=0; i<indicator.children.length; i++){
+    		indicator.children[i].classList.remove("active");
+    	}
+    	indicator.children[index].classList.add("active");
+    }
+
+   function prevSlide(){
+   	 if(index==0){
+   	 	index=slides.length-1;
+   	 }
+   	 else{
+   	 	index--;
+   	 }
+   	 changeSlide();
+   }
+
+   function nextSlide(){
+      if(index==slides.length-1){
+      	index=0;
+      }
+      else{
+      	index++;
+      }
+      changeSlide();
+   }
+
+   function changeSlide(){
+   	       for(let i=0; i<slides.length; i++){
+   	       	 slides[i].classList.remove("active");
+   	       }
+
+       slides[index].classList.add("active");
+   }
+
+   function resetTimer(){
+   	  // when click to indicator or controls button 
+   	  // stop timer 
+   	  clearInterval(timer);
+   	  // then started again timer
+   	  timer=setInterval(autoPlay,4000);
+   }
+ 
+  
+  function autoPlay(){
+      nextSlide();
+      updateCircleIndicator();
+  }
+
+  let timer=setInterval(autoPlay,6000);
+
+
+ 
+
+
+
+
 </script>
 </body>
 </html>
