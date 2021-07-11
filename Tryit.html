@@ -15,9 +15,6 @@ padding: 0;
 margin: 0;
 font-family: 'Karantina', cursive;
 z-index: 0;
- -webkit-transition: 2s;
-  -o-transition: 2s;
-  transition: 2s; 
 }
 a{
 text-decoration: none;
@@ -197,7 +194,7 @@ margin: 5vh 0 0 0;
 	background-position: center;
 	z-index:1; 
 	display:none;
-	padding: 2vh 0 0 7vw;
+	padding: 10% 0 0 7vw;
 	animation: slide 2s ease;
 }
 .home .slide.active{
@@ -215,13 +212,13 @@ margin: 5vh 0 0 0;
 	 flex-grow: 1;
 }
 .home .caption{
-	width: 70%;
+	width: 80%;
 }
 .home .caption h1{
-	font-size: 2em;
+	font-size: 2.5em;
 	margin:0;
-color: #fff;
-text-shadow: #0B68F1 -1vw -1vw;
+color: #301B92;
+text-shadow: #9576CD -.5vh -.5vw;
 }
 .home .slide.active .caption h1{
 	opacity:0;
@@ -229,11 +226,10 @@ text-shadow: #0B68F1 -1vw -1vw;
 	animation-delay:1s;
 }
 .home .caption p{
-	font-size: 1.5em;
-	margin: 1vh 0 1vh 0;
-	color:#fff;
-font-weight: bold;
-text-shadow: #0B68F1 -0.5vw -0.5vw;
+	font-size: 2em;
+	margin: 2vh 0 2vh 0;
+color: #301B92;
+text-shadow: #9576CD -.5vh -.5vw;
 }
 .home .slide.active .caption p{
 	opacity:0;
@@ -243,12 +239,10 @@ font-weight: bold;
 }
 .home .caption a{
  display: inline-block;
- padding: 5vh 5vw;
- background-color: #0B68F1;
+ background-color: #301B92;
  text-decoration: none;
- color:#fff;
-font-weight: 700;
-font-size: 1em;
+ color:#9576CD;
+font-size: 1.5em;
 }
 
 .home .slide.active .caption a{
@@ -257,15 +251,15 @@ font-size: 1em;
 	animation-delay:1.4s;
   border: none;
   outline: none;
-  padding: 1.5vh 3vw 1.5vh 3vw;
+  padding: 1vh 1vw;
   border-radius: .3em;
   cursor: pointer;
   transition: 0.5s;
 }
 .caption a:hover{
-font-size: 1.1em;
+font-size: 1.6em;
 margin: 0 0 0 3vw;
-color: #0B68F1;
+color: #301B92;
 background: #fff;
 }
 @keyframes captionText{
@@ -306,28 +300,27 @@ background: #fff;
 
 .home .indicator{
 	position: absolute;
-	bottom: 5%;
-	left: 50%;
+	bottom: 7.5%;
+	left: 46%;
 	z-index: 2;
 	transform: translateX(-50%);
 }
 
 .home .indicator div{
-	display: inline-block;
+	display: inline;
 	color: #fff;
-	background-color: #0B68F1;
+	background-color: #9576CD;
 	border-radius:50%;
 	text-align: center;
-	line-height: 100%;
-font-size: 1.5em;
+font-size: 1.3em;
 font-weight: bold;
-padding: .5vw 1vh .5vw 1vh;
-margin: 0 1vw 0 0;
+padding: 10% 12.5%;
+margin: 0 .5vw 0 0;
 }
 
 .home .indicator div.active{
- background-color: #fff;
-color: #2C79D3;
+ background-color: #301B92;
+color: #9576CD;
 }
 .controls{
 visibility: hidden;
