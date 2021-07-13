@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>La marmellata</title>
+<title>La marmellata - Buy & Sell Digitals</title>
+<meta name="description" content="Buy or Sell digital accounts ranging from games, music & streaming accounts.">
+  <meta name="keywords" content="FIFA, GAMES, DIGITAL, ACCOUNTS, BUY ACCOUNTS, SELL ACCOUNTS, NETFLIX, SPOTIFY">
+  <meta name="author" content="Elias E.">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Karantina&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/2048/000000/jam.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/2048/000000/jam.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/2048/000000/jam.png">
+<link rel="manifest" href="/site.webmanifest">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-916M0NXERP"></script>
 <script>
@@ -18,19 +30,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5PF3L7L');</script>
 <!-- End Google Tag Manager -->
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="HandheldFriendly" content="true">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karantina&display=swap" rel="stylesheet">
 <style>	
 *{
 padding: 0;
 margin: 0;
 font-family: 'Karantina', cursive;
 z-index: 0;
+}
+bod{
+background: #252669;
+color: #1F2120;
 }
 a{
 text-decoration: none;
@@ -42,14 +51,14 @@ text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #051B6D;
+  background: #fff;
   transition: all 0.5s;
   z-index: 100000;
 }
 .loader .ring{
   height: 45px;
   width: 45px;
-  border: 5px solid grey;
+  border: 5px solid gray;
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -77,26 +86,29 @@ text-decoration: none;
 -webkit-box-shadow: 0px 3px 5px #444444;
 box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
 position: fixed;
-background: white;
-width: 100%;
-padding: 1.5vh 0 1.5vh 0;
+right: 10%;
+top: 2%;
+background: #FAE62D;
+width: 80%;
+padding: 2vh 0 2vh 0;
   z-index: 1;
   transition: 1s;
-  top: 0;
+border-radius: 1vw;
 }
 .texter{
   font-weight: 8000;
   outline: none;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background: #00C284;
+  linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
   background-size: 500%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   animation: animate 10s linear infinite;
-  letter-spacing: 0;
+  letter-spacing: 0;  
+  z-index: 1000000;
   position: relative;
-  left: 5%;
-  z-index: 10000000;
+left: 2%;
 }
 .texter a{
 font-size: 1.5em;
@@ -109,7 +121,8 @@ font-size: 1.5em;
 .li2{
 width: 1.5em;
 position: absolute;
-left: 90%;
+right: 3%;
+opacity: 0;
 }
 ul{
 display: flex;
@@ -122,13 +135,17 @@ display: flex;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #301B92;
+  background-color: #00C284;
   overflow-x: hidden;
   transition: 0.6s;
 z-index: 500;
 }
+hr{
+border: .05em solid #FAE62B;
+background: #FAE62B;
+}
 .brnch a{
-text-decoration: none;
+text-decoration: underline;
   font-size: 2em;
   color: #fff;
   display: block;
@@ -136,14 +153,14 @@ text-decoration: none;
   padding: 2vh 0 2vh 10%;
 }
 .brnch a:hover{
-background: #5D35B0;
-  color: #9576CD;
+background: #FAE62B;
+  color: #171414;
 }
 .brnch ul{
     list-style: none;
 }
 .brnch li{
-    display: inline;
+    display: block;
 }
 .brnch img{
 width: .5em;
@@ -169,6 +186,9 @@ transition: 1.5s;
   width: 2em;
   position: absolute;
 left: 84%;
+top: 0;
+background: #FAE62B;
+padding: 3.4vw;
 }
 #dfrnt{
 text-align: center;
@@ -188,16 +208,11 @@ position: relative;
 .sidtexter a:hover{
 background: transparent;
 }
-hr{
-border: 0.01vw solid #5D35B0;
-background: #5D35B0;
-}
 .home{
 	overflow:hidden;
 	position: relative;	
-height: 80vh;
+height: 90vh;
 font-size: 1em;
-margin: 5vh 0 0 0;
 }
 
 .home .slide{
@@ -228,13 +243,24 @@ margin: 5vh 0 0 0;
 	 flex-grow: 1;
 }
 .home .caption{
-	width: 80%;
+	width: 90%;
 }
 .home .caption h1{
 	font-size: 2.5em;
-	margin:0;
-color: #301B92;
-text-shadow: #9576CD -.5vh -.5vw;
+	margin: 10vh 0 0 0;
+color: #F5F5F5;
+text-shaow: #CA153D -1vh -2vw;
+letter-spacing: .3vw;
+}
+@media screen and (min-width: 1099px) {
+   .home .caption h1{
+	margin: 0 0 0 0;
+}
+}
+media screen and (min-width: 1299px) {
+   .home .caption h1{
+	margin: -25% 0 0 0;
+}
 }
 .home .slide.active .caption h1{
 	opacity:0;
@@ -244,8 +270,9 @@ text-shadow: #9576CD -.5vh -.5vw;
 .home .caption p{
 	font-size: 2em;
 	margin: 2vh 0 2vh 0;
-color: #301B92;
-text-shadow: #9576CD -.5vh -.5vw;
+color: #1F2120;
+text-shaow: #CA153D -1vh -2vw;
+letter-spacing: .3vw;
 }
 .home .slide.active .caption p{
 	opacity:0;
@@ -255,9 +282,9 @@ font-weight: bold;
 }
 .home .caption a{
  display: inline-block;
- background-color: #301B92;
+ background-color: #F5F5F5;
  text-decoration: none;
- color:#9576CD;
+ color: #1F2120;
 font-size: 1.5em;
 }
 
@@ -273,10 +300,8 @@ font-size: 1.5em;
   transition: 0.5s;
 }
 .caption a:hover{
-font-size: 1.6em;
-margin: 0 0 0 3vw;
-color: #301B92;
-background: #fff;
+color: #F5F5F5;
+background: #1F2120;
 }
 @keyframes captionText{
 	0%{
@@ -325,7 +350,7 @@ background: #fff;
 .home .indicator div{
 	display: inline;
 	color: #fff;
-	background-color: #9576CD;
+	background-color: #CA153D;
 	border-radius:50%;
 	text-align: center;
 font-size: 1.3em;
@@ -335,8 +360,8 @@ margin: 0 .5vw 0 0;
 }
 
 .home .indicator div.active{
- background-color: #301B92;
-color: #9576CD;
+ background-color: #9A0000;
+color: #CA153D;
 }
 .controls{
 visibility: hidden;
@@ -371,65 +396,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="brnch">
   <a href="#">
   <ul>
-<li id="m1">La marmellata</li>
-<li><img id="i1" src="https://img.icons8.com/ios-filled/2048/ffffff/expand-arrow.png"/></li>
+<li id="m1">What's poppin'?</li>
   </ul>
   </a>
   </div>
   <div class="brnch">
   <a href="#">
   <ul>
-<li id="m2">La marmellata</li>
-<li><img id="i2" src="https://img.icons8.com/ios-filled/2048/ffffff/expand-arrow.png"/></li>
+<li id="m2">Shop</li>
   </ul>
   </a>
   </div>
     <div class="brnch">
   <a href="#">
   <ul>
-<li id="m3">La marmellata</li>
-<li><img id="i3" src="https://img.icons8.com/ios-filled/2048/ffffff/expand-arrow.png"/></li>
+<li id="m3">Sell</li>
   </ul>
   </a>
   </div>
   <div class="brnch">
   <a href="#">
   <ul>
-<li id="m4">La marmellata</li>
-<li><img id="i4" src="https://img.icons8.com/ios-filled/2048/ffffff/expand-arrow.png"/></li>
+<li id="m4">Gift cards</li>
   </ul>
   </a>
   </div>
     <div class="brnch">
   <a href="#">
   <ul>
-<li id="m5">La marmellata</li>
-<li><img id="i5" src="https://img.icons8.com/ios-filled/2048/ffffff/expand-arrow.png"/></li>
+<li id="m5">About</li>
   </ul>
   </a>
   </div>
   <div class="brnch">
   <a href="#">
   <ul>
-<li id="m6">La marmellata</li>
-<li><img id="i6" src="https://img.icons8.com/ios-filled/2048/ffffff/expand-arrow.png"/></li>
+<li id="m6">Terms of use</li>
   </ul>
   </a>
   </div>
   </div>
 <section class="home">
      <div class="slider">
-        <div class="slide active" style="background-image: url('https://blacksmith779.github.io/shopping.jpeg')">
+        <div class="slide active" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg')">
             <div class="container">
                 <div class="caption">
                     <h1>1.Gagnez un iPhone 12 pro maintenant.</h1>
                     <p>Jouez au Quiz mondial et gagnez.</p>
-                    <a href="https://blacksmith779.github.io/pages/Wheel.html">Jouer</a>
+                    <a href="#">Try it now!</a>
                 </div>
             </div>
         </div>
 
-        <div class="slide" style="background-image: url('https://blacksmith779.github.io/130647965-illustration-new-year-2020-vector-people-tweet-and-have-fun-around-numbers-youth-celebrate-christmas.jpg')">
+        <div class="slide" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg')">
             <div class="container">
                 <div class="caption">
                     <h1>2.Notre Collection 2020</h1>
@@ -439,7 +458,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
 
-<div class="slide" style="background-image: url('https://blacksmith779.github.io/lite-01_4_cropped.jpg')">
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg')">
             <div class="container">
                 <div class="caption">
                     <h1>3.Une console Switch lite vous attend.</h1>
@@ -448,7 +467,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
-<div class="slide" style="background-image: url('https://blacksmith779.github.io/0f75391f-4ad5-498c-ba20-941754553f5c-AP_Election_2020_Trump-Biden.jpeg')">
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg')">
             <div class="container">
                 <div class="caption">
                     <h1>3.Trump Vs Biden, qui gagnera??</h1>
@@ -457,7 +476,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
-<div class="slide" style="background-image: url('https://blacksmith779.github.io/shopping.jpeg');">
+<div class="slide" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg');">
             <div class="container">
                 <div class="caption">
                     <h1>5.Iphone 12 pro est disponible.</h1>
@@ -506,16 +525,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           }
           else
           {
-              navbar.style.top="0px";
+              navbar.style.top="2%";
           }
           lasScrollTop = scrollTop;
       });
     </script>
+    
+    
+    
+<script>
+function mata(x) {
+  if (x.matches) { // If media query matches
+document.getElementById("mySidenav").style.width = "70%";
+  } else {  
+  }
+}
+var x = window.matchMedia("(min-width: 1100px)")
+mata(x) // Call listener function at run time
+x.addListener(mata)
+</script>
+
+
+
     <script>
 function openNav(){
 function myFunction(x) {
   if (x.matches) { // If media query matches
-document.getElementById("mySidenav").style.width = "70%";
+document.getElementById("mySidenav").style.width = "100%";
 document.getElementById("wordvar").style.position= "relative";
 document.getElementById("wordvar").style.left= "10%";
 document.getElementById("wordvar").style.opacity= "1";
@@ -537,29 +573,11 @@ document.getElementById("closebtn").style.width= "1em";
 document.getElementById("closebtn").style.left= "86%";
 document.getElementById("dwordvar").style.padding= "1.5vh 0 1.5vh 0";
 document.getElementById("m1").style.fontSize= ".6em";
-document.getElementById("i1").style.margin= ".2em 0 0 0";
-document.getElementById("i1").style.left= "90%";
-document.getElementById("i1").style.width= ".3em";
 document.getElementById("m2").style.fontSize= ".6em";
-document.getElementById("i2").style.margin= ".2em 0 0 0";
-document.getElementById("i2").style.left= "90%";
-document.getElementById("i2").style.width= ".3em";
 document.getElementById("m3").style.fontSize= ".6em";
-document.getElementById("i3").style.margin= ".2em 0 0 0";
-document.getElementById("i3").style.left= "90%";
-document.getElementById("i3").style.width= ".3em";
 document.getElementById("m4").style.fontSize= ".6em";
-document.getElementById("i4").style.margin= ".2em 0 0 0";
-document.getElementById("i4").style.left= "90%";
-document.getElementById("i4").style.width= ".3em";
 document.getElementById("m5").style.fontSize= ".6em";
-document.getElementById("i5").style.margin= ".2em 0 0 0";
-document.getElementById("i5").style.left= "90%";
-document.getElementById("i5").style.width= ".3em";
 document.getElementById("m6").style.fontSize= ".6em";
-document.getElementById("i6").style.margin= ".2em 0 0 0";
-document.getElementById("i6").style.left= "90%";
-document.getElementById("i6").style.width= ".3em";
   } else {
 document.getElementById("wordvar").style.fontSize= "2em";
 document.getElementById("closebtn").style.width= "2em";
