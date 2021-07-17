@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>La marmellata - Buy & Sell Digitals</title>
+<title>Beaver - Home - Buy & Sell Digitals</title>
 <meta name="description" content="Buy or Sell digital accounts ranging from games, music & streaming accounts.">
-  <meta name="keywords" content="FIFA, GAMES, DIGITAL, ACCOUNTS, BUY ACCOUNTS, SELL ACCOUNTS, NETFLIX, SPOTIFY">
+  <meta name="keywords" content="HOME, FIFA, GAMES, DIGITAL, ACCOUNTS, BUY ACCOUNTS, SELL ACCOUNTS, NETFLIX, SPOTIFY">
   <meta name="author" content="Elias E.">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Karantina&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/2048/000000/jam.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/2048/000000/jam.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/2048/000000/jam.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://blacksmith779.github.io/5a6f0ec2ab538104d4a30e5a.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blacksmith779.github.io/5a6f0ec2ab538104d4a30e5a.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blacksmith779.github.io/5a6f0ec2ab538104d4a30e5a.png">
 <link rel="manifest" href="/site.webmanifest">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-916M0NXERP"></script>
@@ -37,12 +38,13 @@ margin: 0;
 font-family: 'Karantina', cursive;
 z-index: 0;
 }
-bod{
-background: #252669;
-color: #1F2120;
+body{
+background: #13148E;
+color: #4B52B2;
 }
 a{
 text-decoration: none;
+color: #6E7AC2;
 }
 .loader{
   position: fixed;
@@ -51,14 +53,14 @@ text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: #4B52B2;
   transition: all 0.5s;
-  z-index: 100000;
+  z-index: 1000000000000;
 }
 .loader .ring{
-  height: 45px;
-  width: 45px;
-  border: 5px solid gray;
+  height: 3em;
+  width: 3em;
+  border: .2em solid #FDFDFB;
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -71,7 +73,7 @@ text-decoration: none;
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: .3em solid #13138D;
   border-top-color: transparent;
   animation: rotate 1.5s linear infinite;
 }
@@ -84,34 +86,35 @@ text-decoration: none;
 -ms-box-shadow: 0px 3px 5px #444444;
 -moz-box-shadow: 0px 3px 5px #444444;
 -webkit-box-shadow: 0px 3px 5px #444444;
-box-shadow: 0vw 3vw 6vw 0.5vw rgba(0,0,0,0.2);
+box-shadow: 0 .8em 1em 0 #444444;
 position: fixed;
 right: 10%;
 top: 2%;
-background: #FAE62D;
+background: #6E7AC3;
 width: 80%;
-padding: 2vh 0 2vh 0;
+padding: .6em 0 .6em 0;
   z-index: 1;
   transition: 1s;
-border-radius: 1vw;
+border-radius: .3em;
 }
 .texter{
   font-weight: 8000;
   outline: none;
   text-transform: uppercase;
-  background: #00C284;
+  background: #FDFDFB;
   linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
   background-size: 500%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   animation: animate 10s linear infinite;
-  letter-spacing: 0;  
+  letter-spacing: .1em;  
   z-index: 1000000;
   position: relative;
-left: 2%;
+left: 7%;
 }
 .texter a{
-font-size: 1.5em;
+font-size: 1.6em;
+font-weight: 600;
 }
 @keyframes animate {
   to{
@@ -119,14 +122,45 @@ font-size: 1.5em;
   }
 }
 .li2{
-width: 1.5em;
+width: 1.6em;
 position: absolute;
-right: 3%;
-opacity: 0;
+right: 7%;
 }
 ul{
 display: flex;
     list-style: none;
+}
+.bg{
+    width: 100%;
+}
+#backtotop{
+    z-index: 1000000000000;
+    display: inline-block;
+    position: fixed;
+    visibility: hidden;
+    bottom: 4%;
+    right: 4%;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 0;
+    font-size: 1em;
+    text-align: center;
+    opacity: .2;
+}
+
+#backtotop.visible{
+    visibility: visible;
+    opacity: .5;
+    background: #24DB1E;
+}
+
+#backtotop:hover{
+    opacity: 1;
+    background: #24DB1E;
+}
+#cktop{
+width: 2.2em;
+padding: .39em 0 0 0;
 }
 .sidenav {
   height: 100%;
@@ -135,26 +169,29 @@ display: flex;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #00C284;
+  background-color: #FDFDFB;
   overflow-x: hidden;
   transition: 0.6s;
 z-index: 500;
 }
 hr{
-border: .05em solid #FAE62B;
-background: #FAE62B;
+border: .07em solid #6E7AC3;
+background: #6E7AC3;
+width: 100%;
 }
 .brnch a{
 text-decoration: underline;
   font-size: 2em;
-  color: #fff;
+  color: #14148C;
   display: block;
-  transition: 0.8s;
-  padding: 2vh 0 2vh 10%;
+  transition: 0.4s;
+  padding: .5em 0 .5em 1em;
+  width: 100%;
 }
 .brnch a:hover{
-background: #FAE62B;
-  color: #171414;
+background: #6E7AC3;
+  color: #FDFDFB;
+  width: 100%;
 }
 .brnch ul{
     list-style: none;
@@ -162,16 +199,12 @@ background: #FAE62B;
 .brnch li{
     display: block;
 }
-.brnch img{
-width: .5em;
-position: absolute;
-left: 90%;
-margin: .3em 0 0 0;
-}
 #dwordvar{
 display: flex;
-padding: 2vh 0 2vh 0;
+padding: .5em 0 .5em 1em;
 transition: 1s;
+background: #14148D;
+width: 100%;
 }
 #wordvar{
 padding: 0;
@@ -185,28 +218,24 @@ transition: 1.5s;
 #closebtn {
   width: 2em;
   position: absolute;
-left: 84%;
-top: 0;
-background: #FAE62B;
-padding: 3.4vw;
+left: 90%;
+top: 2%;
+margin: 0;
+}
+@media screen and (min-width: 699px) {
+#closebtn {
+  position: absolute;
+left: 86%;
+}
+}
+@media screen and (min-width: 1100px) {
+#closebtn {
+  position: absolute;
+left: 90%;
+}
 }
 #dfrnt{
 text-align: center;
-}
-.sidtexter{
-font-weight: 8000;
-  outline: none;
-  text-transform: uppercase;
-  opacity: 0.5;
-}
-.sidtexter a{
-font-size: 3em;
-display: inline;
-position: relative;
-  left: 15vw;
-}
-.sidtexter a:hover{
-background: transparent;
 }
 .home{
 	overflow:hidden;
@@ -214,7 +243,6 @@ background: transparent;
 height: 90vh;
 font-size: 1em;
 }
-
 .home .slide{
 	position: absolute;
 	left:0;
@@ -225,8 +253,18 @@ font-size: 1em;
 	background-position: center;
 	z-index:1; 
 	display:none;
-	padding: 10% 0 0 7vw;
+	padding: 7em 0 0 2em;
 	animation: slide 2s ease;
+}
+@media screen and (min-width: 699px) {
+.home .slide{
+	padding: 7em 0 0 15%;
+}
+}
+@media screen and (max-width: 364px) {
+.home .slide{
+	padding: 5.5em 0 0 7vw;
+}
 }
 .home .slide.active{
 	display: flex;
@@ -247,20 +285,9 @@ font-size: 1em;
 }
 .home .caption h1{
 	font-size: 2.5em;
-	margin: 10vh 0 0 0;
-color: #F5F5F5;
-text-shaow: #CA153D -1vh -2vw;
-letter-spacing: .3vw;
-}
-@media screen and (min-width: 1099px) {
-   .home .caption h1{
-	margin: 0 0 0 0;
-}
-}
-media screen and (min-width: 1299px) {
-   .home .caption h1{
-	margin: -25% 0 0 0;
-}
+color: #C1D3EC;
+text-shadow: #fff -.06em -.06em;
+letter-spacing: .07em;
 }
 .home .slide.active .caption h1{
 	opacity:0;
@@ -269,10 +296,10 @@ media screen and (min-width: 1299px) {
 }
 .home .caption p{
 	font-size: 2em;
-	margin: 2vh 0 2vh 0;
-color: #1F2120;
-text-shaow: #CA153D -1vh -2vw;
-letter-spacing: .3vw;
+	margin: .4em 0 .3em 0;
+color: #C1D3EC;
+text-shadow: #fff -.06em -.06em;
+letter-spacing: .07em;
 }
 .home .slide.active .caption p{
 	opacity:0;
@@ -282,9 +309,9 @@ font-weight: bold;
 }
 .home .caption a{
  display: inline-block;
- background-color: #F5F5F5;
+ background-color: #C1D3EC;
  text-decoration: none;
- color: #1F2120;
+ color: #fff;
 font-size: 1.5em;
 }
 
@@ -294,14 +321,14 @@ font-size: 1.5em;
 	animation-delay:1.4s;
   border: none;
   outline: none;
-  padding: 1vh 1vw;
+  padding: .3em;
   border-radius: .3em;
   cursor: pointer;
   transition: 0.5s;
 }
 .caption a:hover{
-color: #F5F5F5;
-background: #1F2120;
+color: #C1D3EC;
+background: #fff;
 }
 @keyframes captionText{
 	0%{
@@ -311,69 +338,73 @@ background: #1F2120;
 	 opacity:1; transform: translateX(0px);	
 	}
 }
-
-.home .controls .prev,
-.home .controls .next{
- position: absolute;
- z-index:2;
- top:50%;
- height: 11.42vw;
- width: 11.42vw;
- margin-top: -5.71vw;
- color: #000;
- background-color: #fff;
- text-align: center;
- line-height: 11.42vw;
- font-size: 5.71vw;
- cursor:pointer;
- transition: all .5s ease;
-}
-.home .controls .prev:hover,
-.home .controls .next:hover{
-	background-color: #000000;
-}
-.home .controls .prev{
- left:0;
-}
-.home .controls .next{
- right:0;
-}
-
 .home .indicator{
 	position: absolute;
 	bottom: 7.5%;
-	left: 46%;
+	left: 45%;
 	z-index: 2;
 	transform: translateX(-50%);
 }
-
 .home .indicator div{
 	display: inline;
 	color: #fff;
-	background-color: #CA153D;
-	border-radius:50%;
+	background-color: #C1D3EC;
+	border-radius: 50%;
 	text-align: center;
-font-size: 1.3em;
-font-weight: bold;
+font-size: 1.5em;
+font-weight: bolder;
 padding: 10% 12.5%;
 margin: 0 .5vw 0 0;
 }
-
 .home .indicator div.active{
- background-color: #9A0000;
-color: #CA153D;
+ background-color: #13148E;
+color: #4B52B2;
 }
-.controls{
-visibility: hidden;
+#pquote p{
+font-size: 1.7em;
+text-align: left;
+margin: 1em 1.5em .33em .5em;
+border-left: .25em solid #6E7AC2;
+padding: 0 0 0 2%;
+color: #FDFDFB;
 }
-p{
-font-size: 10vw;
-margin: 10vw;
+@media screen and (min-width: 600px) {
+#pquote p{
+position: absolute;
+left: 25%;
+margin: 1em 5em .33em 0;
+}
+}
+@media screen and (min-width: 1200px) {
+#pquote p{
+position: absolute;
+left: 40%;
+margin: 1em 35% .33em 0;
+}
+}
+b{
+color: #6E7AC2;
+font-weight: bolder;
+}
+i{
+font-size: .9em;
+color: #FDFDFB;
+position: relative;
+left: 60%;
+}
+@media screen and (min-width: 1200px) {
+i{
+position: relative;
+left: 30%;
+}
+}
+i:before{
+content: '-';
 }
 </style>
 </head>
 <body id="body">
-<!-- Google Tag Manager (noscript) -->
+				<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF3L7L"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -383,10 +414,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div id="header">
 <ul>
-<li spellcheck="true" class="texter" contentediable="true"><a href="#">La marmellata</a></li>
-<li><a onclick="openNav()" href="#"><img class="li2" src="https://img.icons8.com/ios-filled/2048/4a90e2/menu-rounded.png"/></a></li>
+<li spellcheck="true" class="texter" contentediable="true"><a href="#">Beaver</a></li>
+<li><a onclick="openNav()" href="#"><img class="li2" src="https://img.icons8.com/ios-filled/2048/ffffff/menu--v1.png"/></a></li>
 </ul>
 </div>
+<div class="bg"></div>
+<a id="backtotop">
+<img id="cktop" src="file:///storage/emulated/0/Download/5a6f0ec2ab538104d4a30e5a.png"></img>
+</a>
 <div id="mySidenav" class="sidenav">
 				<div id="dwordvar">
 				<span id="wordvar">Ciao</span>
@@ -438,7 +473,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 <section class="home">
      <div class="slider">
-        <div class="slide active" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg')">
+        <div class="slide active" style="background-image: url('file:///storage/emulated/0/Download/canadian-flag-%E2%81%B8eview.jpg')">
             <div class="container">
                 <div class="caption">
                     <h1>1.Gagnez un iPhone 12 pro maintenant.</h1>
@@ -448,40 +483,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
 
-        <div class="slide" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg')">
+        <div class="slide" style="background-image: url('file:///storage/emulated/0/Download/canadian-flag-%E2%81%B8eview.jpg')">
             <div class="container">
                 <div class="caption">
                     <h1>2.Notre Collection 2020</h1>
                     <p>2020 est une grande année n'est ce pas?!</p>
-                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                    <a href="#">lire la suite</a>
                 </div>
             </div>
         </div>
 
-<div class="slide" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg')">
+<div class="slide" style="background-image: url('file:///storage/emulated/0/Download/canadian-flag-%E2%81%B8eview.jpg')">
             <div class="container">
                 <div class="caption">
                     <h1>3.Une console Switch lite vous attend.</h1>
                     <p>Jouez maintenant pour la gagner.</p>
-                    <a href="https://blacksmith779.github.io/pages/Wheel.html">Jouez</a>
+                    <a href="#">Jouez</a>
                 </div>
             </div>
         </div>
-<div class="slide" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg')">
+<div class="slide" style="background-image: url('file:///storage/emulated/0/Download/canadian-flag-%E2%81%B8eview.jpg')">
             <div class="container">
                 <div class="caption">
                     <h1>3.Trump Vs Biden, qui gagnera??</h1>
                     <p>Découvrez les nouveautés des Etats Unis.</p>
-                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                    <a href="#">lire la suite</a>
                 </div>
             </div>
         </div>
-<div class="slide" style="background-image: url('https://blacksmith779.github.io/wp9188326-desktop-summer-pattern-wallpapers.jpg');">
+<div class="slide" style="background-image: url('file:///storage/emulated/0/Download/canadian-flag-%E2%81%B8eview.jpg');">
             <div class="container">
                 <div class="caption">
                     <h1>5.Iphone 12 pro est disponible.</h1>
                     <p>Apple lançe son nouveau telephone, l'Iphone 12 pro.</p>
-                    <a href="https://blacksmith779.github.io/pages/Wheel.html">lire la suite</a>
+                    <a href="#">lire la suite</a>
                 </div>
             </div>
         </div>
@@ -495,24 +530,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- indicators -->
-    <div class="indicator">
-    </div>
+    <a class="indicator">
+    </a>
 
   </section>
-<p>magnis postea eum vituperatoribus qui autem ius minim rhoncus justo eum theophrastus felis aperiri epicurei persecuti fabellas oratio urbanitas epicurei habeo quis ei quas civibus magna error quaestio vel definitiones eloquentiam solet tellus taciti putent invenire vivamus urna cum eripuit graece saepe his quod sententiae libris laoreet blandit venenatis commodo</p>
+<section>
+				<blockquote id="pquote">
+<p>
+Cheers, I am Elias<b>.</b>
+<br>
+Our job is to make the digital market superb in the eyes of our costumers<b>.</b>
+<br>
+People from all over the world can visit our site via <a href="#">a specific link</a>, to find whatever they are looking for<b>.</b>
+<br>
+Our products vary by type, price and source, and we assure you that they are of quality<b>.</b>
+<br>
+Here you will find all sorts of digitals ranging from accounts, games, tools and much more<b>.</b>
+<br>
+Enjoy your times with us<b>.</b>
+<br>
+Sincerely<b>.</b><i>Elias</i>
+</p>
+</blockquote>
+</section>
 
 
   <script>
     const loader = document.querySelector(".loader");
     window.onload = function(){
       setTimeout(function(){
-        loader.style.opacity = "0";
+        loader.style.opacity = "0";  
         setTimeout(function(){
           loader.style.display = "none";
+<!-- how to stop scrolling while the loader is turning around -->
+
         }, 0);
       },0);
     }
     </script>
+<script>
+				jQuery("#backtotop").click(function(){
+	jQuery("body,html").animate({
+		scrollTop:0
+	},600);
+});
+
+jQuery(window).scroll(function(){
+	if(jQuery(window).scrollTop() > 150)
+	{
+		jQuery("#backtotop").addClass("visible");
+	}
+	else
+	{
+		jQuery("#backtotop").removeClass("visible");
+	}
+});
+      
+</script>
     <script>
       var lastScrollTop = 200;
       var navbar = document.getElementById("header");
@@ -530,24 +604,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           lasScrollTop = scrollTop;
       });
     </script>
-    
-    
-    
 <script>
-function mata(x) {
-  if (x.matches) { // If media query matches
-document.getElementById("mySidenav").style.width = "70%";
-  } else {  
-  }
-}
-var x = window.matchMedia("(min-width: 1100px)")
-mata(x) // Call listener function at run time
-x.addListener(mata)
-</script>
-
-
-
-    <script>
 function openNav(){
 function myFunction(x) {
   if (x.matches) { // If media query matches
@@ -568,10 +625,11 @@ x.addListener(myFunction)
 
 function due(y) {
   if (y.matches) { // If media query matches
-document.getElementById("wordvar").style.fontSize= "1em";
-document.getElementById("closebtn").style.width= "1em";
-document.getElementById("closebtn").style.left= "86%";
-document.getElementById("dwordvar").style.padding= "1.5vh 0 1.5vh 0";
+document.getElementById("wordvar").style.fontSize= "1.6em";
+document.getElementById("closebtn").style.width= "1.6em";
+document.getElementById("closebtn").style.left= "80%";
+document.getElementById("closebtn").style.top= "4%";
+document.getElementById("dwordvar").style.padding= "1em 0 1em 0";
 document.getElementById("m1").style.fontSize= ".6em";
 document.getElementById("m2").style.fontSize= ".6em";
 document.getElementById("m3").style.fontSize= ".6em";
@@ -588,6 +646,15 @@ var y = window.matchMedia('(min-width: 500px) and (max-width: 601px)');
 due(y) // Call listener function at run time
 y.addListener(due)
 
+function mata(z) {
+  if (z.matches) { // If media query matches
+document.getElementById("mySidenav").style.width = "70%";
+  } else{
+  }
+}
+var z = window.matchMedia("(min-width: 1100px)")
+mata(z) // Call listener function at run time
+z.addListener(mata)
 }
 
 function closeNav(){
@@ -614,7 +681,7 @@ document.getElementById("wordvar").style.opacity= "0";
 
  const slides=document.querySelector(".slider").children;
  const prev=document.querySelector(".prev");
- const next=document.querySelector(".next");
+ const next=document.querySelector(".next"); 
  const indicator=document.querySelector(".indicator");
  let index=0;
 
@@ -630,7 +697,7 @@ document.getElementById("wordvar").style.opacity= "0";
       updateCircleIndicator();
       resetTimer();
       
-   })
+   })				
 
    // create circle indicators
     function circleIndicator(){
@@ -704,13 +771,6 @@ document.getElementById("wordvar").style.opacity= "0";
   }
 
   let timer=setInterval(autoPlay,6000);
-
-
- 
-
-
-
-
 </script>
 </body>
 </html>
