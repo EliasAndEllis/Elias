@@ -292,18 +292,6 @@ left: 90%;
 top: 3%;
 margin: 0;
 }
-@media screen and (min-width: 699px) {
-#closebtn {
-  position: absolute;
-left: 86%;
-}
-}
-@media screen and (min-width: 1100px) {
-#closebtn {
-  position: absolute;
-left: 90%;
-}
-}
 #dfrnt{
 text-align: center;
 }
@@ -826,8 +814,39 @@ width: 3.5em;
 height: 3.5em;
 margin: .2rem 0 0 0;
 }
+hr{
+border: .2em solid #E3E3E3;
+background: #E3E3E3;
+width: 100%;
+}
+.brnch a{
+  font-size: 1.6em;
+  padding: 1em 0 1em 1em;
+  width: 100%;
+}
 #dwordvar{
-padding: 1.25em 0 1.25em 2em;
+display: flex;
+padding: 1em 0 1em 1em;
+transition: 1s;
+background: #FFC107;
+width: 100%;
+}
+#wordvar{
+padding: 0;
+position: relative;
+left: -35%;
+opacity: 0;
+font-size: 1em;
+color: #fff;
+transition: 1.5s;
+}
+#closebtn {
+  width: 1.5vw;
+height: 1.5vh;
+  position: absolute;
+left: 90%;
+top: 3%;
+margin: 0;
 }
 .alert{
   padding: 1em;
