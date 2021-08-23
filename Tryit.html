@@ -2,35 +2,21 @@
 <html lang="en">
 <head>
 <title>Elias' horizon</title>
-<meta name="description" content="Buy or Sell digital accounts ranging from games, music & streaming accounts.">
-  <meta name="keywords" content="HOME, FIFA, GAMES, DIGITAL, ACCOUNTS, BUY ACCOUNTS, SELL ACCOUNTS, NETFLIX, SPOTIFY">
-  <meta name="author" content="Elias E.">
+<meta charset="UTF-8">
+<meta name="description" content="Welcome to my horizon, here, you will learn everything about me.">
+  <meta name="keywords" content="Elias, Harvard, Stanford, Yale, Columbia University, Pen University, NY University">
+  <meta name="author" content="Elias Ellis">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- footer script -->
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/2048/000000/leprechaun.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/2048/000000/leprechaun.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/2048/000000/leprechaun.png">
-<link rel="manifest" href="/site.webmanifest">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-916M0NXERP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-916M0NXERP');
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5PF3L7L');</script>
-<!-- End Google Tag Manager -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@900&display=swap');
 @font-face {
@@ -46,6 +32,7 @@ font-family: Product Sans;
 z-index: 0;
 list-style: none;
 text-transform: capitalize;
+box-sizing: border-box;
 }
 html {
     overflow: scroll;
@@ -70,8 +57,20 @@ background-attachment: fixed;
 color: #fff;
 height: 200em;
 }
+::selection {
+background: #fff;
+color: #000;
+font-weight: 900;
+}
 a{
 text-decoration: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 .loader{
   position: fixed;
@@ -139,6 +138,13 @@ background-color: #FAA73F;
   font-size: 1.5em;
   cursor: pointer;
   transition: 0.3s;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .closebtn:hover {
@@ -284,6 +290,13 @@ opacity: 0;
 font-size: 2em;
 color: #fff;
 transition: 1.5s;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 #closebtn {
   width: 2.5em;
@@ -291,6 +304,13 @@ transition: 1.5s;
 left: 90%;
 top: 3%;
 margin: 0;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 #dfrnt{
 text-align: center;
@@ -361,185 +381,206 @@ color: #fff;
 #dfr:hover{
 background: #212121;
 }
-.wrapper{
-  position: absolute;
-left: 50%;
-  margin: 5em 0 5em 0;
-  transform: translate(-50%,-50%);
-color: #F6F6F8;
-font-size: 1em;
+.main_container {
+  padding: 50px;
+  margin-top: 60px;
+color: #000;
 }
-.wrapper a{
-color: #F6F6F8;
+#mct::selection {
+background: #000;
+color: #fff;
+font-weight: 900;
 }
-.wrapper a:hover{
-color: #F6F6F8;
-}
-.select_wrap{
-  width: 60vw;
-  margin: 0;
-  position: relative;
-  user-select: none;
-}
-.select_wrap .default_option{
-  background: #C60821;
-  border-radius: 0.35em;
-  position: relative;
-  cursor: pointer;
-}
-
-.select_wrap .default_option li{
-    padding: .63em 1.3em;
-}
-
-.select_wrap .default_option:before{
-    content: "";
-    position: absolute;
-    top: 1.12em;
-    right: 1.12em;
-    width: .37em;
-    height: .37em;
-    border: .12em solid;
-    border-color: transparent transparent #F6F6F8 #F6F6F8;
-    transform: rotate(-45deg);
-transition: 1s;
-}
-
-.select_wrap .select_ul{
-  position: absolute;
-  top: 3.5em;
-  left: 0;
-  width: 100%;
-  background: #C60821;
-opacity: .9;
-  border-radius: 0.35em;
-  display: none;
-}
-
-.select_wrap .select_ul li{
-  padding: .3em 1.3em;
-  cursor: pointer;
-}
-
-.select_wrap .select_ul li:first-child:hover{
-  border-top-left-radius: 0.3125em;
-  border-top-right-radius: 0.3125em;
-}
-
-.select_wrap .select_ul li:last-child:hover{
-  border-bottom-left-radius: 0.3125em;
-  border-bottom-right-radius: 0.3125em;
-}
-
-.select_wrap .select_ul li:hover{
-  background: #FFC107;
-color: #C60821;
-}
-
-.select_wrap .option{
+.main_container .item2 {
   display: flex;
+  width: 100%;
   align-items: center;
-}
-#crt{
-font-size: .7em;
-padding: 0;
-margin: 0;
-font-weight: bolder;
-}
-.select_wrap .option .icon{
-  background: url('https://img.icons8.com/color/35/000000/language.png') no-repeat 0 0;
-	width: 2em;
-	height: 2em;
-  margin: 0 1.1em 0 0;
-}
-.select_wrap .option.usa .icon{
-  background: url('https://img.icons8.com/color/35/000000/usa.png') no-repeat 0 0;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 15px;
+  margin-bottom: 25px;
 }
 
-.select_wrap .option.fr .icon{
-  background: url('https://img.icons8.com/color/35/000000/france.png') no-repeat 0 0;
+.main_container .item2 .img_holder {
+  width: 350px;
+  height: auto;
 }
 
-.select_wrap .option.de .icon{
- background: url('https://img.icons8.com/color/35/000000/germany.png') no-repeat 0 0;
-}
-.select_wrap .option.sp .icon{
- background: url('https://img.icons8.com/color/35/000000/spain-2.png') no-repeat 0 0;
-}
-
-.select_wrap.active .select_ul{
-  display: block;
-}
-
-.select_wrap.active .default_option:before{
-  top: 1.56em;
-  transform: rotate(-225deg);
-}
-#txt{
-position: absolute;
-top: 20%;
-margin: 0 1em 0 1em;
-}
-#txt p{
-font-size: 2em;
-font-weight: bolder;
-text-decoration: underline;
- -webkit-filter: drop-shadow(1vw 0px 0px black); /* Chrome, Safari, Opera */
- filter: drop-shadow(1vw 0px 0px black);
-}
-.container {
-  display: flex;
+.main_container .item2 .img_holder img {
   width: 100%;
-position: absolute;
-top: 35%;
-overflow-x: scroll;
-}
-.panel {
-background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 75vh;
-  border-radius: 1em;
-  color: #000;
-  margin: 0 .3em 0 .3em;
-  position: relative;
-  cursor: pointer;
-  flex: 0.5;
-  transition: flex 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.panel h3 {
-  font-size: 1.4em;
-background: #fff;
-padding: .2em .2em .2em 0;
-border-radius: .2em;
-border: .1em solid #000;
-  position: absolute;
-  bottom: 1em;
-  left: 5%;
-  margin: 0;
-  opacity: 0;
-}
-.panel.active {
-  flex: 5;
-background-repeat: no-repeat;
-  background-size: cover;
+  display: block;
+  height: auto;
+  margin: 0 auto;
 }
 
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
+.main_container .item2 .item_info {
+  width: calc(100% - 375px);
+  margin-left: 25px;
+  line-height: 24px;
 }
-/*
-@media screen and (max-width: 480px) {
-  .container {
-    width: 100vw;
+
+.footer{
+   background: #222222;
+   padding: 50px;
+}
+
+.footer .footer_menu{
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto 25px;
+  justify-content: space-between;
+}
+
+.footer .footer_menu .title{
+  margin-bottom: 10px;
+  color: #adadad;
+}
+
+.footer .footer_menu ul li a{
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.footer .footer_menu ul li a:hover{
+  text-decoration: underline;
+}
+
+.footer .partners{
+  margin-bottom: 25px;
+}
+
+.footer .partners ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer .partners li a{
+  background: url('https://img.icons8.com/color/2048/000000/university.png') no-repeat 0 0;
+	background-size: 80% 80%;
+  display: block;
+  margin: 0;
+}
+
+.footer .partners li a.partner1{
+background: url('https://blacksmith779.github.io/5842f616a6515b1e0ad75b21.png') no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 100px;
+	height: 100px;
+margin: 0 1em .5em 0;
+padding: 0;
+}
+.footer .partners li a.partner2{
+background: url('https://blacksmith779.github.io/5842f68fa6515b1e0ad75b22.png') no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 100px;
+	height: 100px;
+margin: 0 1em .5em 0;
+padding: 0;
+}
+.footer .partners li a.partner3{
+background: url('https://blacksmith779.github.io/5842f74da6515b1e0ad75b26.png') no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 100px;
+	height: 100px;
+margin: 0 1em 1em 0;
+padding: 0;
+}
+.footer .partners li a.partner4{
+  background: url('https://blacksmith779.github.io/5842f804a6515b1e0ad75b29.png') no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 300px;
+	height: 101px;
+margin: 0 0 1em 0;
+padding: 0;
+}
+.footer .partners li a.partner5{
+  background: url('https://blacksmith779.github.io/5842f7f1a6515b1e0ad75b27.png') no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 300px;
+	height: 101px;
+margin: 0;
+padding: 0;
+}
+
+.footer .social_media{
+  text-align: center;
+}
+
+.footer .social_media ul{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.footer .social_media ul li a{
+  display: block;
+  margin: 0 5px;
+  color: #fff;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: #222222;
+  line-height: 50px;
+  border-radius: 3px;
+}
+
+.footer .social_media ul li a:hover{
+  color: #fff;
+}
+
+.footer .social_media ul li a.facebook:hover{
+  background: #3b5998; 
+}
+
+.footer .social_media ul li a.twitter:hover{
+  background: #1da1f2; 
+}
+
+.footer .social_media ul li a.instagram:hover{
+  background: #c32aa3; 
+}
+
+.footer .social_media ul li a.whatsapp:hover{
+  background: #25d366; 
+}
+
+.footer .social_media{
+  color: #adadad;
+}
+
+@media (max-width:768px) {
+  .main_container {
+    padding: 25px;
   }
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
+  .main_container .item2{
+    flex-direction: column;
+  }
+  .main_container .item2 .img_holder{
+    max-width: 750px;
+    width: 100%;
+  }
+  .main_container .item2 .item_info{
+    margin-left: 0;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .footer .footer_menu{
+    flex-direction: column;
+    width: 220px;
+    margin: 0 auto 25px;
+  }
+  .footer .footer_menu > div{
+    margin: 10px 0;
+  }
+  .footer .partners ul li a{
+    margin: 5px;
   }
 }
-*/
 </style>
 <style>/*1366×768*/
 @media only screen and (min-width: 1365px){
@@ -594,59 +635,6 @@ margin: 0 .28em 0 .28em;
   content: "1366";
 margin: 0 .28em 0 0;
 font-size: 1.42em;
-}
-.wrapper{
-  position: absolute;
-left: 50%;
-font-size: 1.1em;
-}
-.select_wrap{
-  width: 17em;
-}
-.select_wrap .select_ul{
-  border-radius: 0.24em;
-}
-.select_wrap .option .icon{
-background-size: 2em 2em;
-}
-.select_wrap .option.usa .icon{
-background-size: 2em 2em;
-}
-
-.select_wrap .option.fr .icon{
-background-size: 2em 2em;
-}
-
-.select_wrap .option.de .icon{
-background-size: 2em 2em;
-}
-.select_wrap .option.sp .icon{
-background-size: 2em 2em;
-}
-#txt{
-position: absolute;
-top: 23%;
-margin: 0 0 0 3em;
-}
-#txt p{
-font-size: 3em;
- -webkit-filter: drop-shadow(.5vw 0px 0px black); /* Chrome, Safari, Opera */
- filter: drop-shadow(.5vw 0px 0px black);
-}
-.container {
-  display: flex;
-  width: 100%;
-margin: 0 0 0 0;
-position: absolute;
-top: 38%;
-}
-.panel {
-height: 60vh;
-}
-.panel h3 {
-  font-size: 3em;
-padding: .5em .25em;
-border-radius: .3em;
 }
 #backtotop{
     position: fixed;
@@ -737,64 +725,6 @@ margin: 0 .4em 0 .4em;
 margin: 0 .4em 0 0;
 font-size: 1.1m;
 }
-.wrapper{
-  position: absolute;
-left: 50%;
-font-size: 1.75em;
-}
-.select_wrap{
-  width: 15em;
-}
-.select_wrap .select_ul{
-  border-radius: 0.35em;
-}
-.select_wrap .option .icon{
-  background: url('https://img.icons8.com/color/35/000000/language.png') no-repeat 0 0;
-background-size: 2em 2em;
-}
-.select_wrap .option.usa .icon{
-  background: url('https://img.icons8.com/color/35/000000/usa.png') no-repeat 0 0;
-background-size: 2em 2em;
-}
-
-.select_wrap .option.fr .icon{
-  background: url('https://img.icons8.com/color/35/000000/france.png') no-repeat 0 0;
-background-size: 2em 2em;
-}
-
-.select_wrap .option.de .icon{
- background: url('https://img.icons8.com/color/35/000000/germany.png') no-repeat 0 0;
-background-size: 2em 2em;
-}
-.select_wrap .option.sp .icon{
- background: url('https://img.icons8.com/color/35/000000/spain-2.png') no-repeat 0 0;
-background-size: 2em 2em;
-}
-#txt{
-position: absolute;
-top: 23%;
-margin: 0 0 0 3em;
-}
-#txt p{
-font-size: 4em;
- -webkit-filter: drop-shadow(.5vw 0px 0px black); /* Chrome, Safari, Opera */
- filter: drop-shadow(.5vw 0px 0px black);
-}
-.container {
-  display: flex;
-  width: 100%;
-margin: 0 0 0 0;
-position: absolute;
-top: 38%;
-}
-.panel {
-height: 60vh;
-}
-.panel h3 {
-  font-size: 3em;
-padding: .5em .25em;
-border-radius: .3em;
-}
 #backtotop{
     position: fixed;
     visibility: hidden;
@@ -826,7 +756,7 @@ width: 100%;
 }
 #dwordvar{
 display: flex;
-padding: 1em 0 1em 1em;
+padding: .5em 0 .5em 1em;
 transition: 1s;
 background: #FFC107;
 width: 100%;
@@ -842,11 +772,12 @@ transition: 1.5s;
 }
 #closebtn {
   width: 2.5vw;
-height: 3.25vh;
+height: 2.5w;
   position: absolute;
 left: 90%;
-top: 3%;
+top: -10%;
 margin: 0;
+padding: 0;
 }
 .alert{
   padding: 1em;
@@ -863,14 +794,10 @@ font-weight: bolder;
 font-size: 1.3em;
 margin: 0 .2em 0 0;
 }
-}
+
 </style>
 </head>
 <body id="body" onload="bon()" >
-				<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF3L7L"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <div class="loader">
 <div class="ring">
 </div>
@@ -940,118 +867,126 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </ul>
   </a>
   </div>
-
-<div class="wrapper">
-  <div class="select_wrap">
-      <ul class="default_option">
-          <li>
-              <div class="option pizza">
-                <div class="icon"></div>
-                <p>Select Language</p>
-              </div>
-          </li>
-      </ul>
-      <ul class="select_ul">
-          <li>
-<a href="#">
-              <div class="option usa">
-                <div class="icon"></div>
-                <p>En USA</p>
-<div id="crt">(current)</div>
-              </div>  
-</a>
-          </li>
-          <li>
-<a href="#">
-              <div class="option fr">
-                <div class="icon"></div>
-                <p>French</p>
-              </div>  
-</a>
-          </li>
-          <li>
-<a href="#">
-              <div class="option de">
-                <div class="icon"></div>
-                <p>German</p>
-              </div>  
-</a>
-          </li>
-         <li>
-<a href="#">
-              <div class="option sp">
-                <div class="icon"></div>
-                <p>Spanish</p>
-              </div>  
-</a>
-          </li>
-      </ul>
-  </div>
-</div>	
-  </div>
-<div id="txt">
-<p>Please select one of the paths bellow</p>
 </div>
-<div class="container" id="ctnr">
-      <div
-        class="panel"
-        style="
-          background-image: url('file:///storage/emulated/0/Download/b683aa79abaf44c69d636887ca8f95eb-1628258080605.png');
-        "
-      >
-        <h3>Biography</h3>
-      </div>
 
-      <div
-        class="panel"
-        style="
-          background-image: url('file:///storage/emulated/0/Download/b683aa79abaf44c69d636887ca8f95eb-1628258080605.png');
-        "
-      >
-        <h3>Interests</h3>
-      </div>
-
-      <div
-        class="panel"
-        style="
-          background-image: url('file:///storage/emulated/0/Download/b683aa79abaf44c69d636887ca8f95eb-1628258080605.png');
-        "
-      >
-        <h3>Achievements</h3>
-      </div>
-      <div
-        class="panel"
-        style="
-          background-image: url('file:///storage/emulated/0/Download/b683aa79abaf44c69d636887ca8f95eb-1628258080605.png');
-        "
-      >
-        <h3>Spoken Languages</h3>
-      </div>
-      <div
-        class="panel"
-        style="
-          background-image: url('file:///storage/emulated/0/Download/b683aa79abaf44c69d636887ca8f95eb-1628258080605.png');
-        "
-      >
-        <h3>awards</h3>
-      </div>
-<div
-        class="panel"
-        style="
-          background-image: url('file:///storage/emulated/0/Download/b683aa79abaf44c69d636887ca8f95eb-1628258080605.png');
-        "
-      >
-        <h3>efficiency</h3>
-      </div>
-<div
-        class="panel"
-        style="
-          background-image: url('file:///storage/emulated/0/Download/b683aa79abaf44c69d636887ca8f95eb-1628258080605.png');
-        "
-      >
-        <h3>about this site</h3>
-      </div>
+<div class="wrapper2">
+<div class="main_container">
+       <div class="item2">
+         <div class="img_holder">
+           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+         </div>
+         <div class="item_info" id="mct">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rerum est, voluptas cupiditate assumenda iure vero tempora fugiat. Unde blanditiis incidunt alias molestiae. Totam, laboriosam. Animi accusamus et labore sit nihil exercitationem provident odit nostrum ipsum, architecto deserunt eius veritatis qui enim modi impedit nemo quam quae voluptatibus aliquid possimus.
+         </div>
+      </div>  
+      <div class="item2">
+         <div class="img_holder">
+           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+         </div>
+         <div class="item_info">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rerum est, voluptas cupiditate assumenda iure vero tempora fugiat. Unde blanditiis incidunt alias molestiae. Totam, laboriosam. Animi accusamus et labore sit nihil exercitationem provident odit nostrum ipsum, architecto deserunt eius veritatis qui enim modi impedit nemo quam quae voluptatibus aliquid possimus.
+         </div>
+      </div>  
+      <div class="item2">
+         <div class="img_holder">
+           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+         </div>
+         <div class="item_info">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rerum est, voluptas cupiditate assumenda iure vero tempora fugiat. Unde blanditiis incidunt alias molestiae. Totam, laboriosam. Animi accusamus et labore sit nihil exercitationem provident odit nostrum ipsum, architecto deserunt eius veritatis qui enim modi impedit nemo quam quae voluptatibus aliquid possimus.
+         </div>
+      </div>  
+      <div class="item2">
+         <div class="img_holder">
+           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+         </div>
+         <div class="item_info">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rerum est, voluptas cupiditate assumenda iure vero tempora fugiat. Unde blanditiis incidunt alias molestiae. Totam, laboriosam. Animi accusamus et labore sit nihil exercitationem provident odit nostrum ipsum, architecto deserunt eius veritatis qui enim modi impedit nemo quam quae voluptatibus aliquid possimus.
+         </div>
+      </div>  
+      <div class="item2">
+         <div class="img_holder">
+           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+         </div>
+         <div class="item_info">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rerum est, voluptas cupiditate assumenda iure vero tempora fugiat. Unde blanditiis incidunt alias molestiae. Totam, laboriosam. Animi accusamus et labore sit nihil exercitationem provident odit nostrum ipsum, architecto deserunt eius veritatis qui enim modi impedit nemo quam quae voluptatibus aliquid possimus.
+         </div>
+      </div>  
     </div>
+    <div class="footer">
+        <div class="footer_menu">
+           <div class="col_1">
+              <div class="title">
+                Company  
+              </div>  
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+           </div>
+           <div class="col_2">
+             <div class="title">
+                Help & Support 
+              </div>  
+              <ul>
+                <li><a href="#">Support Center</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Call Center</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+           </div>
+           <div class="col_3">
+             <div class="title">
+                Services  
+              </div>  
+              <ul>
+                <li><a href="#">Business Consultancy</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Market Analysis</a></li>
+                <li><a href="#">Web Development</a></li>
+              </ul>
+           </div>
+           <div class="col_4">
+             <div class="title">
+                Solutions  
+              </div>  
+              <ul>
+                <li><a href="#">Facilities Services</a></li>
+                <li><a href="#">Workplace Staffing</a></li>
+                <li><a href="#">Project Management</a></li>
+                <li><a href="#">Wordpress Management</a></li>
+              </ul>
+          </div>
+<div class="col_5">
+             <div class="title">
+                Services  
+              </div>  
+              <ul>
+<li><a href="#">principes civibus contentiones proin quo quisque nostrum habitant euripidis invidunt eirmod consetetur mentitum suscipiantur eget homero ex suavitate iusto suscipit</a></li>
+</ul>
+           </div>
+        </div>
+        <div class="partners">
+            <ul>
+                <li><a class="partner1" href="#"></a></li>
+                <li><a class="partner2" href="#"></a></li>
+                <li><a class="partner3" href="#"></a></li>
+                <li><a class="partner4" href="#"></a></li>
+                <li><a class="partner5" href="#"></a></li>  
+            </ul>
+        </div>
+        <div class="social_media">
+            <ul>
+                <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+            <p>Copyright © Coding Market</p>
+        </div>
+    </div>
+</div>	
 
 
   <script>
@@ -1093,37 +1028,6 @@ for (i = 0; i < close.length; i++) {
   }
 }
 </script>
-
-<script>
-const panels = document.querySelectorAll(".panel");
-
-panels.forEach((panel) => {
-  panel.addEventListener("click", () => {
-    removeActiveClass();
-    panel.classList.add("active");
-  });
-
-  function removeActiveClass() {
-    panels.forEach((panel) => {
-      panel.classList.remove("active");
-    });
-  }
-});
-</script>
-
-<script>
-		$(document).ready(function(){
-			$(".default_option").click(function(){
-			  $(this).parent().toggleClass("active");
-			})
-
-			$(".select_ul li").click(function(){
-			  var currentele = $(this).html();
-			  $(".default_option li").html(currentele);
-			  $(this).parents(".select_wrap").removeClass("active");
-			})
-		});
-	</script>
 
 <script>
 jQuery("#dfr").click(function(){
