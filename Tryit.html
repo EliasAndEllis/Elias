@@ -29,6 +29,7 @@
 <!-- End of fabicon -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&display=swap');
 @font-face {
   font-family: 'Product Sans';
   font-style: normal;
@@ -396,7 +397,7 @@ background: #212121;
   margin-top: 60px;
 color: #000;
 }
-#mct::selection {
+.item_info p::selection {
 background: #000;
 color: #fff;
 font-weight: 900;
@@ -410,7 +411,16 @@ font-weight: 900;
   padding: 15px;
   margin-bottom: 25px;
 }
-
+.item_info::first-letter {
+  color: white;
+  background-color: black;
+  border-radius: .1em;
+  box-shadow: .1em .1em 0 red;
+  font-size: 250%;
+  padding: .5em .1em;
+  margin: 0 .2em 0 0;
+  float: left;
+}
 .main_container .item2 .img_holder {
   width: 350px;
   height: auto;
@@ -811,9 +821,6 @@ margin: 0 .2em 0 0;
   padding: 0 1.5em 0 1.5em;
   margin: 0;
 }
-#mct::selection {
-font-weight: 900;
-}
 .main_container .item2 {
   display: flex;
   width: 100%;
@@ -823,7 +830,6 @@ font-weight: 900;
   margin: 0 0 1.5em 0;
 font-size: 2em;
 }
-
 .main_container .item2 .img_holder {
   width: 10em;
   height: auto;
