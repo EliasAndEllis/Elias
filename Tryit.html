@@ -731,9 +731,6 @@ top: 0%;
     background: transparent;
 }
 }
-.brnch a{
-padding: 1em 0 1em 2em;
-}
 #erio{
 position: sticky;
    top: 4.19em;
@@ -782,10 +779,11 @@ width: 100%;
   font-size: 2.5em;
   padding: 1em 0 1em 1em;
   width: 100%;
+padding: 1em 0 1em 2em;
 }
 #dwordvar{
 display: flex;
-padding: .5em 0 .5em 1em;
+padding: .54em 0 .54em 1em;
 transition: 1s;
 background: #FFC107;
 width: 100%;
@@ -800,11 +798,11 @@ color: #fff;
 transition: 1.5s;
 }
 #closebtn {
-  width: 2.5vw;
-height: 2.5w;
+  width: 2.5em;
+height: auto;
   position: absolute;
+top: .8em;
 left: 90%;
-top: -10%;
 margin: 0;
 padding: 0;
 }
@@ -1343,12 +1341,8 @@ x.addListener(myFunction)
 function due(y) {
   if (y.matches) { // If media query matches
 document.getElementById("mySidenav").style.width = "35%";
-document.getElementById("closebtn").style.width= "3em";
-document.getElementById("closebtn").style.left= "90%";
-document.getElementById("closebtn").style.top= "2%";
 }
 else {
-document.getElementById("closebtn").style.width= "2em";
   }
 }
 var y = window.matchMedia("(min-width: 1919px)");
