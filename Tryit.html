@@ -467,7 +467,7 @@ font-weight: 900;
 }
 footer{
   width: 100%;
-  background: #111;
+  background: #E3E3E3;
 }
 footer .content{
   max-width: 1350px;
@@ -535,20 +535,44 @@ footer .content .right input[type="submit"]{
   background: none;
   color:  #eb2f06;
 }
-footer .content .media-icons a{
-  font-size: 16px;
-  height: 45px;
-  width: 45px;
-  display: inline-block;
-  text-align: center;
-  line-height: 43px;
-  border-radius: 5px;
-  border: 2px solid #222222;
-  margin: 30px 5px 0 0;
-  transition: all 0.3s ease;
+#unibrow img{
+margin: 0 .5em 0 .5em;
+padding: 0;
 }
-.content .media-icons a:hover{
-  border-color: #eb2f06;
+#unibrow img:nth-child(1){
+width: 3em;
+}
+#unibrow img:nth-child(2){
+width: 4.4em;
+heiht: 5em;
+}
+#unibrow img:nth-child(3){
+width: 14em;
+heiht: auto;
+}
+#unibrow img:nth-child(4){
+width: 7em;
+heiht: auto;
+}
+#unibrow img:nth-child(5){
+width: 7.5em;
+heigt: auto;
+}
+#unibrow img:nth-child(6){
+width: 13em;
+heiht: auto;
+}
+#unibrow img:nth-child(7){
+width: 13em;
+heiht: auto;
+}
+#unibrow img:nth-child(8){
+width: 13em;
+heiht: auto;
+}
+#unibrow img:nth-child(9){
+width: 13em;
+heiht: auto;
 }
 footer .bottom{
   width: 100%;
@@ -852,6 +876,144 @@ font-size: 2em;
   margin: 0 .2em 0 0;
   float: left;
 }
+footer{
+  width: 100%;
+}
+footer .content{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,a{
+  color: #fff;
+}
+footer .content .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
+}
+footer .content p{
+  text-align: justify;
+}
+footer .content .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .content .lower i{
+  padding-right: 16px;
+}
+footer .content .middle{
+  padding-left: 80px;
+}
+footer .content .middle a{
+  line-height: 32px;
+}
+footer .content .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .content .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #eb2f06;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #eb2f06;
+  transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover{
+  background: none;
+  color:  #eb2f06;
+}
+#unibrow img{
+margn: 0 .5em 0 .5em;
+padding: 0;
+}
+#unibrow img:nth-child(1){
+width: 4em;
+}
+#unibrow img:nth-child(2){
+width: 6em;
+heiht: 5em;
+}
+#unibrow img:nth-child(3){
+width: 5.5em;
+}
+#unibrow img:nth-child(4){
+width: 5em;
+}
+#unibrow img:nth-child(5){
+width: 15em;
+}
+#unibrow img:nth-child(6){
+width: 6.5em;
+}
+#unibrow img:nth-child(7){
+width: 10em;
+}
+#unibrow img:nth-child(8){
+width: 10em;
+}
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #eb2f06;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #eb2f06;
+}
+@media (max-width:1100px) {
+  footer .content .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .content .box{
+    width: 50%;
+  }
+  .content .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .content .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle{
+    padding-left: 0;
+  }
+}
 </style>
 </head>
 <body id="body" onload="bon()" >
@@ -1006,21 +1168,20 @@ font-size: 2em;
      </div>
      <div class="right box">
        <div class="topic">Subscribe us</div>
-       <form action="#">
-         <input type="text" placeholder="Enter email address">
-         <input type="submit" name="" value="Send">
-         <div class="media-icons">
-           <a href="#"><i class="fab fa-facebook-f"></i></a>
-           <a href="#"><i class="fab fa-instagram"></i></a>
-           <a href="#"><i class="fab fa-twitter"></i></a>
-           <a href="#"><i class="fab fa-youtube"></i></a>
-           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         <div id="unibrow">
+<img src="https://blacksmith779.github.io/5842f616a6515b1e0ad75b21.png"></img>
+<img src="https://blacksmith779.github.io/5842f68fa6515b1e0ad75b22.png"></img>
+<img src="https://BlackSmith779.github.io/NicePng_princeton-university-logo-png_2817081.png"></img>
+<img src="https://blacksmith779.github.io/5842f8afa6515b1e0ad75b2b.png"></img>
+<img src="https://blacksmith779.github.io/5842f8a5a6515b1e0ad75b2a.png"></img>
+<img src="https://blacksmith779.github.io/5842f7f1a6515b1e0ad75b27.png"></img>
+<img src="https://blacksmith779.github.io/5842f804a6515b1e0ad75b29.png"></img>
+<img src="https://blacksmith779.github.io/5842f732a6515b1e0ad75b23.png"></img>
          </div>
-       </form>
      </div>
    </div>
    <div class="bottom">
-     <p>Copyright &#169; 2020 <a href="#">
+<code>Elias's horizon - Since August 2021</code>
  </footer>
 
 
