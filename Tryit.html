@@ -13,6 +13,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!-- footer script -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- different favicon -->
 <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://img.icons8.com/color/2048/000000/leprechaun.png">
 <link rel="apple-touch-icon" sizes="57x57" href="https://img.icons8.com/color/2048/000000/leprechaun.png">
@@ -464,60 +465,132 @@ font-weight: 900;
     text-align: center;
   }
 }
-#ftt{
-height: 100%;
-background: #000;
-font-size: 1.4em;
-text-align: center;
-align-items: center;
+footer{
+  width: 100%;
+  background: #111;
 }
-#cml{
-display: inline-block;
-margin: .5em 1em .5em 1em;
+footer .content{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-#ftt ul{
-display: block;
-color: #fff;
-font-weight: bold;
-text-align: center;
-margin: 0 2em 0 0;
+footer .content p,a{
+  color: #fff;
 }
-#ftt img{
-width: 5em;
-margin: 0 1em 1em 0;
+footer .content .box{
+  width: 33%;
+  transition: all 0.4s ease;
 }
-#ftt h{
-font-size: 1.45em;
-color: gray;
-text-decoration: underline;
-font-weight: bolder;
+footer .content .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
 }
-#cml a{
-color: #fff;
-text-decoration: none;
-opacity: 1;
+footer .content p{
+  text-align: justify;
 }
-#cml li:hover{
-opacity: 0.3;
-text-decoration: line-through;
+footer .content .lower .topic{
+  margin: 24px 0 5px 0;
 }
-#cmm{
-margin: 1em 0 0 0;
+footer .content .lower i{
+  padding-right: 16px;
 }
-#pack{
-margin: 1em 0 2em  0;
-padding: 0;
-font-weight: light;
+footer .content .middle{
+  padding-left: 80px;
 }
-#pack p{
-font-size: 1em;
+footer .content .middle a{
+  line-height: 32px;
 }
-#pack h{
-font-size: .7em;
-color: gray;
-opacity: .7;
-text-decoration: none;
+footer .content .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
 }
+footer .content .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #eb2f06;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #eb2f06;
+  transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover{
+  background: none;
+  color:  #eb2f06;
+}
+footer .content .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.content .media-icons a:hover{
+  border-color: #eb2f06;
+}
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #eb2f06;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #eb2f06;
+}
+@media (max-width:1100px) {
+  footer .content .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .content .box{
+    width: 50%;
+  }
+  .content .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .content .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle{
+    padding-left: 0;
+  }
+}
+
 </style>
 <style>/*1366×768*/
 @media only screen and (min-width: 1365px){
@@ -903,55 +976,53 @@ font-size: 2em;
          </div>
       </div>  
     </div>
-<div id="ftt">
-<div id="cml">
-<ul>
-<h>Paths</h>
-<a href="#"><li>whatsoeverhappensdon</li></a>
-<a href="#"><li>whatsoeverhappensdon</li></a>
-<a href="#"><li>whatsoeverhappensdon</li></a>
-<a href="#"><li>whatsoeverhappensdon</li></a>
-</ul>
-</div>
-<div id="cml">
-<ul>
-<h>paths</h>
-<a href="#"><li>main</li></a>
-<a href="#"><li>main</li></a>
-<a href="#"><li>main</li></a>
-<a href="#"><li>main</li></a>
-</ul>
-</div>
-<div id="cml">
-<ul>
-<h>paths</h>
-<a href="#"><li>main</li></a>
-<a href="#"><li>main</li></a>
-<a href="#"><li>main</li></a>
-<a href="#"><li>main</li></a>
-</ul>
-</div>
-<div id="cml">
-<ul>
-<h>paths</h>
-<a href="#"><li>whatsoeverhappensdon</li></a>
-<a href="#"><li>whatsoeverhappensdon</li></a>
-<a href="#"><li>whatsoeverhappensdon</li></a>
-<a href="#"><li>whatsoeverhappensdon</li></a>
-</ul>
-</div>
-<div id="cmm">
-<img src="file:///storage/emulated/0/Download/certificate-a-complete-guide-for-effective-business-communication.jpeg"></img>
-<img src="file:///storage/emulated/0/Download/certificate-a-complete-guide-for-effective-business-communication.jpeg"></img>
-<img src="file:///storage/emulated/0/Download/certificate-a-complete-guide-for-effective-business-communication.jpeg"></img>
-<img src="file:///storage/emulated/0/Download/certificate-a-complete-guide-for-effective-business-communication.jpeg"></img>
-<img src="file:///storage/emulated/0/Download/certificate-a-complete-guide-for-effective-business-communication.jpeg"></img>
-</div>
-<div id="pack">
-<p>all images from this site are ret teh teh alterum ornare sumo quo lobortis sociis nam efficiantur principes legimus nibh doctus audire patrioque noster interdum labores nullam hac iuvaret</p>
-<h>Elias's Horizon (Since August 2021)<h>
-</div>
-</div>
+
+ <footer>
+   <div class="content">
+     <div class="left box">
+       <div class="upper">
+         <div class="topic">About us</div>
+         <p>CodingLab is a channel where you can learn HTML,
+         CSS, and also JavaScript along with creative CSS Animations and Effects.</p>
+       </div>
+       <div class="lower">
+         <div class="topic">Contact us</div>
+         <div class="phone">
+           <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+         </div>
+         <div class="email">
+           <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+         </div>
+       </div>
+     </div>
+     <div class="middle box">
+       <div class="topic">Our Services</div>
+       <div><a href="#">Web Design, Development</a></div>
+       <div><a href="#">Web UX Design, Reasearch</a></div>
+       <div><a href="#">Web User Interface Design</a></div>
+       <div><a href="#">Theme Development, Design</a></div>
+       <div><a href="#">Mobile Application Design</a></div>
+       <div><a href="#">Wire raming & Prototyping</a></div>
+     </div>
+     <div class="right box">
+       <div class="topic">Subscribe us</div>
+       <form action="#">
+         <input type="text" placeholder="Enter email address">
+         <input type="submit" name="" value="Send">
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </form>
+     </div>
+   </div>
+   <div class="bottom">
+     <p>Copyright &#169; 2020 <a href="#">
+ </footer>
+
 
   <script>
 var alt = document.getElementById("alt");
