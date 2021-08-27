@@ -920,6 +920,10 @@ footer .content .middle a{
 #unibrow img{
 margn: 0 .5em 0 .5em;
 padding: 0;
+-webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
 }
 #unibrow img:nth-child(1){
 width: 4em;
@@ -948,6 +952,10 @@ width: 10em;
 }
 .email a{
 text-transform: lowercase;
+-webkit-user-select: all;  /* Chrome 49+ */
+  -moz-user-select: all;     /* Firefox 43+ */
+  -ms-user-select: all;      /* No support yet */
+  user-select: all; 
 }
 footer .bottom{
   width: 100%;
@@ -956,6 +964,10 @@ footer .bottom{
 }
 footer .bottom code{
   color: #212121;
+-webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
 }
 footer .bottom code:hover{
   color: #C60821;
@@ -1097,7 +1109,7 @@ text-decoration: line-through;
      <div class="left box">
        <div class="upper">
          <div class="topic">Note</div>
-         <p>All resources ranging from images, fonts, styles... are all from verified sources.</p>
+         <p>resources ranging from images & fonts are all from verified sources, and are made for public use.</p>
        </div>
        <div class="lower">
          <div class="topic">Contact</div>
