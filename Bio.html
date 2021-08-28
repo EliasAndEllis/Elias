@@ -623,6 +623,99 @@ footer a:hover{
   }
 }
 </style>
+<style>/*1366×768*/
+@media only screen and (min-width: 1365px){
+.texter a{
+font-size: 1.77m;
+padding: 0 0 0 4.5em;
+}
+.li2{
+width: 1.77em;
+height: 1.77em;
+padding: 0 2em 0 0;
+}
+#header{
+width: 100%;
+padding: 1.2em 0 1.2em 0;
+position: fixed;
+top: 0%;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+#header {
+    -webkit-backdrop-filter: blur(.2vw);
+    backdrop-filter: blur(.2vw);
+    background: transparent;
+}
+}
+.brnch a{
+  font-size: 1.9em;
+  padding: .71em 0 .71em 1.42em;
+}
+#wordvar{
+font-size: 2.5em;
+}
+#closebtn {
+  width: 2.5em;
+height: 2em;
+}
+#erio{
+position: sticky;
+   top: 4.2em;
+   padding: .39em .25em .39em .25em;
+}
+.links {
+   box-shadow: 0 0 .88em -0.444em rgba(0,0,0,0.5);
+   margin: 0 .28em 0 0;
+   font-size: 1.28em;
+border: .04em solid #000;
+}
+#dfr{
+margin: 0 .28em 0 .28em;
+}
+#Sch::after{
+  content: "1366";
+margin: 0 .28em 0 0;
+font-size: 1.42em;
+}
+#backtotop{
+    position: fixed;
+    visibility: hidden;
+    bottom: 8.5%;
+    right: 3.5%;
+    width: 3em;
+    height: 3em;
+    opacity: .1;
+}
+#backtotop.visible{
+    visibility: visible;
+    opacity: 1;
+    background: #F6F6F8;
+}
+#btt{
+width: 2.5em;
+height: 2.5em;
+margin: .2rem 0 0 0;
+}
+#dwordvar{
+padding: .55em 0 .55em 1.42em;
+}
+.alert{
+  padding: .71em;
+  margin: .21em .35em .21em .35em;
+font-size: 1.7em;
+}
+.closebtn {
+  margin: 0 0 0 1.06em;
+  font-weight: bolder;
+  font-size: 1.4em;
+  }
+.alert strong{
+font-weight: bolder;
+font-size: 1.4em;
+margin: 0 .3em 0 0;
+}
+}
+</style>
 <style>/*1920×1080*/
 @media only screen and (min-width: 1919px){
 .texter a{
@@ -768,14 +861,15 @@ word-wrap: break-word;
    width: 90%;
 }
 .main_container .item2 .img_holder {
-  width: 15em;
-  height: auto;
+  width: 10em;
+  height: 10em;
+margin: 0 5em 0 0;
 }
 
 .main_container .item2 .img_holder img {
-  width: 100%;
+  width: 15em;
   display: block;
-  height: auto;
+  height: 10em;
 }
 
 .main_container .item2 .item_info {
@@ -909,7 +1003,7 @@ text-decoration: line-through;
 </div>
 <div class="alert" id="alt">
   <span class="closebtn">&times;</span>  
-    <strong>Welcome & enjoy!</strong>That's the  home section. To visit other sections, please open the navigation menu, select it from the sticky navigation bar, or you can click the image of one of the topics below.
+    <strong>Welcome & enjoy!</strong>That's the Biography section. To visit other sections, please open the navigation menu, select it from the sticky navigation bar, or you can click the image of one of the topics below.
 </div>
 
 <div class="alert info" id="alti">
@@ -930,14 +1024,14 @@ text-decoration: line-through;
 -->
 <div id="header">
 <ul>
-<li spellcheck="true" class="texter" contentediable="true"><a href="#">Elias' horizon</a></li>
-<li><a onclick="openNav()" href="#"><img class="li2" src="https://img.icons8.com/ios-filled/2048/000000/menu--v1.png"/></a></li>
+<li spellcheck="true" class="texter" contentediable="true"><a href="https://blacksmith779.github.io/Tryit.html">Elias' horizon</a></li>
+<li><a onclick="openNav()" href="#"><img class="li2" src="https://img.icons8.com/ios-filled/2048/000000/menu--v1.png" alt="Menu button - Refresh the page"/></a></li>
 </ul>
 </div>
 <div id="erio">
 <span class="links" id="dfr"><a href="#" onclick="closeNav()">Scroll</a></span>
 <span  id="Sch"></span>
-       <span class="links" id="rly"><a href="#" onclick="closeNav()">Bio</a></span>
+       <span class="links" id="rly"><a href="https://blacksmith779.github.io/Bio.html" onclick="closeNav()">Bio</a></span>
        <span class="links" id="rly2">
 <a href="#" onclick="closeNav()">Interests</a>
 </span>
@@ -950,12 +1044,12 @@ text-decoration: line-through;
 </div>
 <div class="bg"></div>
 <a id="backtotop">
-<img id="btt" src="https://img.icons8.com/material-sharp/2048/000000/chevron.png"/>
+<img id="btt" src="https://img.icons8.com/material-sharp/2048/000000/chevron.png" alt="scroll up button - Refresh the page"/>
 </a>
 <div id="mySidenav" class="sidenav">
 				<div id="dwordvar">
 				<span id="wordvar">Ciao</span>
-<img href="javascript:void(0)" id="closebtn" onclick="closeNav()" src="https://img.icons8.com/ios-glyphs/2048/ffffff/delete-sign.png"/>
+<img href="javascript:void(0)" id="closebtn" onclick="closeNav()" src="https://img.icons8.com/ios-glyphs/2048/ffffff/delete-sign.png" alt="close button - Refresh the page"/>
 </div>
   <hr>
   <div class="brnch">
@@ -984,65 +1078,79 @@ text-decoration: line-through;
 <div class="wrapper2">
 <div class="main_container">
        <div class="item2">
+<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
          <div class="img_holder">
-           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+<img src="https://blacksmith779.github.io/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg" alt="Biography image - Refresh the page">
          </div>
+</a>
          <div class="item_info" id="mct">
-<p>Section 1, titled "Biography" will give you an insight of all information related to me, from my <b>background</b>, <b>health</b>, <b>personality</b> and other information.</p>
+<p>Section 1, titled "Biography", will give you an insight of all information related to me. From my <b>background</b>, <b>health</b>, <b>personality</b> to other information concenring my appearance.</p>
          </div>
-      </div>  
+      </div>
       <div class="item2">
+<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
          <div class="img_holder">
-           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+<img src="https://blacksmith779.github.io/edgar-pimenta-QCjG5hGpdA0-unsplash.jpg" alt="Sports image - Refresh the page">
          </div>
+</a>
          <div class="item_info">
 <p><b>Interests</b>, <b>activities</b>, <b>sports</b>, <b>behaviour</b>, <b>futur plans</b> and more. All of that in section 2 titled "Interests".</p>
          </div>
       </div>  
       <div class="item2">
+<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
          <div class="img_holder">
-           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+<img src="https://blacksmith779.github.io/luis-villasmil-3yr-LjHyFsA-unsplash.jpg" alt="Achievements image - Refresh the page">
          </div>
+</a>
          <div class="item_info">
 <p>
-In section 3 "achievements", you will explore all of my <b>academic achievements</b>, <b>sports achievements</b>, <b>honours</b> and more.
+In section 3, "achievements", you will explore all of my <b>academic achievements</b>, <b>sports achievements</b>, <b>honours</b> and more.
 </p>
          </div>
       </div>  
       <div class="item2">
+<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
          <div class="img_holder">
-           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+<img src="https://blacksmith779.github.io/kenji-rikitake-N6svnp0mZBw-unsplash.jpg" alt="Languages image - Refresh the page">
          </div>
+</a>
          <div class="item_info">
 <p>
-Curious how many <b>languages</b> I speak and <b>how I use them</b>, click the image and find that out in section 4 "spoken languages".
+Curious how many <b>languages</b> I speak and <b>how I use them</b> ?! click the image and find that out in section 4 "spoken languages".
 </p>
          </div>
       </div>  
       <div class="item2">
+<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
          <div class="img_holder">
-           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+<img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="Awards image - Refresh the page">
          </div>
+</a>
          <div class="item_info">
 <p>
-Section 5 titled "awards" represents all kinds of <b>certificates</b>, <b>medals</b>, and <b>badges</b> which I have been collecting since ever.
+Section 5, titled "awards", represents all kinds of <b>certificates</b>, <b>medals</b>, and <b>badges</b> which I have been collecting since ever.
 </p>
          </div>
       </div>  
 <div class="item2">
+<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
          <div class="img_holder">
-           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+ <img src="https://blacksmith779.github.io/mimi-thian--VHQ0cw2euA-unsplash.jpg" alt="Values image - Refresh the page">
          </div>
+</a>
          <div class="item_info">
 <p>
-All mankind has got values, which we use to achieve success in our lives. Section 6 "efficiency" opens your eyes on my <b>values</b> which I always use, and answer your question <b>why choosing me</b> ?!
+All mankind has got values, which we use to achieve success in our lives. Section 6, "efficiency", opens your eyes on my <b>values</b> that I always use, and answers your question <b>why choosing me</b> ?!
 </p>
          </div>
       </div>  
 <div class="item2">
+<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
          <div class="img_holder">
-           <img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="">
+<img src="https://blacksmith779.github.io/firmbee-com-ir5lIkVFqC4-unsplash%20(2).jpg" alt="About this site image - Refresh the page">
          </div>
+</a>
          <div class="item_info">
 <p>
 "About this site" is set as title of the last but not least section 7, which provides information related to this website, answering different questions such as <b>who</b> created it ?! <b>with whom</b> ?! <b>what for</b> ?!
@@ -1067,7 +1175,7 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
      </div>
      <div class="middle box">
        <div class="topic">Paths</div>
-       <div><a href="#">Biography</a></div>
+       <div><a href="https://blacksmith779.github.io/Bio.html" target="_blank">Biography</a></div>
        <div><a href="#">Interests</a></div>
        <div><a href="#">Achievements</a></div>
        <div><a href="#">Spoken Languages</a></div>
@@ -1078,14 +1186,14 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
      <div class="right box">
        <div class="topic">Targets</div>
          <div id="unibrow">
-<img src="https://blacksmith779.github.io/5842f616a6515b1e0ad75b21.png"></img>
-<img src="https://blacksmith779.github.io/5842f68fa6515b1e0ad75b22.png"></img>
-<img src="https://BlackSmith779.github.io/NicePng_princeton-university-logo-png_2817081.png"></img>
-<img src="https://blacksmith779.github.io/5842f8afa6515b1e0ad75b2b.png"></img>
-<img src="https://blacksmith779.github.io/5842f8a5a6515b1e0ad75b2a.png"></img>
-<img src="https://blacksmith779.github.io/5842f7f1a6515b1e0ad75b27.png"></img>
-<img src="https://blacksmith779.github.io/5842f804a6515b1e0ad75b29.png"></img>
-<img src="https://blacksmith779.github.io/5842f732a6515b1e0ad75b23.png"></img>
+<img src="https://blacksmith779.github.io/5842f616a6515b1e0ad75b21.png" alt="Stanford Logo - Refresh the page"></img>
+<img src="https://blacksmith779.github.io/5842f68fa6515b1e0ad75b22.png" alt="Harvard Logo - Refresh the page"></img>
+<img src="https://BlackSmith779.github.io/NicePng_princeton-university-logo-png_2817081.png " alt="USC Logo - Refresh the page"></img>
+<img src="https://blacksmith779.github.io/5842f8afa6515b1e0ad75b2b.png" alt="Oxford Logo - Refresh the page"></img>
+<img src="https://blacksmith779.github.io/5842f8a5a6515b1e0ad75b2a.png" alt="Cambridge Logo - Refresh the page"></img>
+<img src="https://blacksmith779.github.io/5842f7f1a6515b1e0ad75b27.png" alt="Brown Logo - Refresh the page"></img>
+<img src="https://blacksmith779.github.io/5842f804a6515b1e0ad75b29.png" alt="Penn Logo - Refresh the page"></img>
+<img src="https://blacksmith779.github.io/5842f732a6515b1e0ad75b23.png" alt="Princeton Logo - Refresh the page"></img>
          </div>
      </div>
    </div>
@@ -1207,7 +1315,7 @@ che1.style.top="0vh";
 function nyc(x) {
   if (x.matches) { // If media query matches
     che1.style.top= "4.2em";
-}
+  }
 else {
    che1.style.top= "7.4vh";
   }
