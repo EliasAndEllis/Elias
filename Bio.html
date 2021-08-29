@@ -793,7 +793,7 @@ text-decoration: underline;
 }
 </style>
 </head>
-<body id="body" onload="bon()" >
+<body id="body" onclick="bon()" >
 <div class="loader">
 <div class="ring">
 </div>
@@ -916,22 +916,16 @@ text-decoration: underline;
    </div>
    <div class="bottom">
 <code>Elias's horizon - Since June 2021</code>
-<iframe src="audio/source.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-<audio controls autoplay loop id="playAudio">
-  <source src="https://github.com/BlackSmith779/BlackSmith779.github.io/raw/master/9convert.com%20-%20Substah%20%20Youknow%20%20South%20Bays.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-</iframe>
+
+    <audio id="audio" src="https://github.com/BlackSmith779/BlackSmith779.github.io/blob/master/9convert.com%20-%20Bitcrush%20%20Of%20Embers%20Album%20Trailer.mp3?raw=true" loop></audio>
 
  </footer>
-
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-  if (!isChrome){
-      $('#iframeAudio').remove()
-  }
-  else {
-      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-  }
+<script>
+      function bon() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
   <script>
 var alt = document.getElementById("alt");
 var  als = document.getElementById("alts");
