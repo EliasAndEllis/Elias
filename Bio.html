@@ -400,77 +400,6 @@ color: #fff;
 #dfr:hover{
 background: #212121;
 }
-.main_container {
-  padding: 50px;
-  margin-top: 60px;
-color: #000;
-}
-.main_container .item2 {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  background: #fff;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-  padding: 15px;
-  margin-bottom: 25px;
-}
-.item2 b{
-text-decoration: underline;
-}
-.item_info::first-letter {
-  color: white;
-  background-color: black;
-  border-radius: .1em;
-  box-shadow: .1em .1em 0 red;
-  font-size: 250%;
-  padding: .5em .1em;
-  margin: 0 .2em 0 0;
-  float: left;
--webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;
-}
-.main_container .item2 .img_holder {
-  width: 350px;
-  height: auto;
-    pointer-events: none;
-}
-
-.main_container .item2 .img_holder img {
-  width: 100%;
-  display: block;
-  height: auto;
-  margin: 0 auto;
--webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;
-}
-
-.main_container .item2 .item_info {
-  width: calc(100% - 375px);
-  margin-left: 25px;
-  line-heigh: 24px;
-}
-@media (max-width:768px) {
-  .main_container {
-    padding: 25px;
-  }
-  .main_container .item2{
-    flex-direction: column;
-  }
-  .main_container .item2 .img_holder{
-    max-width: 750px;
-    width: 100%;
-  }
-  .main_container .item2 .item_info{
-    margin-left: 0;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-  }
-}
 footer{
   width: 100%;
   background: #F6F6F8;
@@ -843,55 +772,6 @@ font-size: 1.4em;
 margin: 0 .4em 0 0;
 text-shadow:0px 0px 0 #000,1px 1px 0 #000,2px 2px 0 #000,3px 3px 0 #000,4px 4px 0 #000,5px 5px 0 #000,6px 6px 0 #000,7px 7px 0 #000,8px 8px 0 #000,9px 9px 0 #000,10px 10px 0 #000,11px 11px 0 #000;
 }
-.main_container {
-  padding: 0 2em 0 7em;
-  margin: 7em 0 0 0;
-}
-.main_container .item2 {
-  display: flex;
-  width: 95%;
-  align-items: center;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-  paddng: 1em 0 1em 0;
-  margin: 0 0 1.5em 0;
-font-size: 2.5em;
-}
-.item_info p{
-word-wrap: break-word;
-   width: 90%;
-font-family: 'Tourney', cursive;
-}
-.main_container .item2 .img_holder {
-  width: 10em;
-  height: 10em;
-margin: 0 5em 0 0;
-}
-
-.main_container .item2 .img_holder img {
-  width: 15em;
-  display: block;
-  height: 10em;
-}
-
-.main_container .item2 .item_info {
-  width: calc(100% - 375px);
-  margin-left: 25px;
-  line-heigt: 24px;
-}
-.item_info::first-letter {
-  color: white;
-  background-color: #212121;
-  border-radius: .1em;
-  box-shadow: .1em .1em 0 #C60821;
-  font-size: 110%;
-  padding: .3em .1em;
-  margin: 0 .2em 0 0;
-  float: left;
--webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;
-}
 footer{
   width: 100%;
 font-size: 1em;
@@ -1025,22 +905,21 @@ text-decoration: line-through;
 -->
 <div id="header">
 <ul>
-<li spellcheck="true" class="texter" contentediable="true"><a href="https://blacksmith779.github.io/Tryit.html">Elias' horizon</a></li>
+<li spellcheck="true" class="texter" contentediable="true"><a href="https://blacksmith779.github.io/Tryit.html">Elias' Biography</a></li>
 <li><a onclick="openNav()" href="#"><img class="li2" src="https://img.icons8.com/ios-filled/2048/000000/menu--v1.png" alt="Menu button - Refresh the page"/></a></li>
 </ul>
 </div>
 <div id="erio">
-<span class="links" id="dfr"><a href="#" onclick="closeNav()">Scroll</a></span>
+<span class="links" id="dfr"><a href="#" onclick="closeNav()">Biography</a></span>
 <span  id="Sch"></span>
-       <span class="links" id="rly"><a href="https://blacksmith779.github.io/Bio.html" onclick="closeNav()">Bio</a></span>
+       <span class="links" id="rly"><a href="https://blacksmith779.github.io/Bio.html" onclick="closeNav()">Short Essay</a></span>
        <span class="links" id="rly2">
-<a href="#" onclick="closeNav()">Interests</a>
+<a href="#" onclick="closeNav()">Background</a>
 </span>
-       <span class="links" id="rly3"><a href="#" onclick="closeNav()">Achievements</a></span>
-       <span class="links" id="rly4"><a href="#" onclick="closeNav()">Spoken languages</a></span>
-       <span class="links" id="rly5"><a href="#" onclick="closeNav()">Awards</a></span>
-       <span class="links"><a href="#" onclick="closeNav()">Efficiency</a></span>
-<span class="links"><a href="#" onclick="closeNav()">About This Site</a></span>
+       <span class="links" id="rly3"><a href="#" onclick="closeNav()">Appearance</a></span>
+       <span class="links" id="rly4"><a href="#" onclick="closeNav()">Health</a></span>
+       <span class="links" id="rly5"><a href="#" onclick="closeNav()">Books Read</a></span>
+       <span class="links"><a href="#" onclick="closeNav()">Contact</a></span>
 <span class="links" style="visibility: hidden;"><a href="#" onclick="closeNav()"></a></span>
 </div>
 <div class="bg"></div>
@@ -1075,90 +954,6 @@ text-decoration: line-through;
   </a>
   </div>
 </div>
-
-<div class="wrapper2">
-<div class="main_container">
-       <div class="item2">
-<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
-         <div class="img_holder">
-<img src="https://blacksmith779.github.io/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg" alt="Biography image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info" id="mct">
-<p>Section 1, titled "Biography", will give you an insight of all information related to me. From my <b>background</b>, <b>health</b>, <b>personality</b> to other information concenring my appearance.</p>
-         </div>
-      </div>
-      <div class="item2">
-<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
-         <div class="img_holder">
-<img src="https://blacksmith779.github.io/edgar-pimenta-QCjG5hGpdA0-unsplash.jpg" alt="Sports image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p><b>Interests</b>, <b>activities</b>, <b>sports</b>, <b>behaviour</b>, <b>futur plans</b> and more. All of that in section 2 titled "Interests".</p>
-         </div>
-      </div>  
-      <div class="item2">
-<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
-         <div class="img_holder">
-<img src="https://blacksmith779.github.io/luis-villasmil-3yr-LjHyFsA-unsplash.jpg" alt="Achievements image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-In section 3, "achievements", you will explore all of my <b>academic achievements</b>, <b>sports achievements</b>, <b>honours</b> and more.
-</p>
-         </div>
-      </div>  
-      <div class="item2">
-<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
-         <div class="img_holder">
-<img src="https://blacksmith779.github.io/kenji-rikitake-N6svnp0mZBw-unsplash.jpg" alt="Languages image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-Curious how many <b>languages</b> I speak and <b>how I use them</b> ?! click the image and find that out in section 4 "spoken languages".
-</p>
-         </div>
-      </div>  
-      <div class="item2">
-<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
-         <div class="img_holder">
-<img src="https://blacksmith779.github.io/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="Awards image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-Section 5, titled "awards", represents all kinds of <b>certificates</b>, <b>medals</b>, and <b>badges</b> which I have been collecting since ever.
-</p>
-         </div>
-      </div>  
-<div class="item2">
-<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
-         <div class="img_holder">
- <img src="https://blacksmith779.github.io/mimi-thian--VHQ0cw2euA-unsplash.jpg" alt="Values image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-All mankind has got values, which we use to achieve success in our lives. Section 6, "efficiency", opens your eyes on my <b>values</b> that I always use, and answers your question <b>why choosing me</b> ?!
-</p>
-         </div>
-      </div>  
-<div class="item2">
-<a href="https://blacksmith779.github.io/Bio.html" target="_blank">
-         <div class="img_holder">
-<img src="https://blacksmith779.github.io/firmbee-com-ir5lIkVFqC4-unsplash%20(2).jpg" alt="About this site image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-"About this site" is set as title of the last but not least section 7, which provides information related to this website, answering different questions such as <b>who</b> created it ?! <b>with whom</b> ?! <b>what for</b> ?!
-</p>
-         </div>
-      </div>  
-    </div>
 
  <footer>
    <div class="content">
