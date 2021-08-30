@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Elias' horizon</title>
+<title>Elias' Horizon</title>
 <meta charset="UTF-8">
 <meta name="description" content="Welcome to my horizon, here, you will learn everything about me.">
   <meta name="keywords" content="Elias, Harvard, Stanford, Yale, Columbia University, Pen University, NY University">
@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" sizes="152x152" href="https://img.icons8.com/color/2048/000000/leprechaun.png">
 <meta name="application-name" content="Elias' horizon">
 <meta name="msapplication-TileImage" content="https://img.icons8.com/color/2048/000000/leprechaun.png">
-<meta name="msapplication-TileColor" content="#25840F">
+<meta name="msapplication-TileColor" content="#61950C">
 <!-- End of favicon -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@900&display=swap');
@@ -995,6 +995,28 @@ footer a:hover{
   color: #C60821;
 text-decoration: line-through;
 }
+#scl{
+display: flex;
+padding: 2em 5em 2em 5em;
+margin: 7em 0 7em 0;
+width: 100%;
+background-color: #212121;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23f6f6f8' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+#scl h1{
+font-size: 2.75em;
+font-weight: 900;
+margin: 0 6em 0 0;
+width: 50%;
+font-family: 'Arvo', serif;
+}
+#scl p{
+font-size: 2em;
+font-weight: 0;
+text-align: left;
+width: 85%;
+font-family: 'Arvo', serif;
+}
 </style>
 </head>
 <body id="body" onclick="bon()">
@@ -1160,6 +1182,12 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
       </div>  
     </div>
 
+<div id="scl">
+<h1>End of section</h1>
+<p>Seems like you have fully completd ths section.<br><b>Cheers for that !</b><br>We shall meet together again in <b>where you are going.</b></p>
+</div>
+
+
  <footer>
    <div class="content">
      <div class="left box">
@@ -1207,7 +1235,7 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
         var audio = document.getElementById("audio");
         audio.play();
 audio.preload = "auto";
-audio.volume = .7;
+audio.volume = 1;
       }
     </script>
 
