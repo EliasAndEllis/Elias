@@ -922,6 +922,11 @@ text-decoration: underline;
   <strong>Info!</strong>If the page was loaded quickly, then your internet connection is working just fine! And vice versa.
 </div>
 
+<div class="alert info" id="alti2">
+  <span class="closebtn">&times;</span>  
+  <strong>Info!</strong>This website comes with calm music background. A 50% volume level shall and will be fine to enjoy these soft rhythms of mine. Just Relax and enjoy your time while surfing the site.
+</div>
+
 <div class="alert success" id="alts">
   <span class="closebtn">&times;</span>  
   <strong>Warning!</strong>Please Note that some devices and/or some browsers are not compatible with this site. Here's the full list of all devices and/or browsers compatible with it. <a href="#">Check the full list here.</a>
@@ -1045,6 +1050,7 @@ audio.volume = .5;
 var alt = document.getElementById("alt");
 var  als = document.getElementById("alts");
 var ali = document.getElementById("alti");
+var alii = document.getElementById("alti2");
 var alw = document.getElementById("altw");
 const loader = document.querySelector(".loader");
 const bodd = document.querySelector("#body");
@@ -1066,8 +1072,11 @@ setTimeout(function(){
 ali.style.visibility = "visible";
 }, 20);
 setTimeout(function(){
-als.style.visibility = "visible";
+alii.style.visibility = "visible";
 }, 30);
+setTimeout(function(){
+als.style.visibility = "visible";
+}, 40);
     }
     </script>
 <script>
