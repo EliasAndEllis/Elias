@@ -925,7 +925,7 @@ z-index: 10;
 }
 .explosion {
 	position: absolute;
-	botom: 0;
+	botm: 0;
 	width: .5em;
 /*original : 4px; */
 	height: 9em;
@@ -990,7 +990,6 @@ z-index: 10;
 
 #firework1 {
 	right: 95%;
-	top: 40%;
 	transform: scale(1);
 }
 #firework1 .explosion::before {
@@ -999,7 +998,6 @@ z-index: 10;
 
 #firework2 {
 	right: 60%;
-	top: 45%;
 	transform: scale(.7);
 }
 #firework2 .explosion::before {
@@ -1008,7 +1006,6 @@ z-index: 10;
 
 #firework3 {
 	right: 80%;
-	top: 60%;
 	transform: scale(.4);
 }
 #firework3 .explosion::before {
@@ -1102,7 +1099,6 @@ z-index: 10;
 <div id="scl">
 <h1>Welcome to where you're going</h1>
 <p>Thank you for making it till here.<br>This page shall be about my <b>biography</b>, representing valuable topics which will definitely, with no doubt, give you a physical image of my mind, spirit and soul.</p>
-</div>
 
 <div class="firework" id="firework1">
 	<div class="explosion"></div>
@@ -1145,6 +1141,7 @@ z-index: 10;
 	<div class="explosion"></div>
 	<div class="explosion"></div>
 	<div class="explosion"></div>
+</div>
 </div>
 
  <footer>
@@ -1204,6 +1201,9 @@ var  als = document.getElementById("alts");
 var ali = document.getElementById("alti");
 var alii = document.getElementById("alti2");
 var alw = document.getElementById("altw");
+var frija1 = document.getElementById("firework1");
+var frija2 = document.getElementById("firework2");
+var frija3 = document.getElementById("firework3");
 const loader = document.querySelector(".loader");
 const bodd = document.querySelector("#body");
 bodd.style.position = "fixed";
@@ -1240,6 +1240,9 @@ als.style.visibility = "visible";
 }, 40);
 setTimeout(function(){
 als.style.display = "none";
+frija1.style.visibility = "visible";
+frija2.style.visibility = "visible";
+frija3.style.visibility = "visible";
 }, 50000);
     }
     </script>
