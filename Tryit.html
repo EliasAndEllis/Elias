@@ -124,14 +124,16 @@ pointer-events: none;
 .alert{
   padding: .75em;
   background-color: #27B376;
-  color: white;
+  color: #f6f6f8;
   opacity: 1;
   transition: opacity 0.6s;
   margin: .2em .5em .2em .5em;
 font-size: 1em;
 visibility: hidden;
+display: none;
 position: relative;
 z-index: 999;
+font-weight: 600;
 }
 
 .alert.success {
@@ -145,7 +147,7 @@ background-color: #FAA73F;
 }
 .closebtn {
   margin: 0 0 0 1em;
-  color: white;
+  color: #f6f6f8;
   font-weight: bold;
   float: right;
   font-size: 1.5em;
@@ -161,13 +163,15 @@ background-color: #FAA73F;
 }
 
 .closebtn:hover {
-  color: black;
+  color: #4C4856;
 }
 .alert strong{
-font-weight: bolder;
+font-weight: bold;
 font-size: 1.525em;
 margin: 0 .2em 0 0;
 font-family: 'Tourney', cursive;
+text-decoration: underline;
+color: #000;
 }
 .alert a{
 color: #000;
@@ -821,13 +825,19 @@ padding: 0;
 cursor: pointer;
 }
 .alert{
-  padding: .8em;
+  padding: .5em 1em .5em 1em;
   margin: .3em 3em .3em 3em;
-font-size: 1.6em;
+font-size: 1.3em;
 align-items: center;
   justify-content: center;
 line-height: 1.7em;
 font-family: 'Tourney', cursive;
+font-weight: 0;
+}
+.alert::selection {
+background: #fff;
+color: #000;
+font-weight: 900;
 }
 .closebtn {
   margin: 0 0 0 5em;
@@ -839,10 +849,15 @@ padding: 0;
 cursor: pointer;
   }
 .alert strong{
-font-weight: bolder;
-font-size: 1.4em;
-margin: 0 .4em 0 0;
-text-shadow:0px 0px 0 #000,1px 1px 0 #000,2px 2px 0 #000,3px 3px 0 #000,4px 4px 0 #000,5px 5px 0 #000,6px 6px 0 #000,7px 7px 0 #000,8px 8px 0 #000,9px 9px 0 #000,10px 10px 0 #000,11px 11px 0 #000;
+font-weight: 900;
+font-size: 1.2em;
+margin: 0 .2em 0 0;
+text-decoration: underline;
+}
+.alert strong::selection {
+background: #fff;
+color: #000;
+font-weight: 900;
 }
 .main_container {
   padding: 0 2em 0 7em;
@@ -997,12 +1012,14 @@ footer a:hover{
 text-decoration: line-through;
 }
 #scl{
+color: #f6f68;
 display: flex;
 padding: 7.5em 2em 7.5em 5em;
-margin: 7em 0 0 0;
+margin: 4.19em 0 0 0;
 width: 100%;
 background-color: #212121;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23f6f6f8' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+
 }
 #scl h1{
 font-size: 2.75em;
@@ -1010,6 +1027,7 @@ font-weight: 900;
 margin: 0 6em 0 0;
 width: 50%;
 font-family: 'Arvo', serif;
+text-decoration: underline;
 }
 #scl p{
 font-size: 2em;
@@ -1017,6 +1035,103 @@ font-weight: 0;
 text-align: left;
 width: 70%;
 font-family: 'Arvo', serif;
+}
+#scl b{
+font-weight: 900;
+font-size: 120%;
+text-decoration: underline;
+}
+.firework {
+	position: absolute;
+z-index: 10;
+}
+.explosion {
+	position: absolute;
+	botm: 0;
+	width: .5em;
+/*original : 4px; */
+	height: 9em;
+	transform-origin: 50% 100%;
+	/* background-color: rgba(0,0,0,.2); */
+	overflow: hidden;
+}
+.explosion:nth-child(1) {
+	transform: rotate(0deg) translateY(-15px);
+}
+.explosion:nth-child(2) {
+	transform: rotate(30deg) translateY(-15px);
+}
+.explosion:nth-child(3) {
+	transform: rotate(60deg) translateY(-15px);
+}
+.explosion:nth-child(4) {
+	transform: rotate(90deg) translateY(-15px);
+}
+.explosion:nth-child(5) {
+	transform: rotate(120deg) translateY(-15px);
+}
+.explosion:nth-child(6) {
+	transform: rotate(150deg) translateY(-15px);
+}
+.explosion:nth-child(7) {
+	transform: rotate(180deg) translateY(-15px);
+}
+.explosion:nth-child(8) {
+	transform: rotate(210deg) translateY(-15px);
+}
+.explosion:nth-child(9) {
+	transform: rotate(240deg) translateY(-15px);
+}
+.explosion:nth-child(10) {
+	transform: rotate(270deg) translateY(-15px);
+}
+.explosion:nth-child(11) {
+	transform: rotate(300deg) translateY(-15px);
+}
+.explosion:nth-child(12) {
+	transform: rotate(330deg) translateY(-15px);
+}
+
+.explosion::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 2.5em;
+	background-color: #f6f6f8;
+}
+@keyframes explosion {
+	0% {
+		top: 100%;
+	}
+	33%, 100% {
+		top: -50%;
+	}
+}
+
+#firework1 {
+	right: 95%;
+	transform: scale(1);
+}
+#firework1 .explosion::before {
+	animation: explosion 3s 0s ease-in-out infinite;
+}
+
+#firework2 {
+	right: 60%;
+	transform: scale(.7);
+}
+#firework2 .explosion::before {
+	animation: explosion 3s .5s ease-in-out infinite;
+}
+
+#firework3 {
+	right: 80%;
+	transform: scale(.4);
+}
+#firework3 .explosion::before {
+	animation: explosion 3s 1s ease-in-out infinite;
 }
 </style>
 </head>
@@ -1027,12 +1142,17 @@ font-family: 'Arvo', serif;
 </div>
 <div class="alert" id="alt">
   <span class="closebtn">&times;</span>  
-    <strong>Welcome & enjoy!</strong>That's the  home section. To visit other sections, please open the navigation menu or select it from the sticky navigation bar or instead you can click the image of one of the topics below.
+    <strong>Welcome & enjoy!</strong>That's the Biography section. To visit other sections, please open the navigation menu or select it from the sticky navigation bar.
 </div>
 
 <div class="alert info" id="alti">
   <span class="closebtn">&times;</span>  
   <strong>Info!</strong>If the page was loaded quickly, then your internet connection is working just fine! And vice versa.
+</div>
+
+<div class="alert info" id="alti2">
+  <span class="closebtn">&times;</span>  
+  <strong>Info!</strong>This website comes with calm music background. A 50% volume level shall and will be fine to enjoy these soft rhythms of mine. Just Relax and enjoy your time while surfing this site.
 </div>
 
 <div class="alert success" id="alts">
@@ -1186,6 +1306,50 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
 <div id="scl">
 <h1>End of section</h1>
 <p>Seems like you have fully completd this section.<br><b>Cheers for that !</b><br>We shall meet together again in <b>where you are going.</b></p>
+
+
+<div class="firework" id="firework1">
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+</div>
+<div class="firework" id="firework2">
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+</div>
+<div class="firework" id="firework3">
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+</div>
 </div>
 
 
@@ -1194,12 +1358,12 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
      <div class="left box">
        <div class="upper">
          <div class="topic">Note</div>
-         <p>resources ranging from images to fonts are all extracted from verified sources, and are made for public use.</p>
+          <p>resources ranging from images to fonts are all extracted from verified sources, and are made for public use.</p>
        </div>
        <div class="lower">
          <div class="topic">Contact</div>
          <div class="email">
-<a href="mailto: eliasandellis@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i>eliasandellis@gmail.com</a>
+<a href="mailto: eliasandellis@gmail.com" target="_blank" rel="noopener noreferrer">eliasandellis@gmail.com</a>
          </div>
        </div>
      </div>
@@ -1228,7 +1392,7 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
      </div>
    </div>
    <div class="bottom">
-<code>Elias's horizon - Since June 2021</code>
+<code>Elias's horizon <b>1.0</b> - Since June 2021</code>
  </footer>
 <audio id="audio" src="https://github.com/BlackSmith779/BlackSmith779.github.io/blob/master/9convert.com%20-%20Of%20Embers?raw=true" loop></audio>
 <script>
@@ -1236,7 +1400,7 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
         var audio = document.getElementById("audio");
         audio.play();
 audio.preload = "auto";
-audio.volume = .15;
+audio.volume = .5;
       }
     </script>
 
@@ -1244,7 +1408,11 @@ audio.volume = .15;
 var alt = document.getElementById("alt");
 var  als = document.getElementById("alts");
 var ali = document.getElementById("alti");
+var alii = document.getElementById("alti2");
 var alw = document.getElementById("altw");
+var frija1 = document.getElementById("firework1");
+var frija2 = document.getElementById("firework2");
+var frija3 = document.getElementById("firework3");
 const loader = document.querySelector(".loader");
 const bodd = document.querySelector("#body");
 bodd.style.position = "fixed";
@@ -1259,14 +1427,33 @@ bodd.style.cursor = "";
         }, 0);
       },10);
 setTimeout(function(){
+alt.style.display = "block";
 alt.style.visibility = "visible";
-}, 10);
+}, 3000);
 setTimeout(function(){
+alt.style.display= "none";
+}, 12000);
+setTimeout(function(){
+ali.style.display = "block";
 ali.style.visibility = "visible";
-}, 20);
+}, 5000);
 setTimeout(function(){
+ali.style.display = "none";
+}, 24000);
+setTimeout(function(){
+alii.style.display = "block";
+alii.style.visibility = "visible";
+}, 7000);
+setTimeout(function(){
+alii.style.display = "none";
+}, 42000);
+setTimeout(function(){
+als.style.display = "block";
 als.style.visibility = "visible";
-}, 30);
+}, 9000);
+setTimeout(function(){
+als.style.display = "none";
+}, 60000);
     }
     </script>
 <script>
