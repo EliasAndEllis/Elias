@@ -1,10 +1,9 @@
 # -BlackSmith779-.github.io
 <html>
-<head>
-<title>ReadMe</title>
-</head>
 <body>
-<code>Copyright © Since June 2021</code>
-<code>All code is protected, other packages such as images, audios, external links are for private use only</code>
+<br>
+<code><b>Copyright © Since June 2021</b></code>
+<br>
+<code><b>All code is protected and claimed, other packages such as images, audios, external links are for private use only</b></code>
 </body>
 </html>
