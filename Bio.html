@@ -1139,24 +1139,24 @@ pointer-events: none;
 margin: 0;
 }
 .skill-bars{
-  padding: 25px 30px;
-  width: 600px;
+  padding: 2em;
+  width: 100%;
   background: #fff;
-  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-  border-radius: 10px;
+  border-radius: .5em;
 }
 .skill-bars .bar{
-  margin: 20px 0;
+  margin: 0 0 2em 0;
 }
 .skill-bars .bar:first-child{
-  margin-top: 0px;
+  margin-top: 0;
 }
 .skill-bars .bar .info{
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 .skill-bars .bar .info span{
-  font-weight: 500;
-  font-size: 17px;
+  font-weight: 900;
+  font-size: 2em;
+color: #212121;
   opacity: 0;
   animation: showText 0.5s 1s linear forwards;
 }
@@ -1166,15 +1166,13 @@ margin: 0;
   }
 }
 .skill-bars .bar .progress-line{
-  height: 10px;
+  height: 2em;
   width: 100%;
   background: #f0f0f0;
   position: relative;
   transform: scaleX(0);
   transform-origin: left;
-  border-radius: 10px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
-              0 1px rgba(255,255,255,0.8);
+  border-radius: 0 1em 1em 0;
   animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
 }
 @keyframes animate {
@@ -1185,7 +1183,7 @@ margin: 0;
 .bar .progress-line span{
   height: 100%;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 0 1em 1em 0;
   transform: scaleX(0);
   transform-origin: left;
   background: #6665ee;
@@ -1209,7 +1207,7 @@ margin: 0;
 .progress-line span::before{
   position: absolute;
   content: "";
-  top: -10px;
+  top: -1em;
   right: 0;
   height: 0;
   width: 0;
@@ -1222,14 +1220,14 @@ margin: 0;
 }
 .progress-line span::after{
   position: absolute;
-  top: -28px;
+  top: -3em;
   right: 0;
-  font-weight: 500;
+  font-weight: 900;
   background: #000;
   color: #fff;
-  padding: 1px 8px;
-  font-size: 12px;
-  border-radius: 3px;
+  padding: .5em;
+  font-size: 1em;
+  border-radius: .25em;
   opacity: 0;
   animation: showText2 0.5s 1.5s linear forwards;
 }
