@@ -29,17 +29,18 @@
 <!-- End of favicon -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 @font-face {
   font-family: 'Product Sans';
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
 *{
 padding: 0;
 margin: 0;
+font-family: 'Tourney', cursive;
+font-family: 'Charm', cursive;
 font-family: Product Sans;
 z-index: 0;
 list-style: none;
@@ -402,78 +403,43 @@ background: #212121;
 #dfr a{
 color: #f6f6f8;
 }
-.main_container {
-  padding: 50px;
-  margin-top: 60px;
-color: #000;
+#hrc{
+background: #f6f6f8;
+padding: 1em;
+margin: 1em 2em 0 2em;
+display: block;
 }
-.main_container .item2 {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  background: #fff;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-  padding: 15px;
-  margin-bottom: 25px;
+#hrc img{
+width: 100%;
+height: 20em;
+margin: 0 0 1em 0;
 }
-.item2 b{
-text-decoration: underline;
-font-weight: lighter;
-font-family: 'Tourney', cursive;
+#hrc h1{
+color: #212121;
+text-align: left;
+font-weight: 900;
+font-size: 1em;
+margin: 0 0 1em 0;
 }
-.item_info::first-letter {
-  color: white;
-  background-color: black;
-  border-radius: .1em;
-  box-shadow: .1em .1em 0 red;
-  font-size: 250%;
-  padding: .5em .1em;
-  margin: 0 .2em 0 0;
-  float: left;
--webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;
+#hrc h1::first-letter {
+font-size: 150%;
+font-weight: 900;
+color: #C60821;
 }
-.main_container .item2 .img_holder {
-  width: 350px;
-  height: auto;
-    pointer-events: none;
+#hrc a{
+background: #212121;
+color: #f6f6f8;
+padding: .25em .5em .25em .5em;
+border-radius: .25em;
+border: .1em solid #212121;
+font-weight: 900;
+transition: .5s;
 }
-
-.main_container .item2 .img_holder img {
-  width: 100%;
-  display: block;
-  height: auto;
-  margin: 0 auto;
--webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;
-}
-
-.main_container .item2 .item_info {
-  width: calc(100% - 375px);
-  margin-left: 25px;
-  line-heigh: 24px;
-}
-@media (max-width:768px) {
-  .main_container {
-    padding: 25px;
-  }
-  .main_container .item2{
-    flex-direction: column;
-  }
-  .main_container .item2 .img_holder{
-    max-width: 750px;
-    width: 100%;
-  }
-  .main_container .item2 .item_info{
-    margin-left: 0;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-  }
+#hrc a:hover{
+color: #212121;
+background: #f6f6f8;
+margin: 0 0 0 1em;
+border: .1em solid #212121;
 }
 footer{
   width: 100%;
@@ -869,56 +835,43 @@ background: #fff;
 color: #000;
 font-weight: 900;
 }
-.main_container {
-  padding: 0 2em 0 7em;
-  margin: 7em 0 0 0;
+#hrc{
+background: #f6f6f8;
+padding: 1em;
+margin: 1em 2em 0 2em;
+display: block;
 }
-.main_container .item2 {
-  display: flex;
-  width: 95%;
-  align-items: center;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-  paddng: 1em 0 1em 0;
-  margin: 0 0 1.5em 0;
-font-size: 2.5em;
+#hrc img{
+width: 100%;
+height: 20em;
+margin: 0 0 1em 0;
 }
-.item_info p{
-word-wrap: break-word;
-   width: 90%;
-font-family: 'Tourney', cursive;
-font-weight: light;
+#hrc h1{
+color: #212121;
+text-align: left;
+font-weight: 900;
+font-size: 1em;
+margin: 0 0 1em 0;
+}
+#hrc h1::first-letter {
+font-size: 150%;
+font-weight: 900;
 color: #C60821;
 }
-.main_container .item2 .img_holder {
-  width: 10em;
-  height: 10em;
-margin: 0 5em 0 0;
+#hrc a{
+background: #212121;
+color: #f6f6f8;
+padding: .25em .5em .25em .5em;
+border-radius: .25em;
+border: .1em solid #212121;
+font-weight: 900;
+transition: .5s;
 }
-
-.main_container .item2 .img_holder img {
-  width: 15em;
-  display: block;
-  height: 10em;
-}
-
-.main_container .item2 .item_info {
-  width: calc(100% - 375px);
-  margin-left: 25px;
-  line-heigt: 24px;
-}
-.item_info::first-letter {
-  color: white;
-  background-color: #212121;
-  border-radius: .1em;
-  box-shadow: .1em .1em 0 #C60821;
-  font-size: 110%;
-  padding: .3em .1em;
-  margin: 0 .2em 0 0;
-  float: left;
--webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;
+#hrc a:hover{
+color: #212121;
+background: #f6f6f8;
+margin: 0 0 0 1em;
+border: .1em solid #212121;
 }
 footer{
   width: 100%;
@@ -1302,89 +1255,47 @@ background-color: #f6f6f8;
 </div>
 
 
-<div class="wrapper2">
-<div class="main_container">
-       <div class="item2">
-<a href="https://eliasandellis.github.io/Elias/Bio" target="_blank">
-         <div class="img_holder">
-<img src="https://eliasandellis.github.io/Elias/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg" alt="Biography image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info" id="mct">
-<p>Section 1, titled "Biography", will give you an insight of all information related to me. From my <b>background</b>, <b>health</b>, <b>personality</b> to other information concenring my appearance.</p>
-         </div>
-      </div>
-      <div class="item2">
-<a href="#" target="_blank">
-         <div class="img_holder">
-<img src="https://eliasandellis.github.io/Elias/edgar-pimenta-QCjG5hGpdA0-unsplash.jpg" alt="Sports image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p><b>Interests</b>, <b>activities</b>, <b>sports</b>, <b>behaviour</b>, <b>futur plans</b> and more. All of that in section 2 titled "Interests".</p>
-         </div>
-      </div>  
-      <div class="item2">
-<a href="#" target="_blank">
-         <div class="img_holder">
-<img src="https://eliasandellis.github.io/Elias/luis-villasmil-3yr-LjHyFsA-unsplash.jpg" alt="Achievements image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-In section 3, "achievements", you will explore all of my <b>academic achievements</b>, <b>sports achievements</b>, <b>honours</b> and more.
-</p>
-         </div>
-      </div>  
-      <div class="item2">
-<a href="#" target="_blank">
-         <div class="img_holder">
-<img src="https://eliasandellis.github.io/Elias/kenji-rikitake-N6svnp0mZBw-unsplash.jpg" alt="Languages image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-Curious how many <b>languages</b> I speak and <b>how I use them</b> ?! click the image and find that out in section 4 "spoken languages".
-</p>
-         </div>
-      </div>  
-      <div class="item2">
-<a href="#" target="_blank">
-         <div class="img_holder">
-<img src="https://eliasandellis.github.io/Elias/Alexandria-Egypt-reward-competitions-Bridesmaids-Competition-participation-September-12-2014.jpg" alt="Awards image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-Section 5, titled "awards", represents all kinds of <b>certificates</b>, <b>medals</b>, and <b>badges</b> which I have been collecting since ever.
-</p>
-         </div>
-      </div>  
-<div class="item2">
-<a href="#" target="_blank">
-         <div class="img_holder">
- <img src="https://eliasandellis.github.io/Elias/mimi-thian--VHQ0cw2euA-unsplash.jpg" alt="Values image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-All mankind has got values, which we use to achieve success in our lives. Section 6, "efficiency", opens your eyes on my <b>values</b> that I always use, and answers your question <b>why choosing me</b> ?!
-</p>
-         </div>
-      </div>  
-<div class="item2">
-<a href="#" target="_blank">
-         <div class="img_holder">
-<img src="https://eliasandellis.github.io/Elias/firmbee-com-ir5lIkVFqC4-unsplash%20(2).jpg" alt="About this site image - Refresh the page">
-         </div>
-</a>
-         <div class="item_info">
-<p>
-"About this site" is set as title of the last but not least section 7, which provides information related to this website, answering different questions such as <b>who</b> created it ?! <b>with whom</b> ?! <b>what for</b> ?!
-</p>
-         </div>
-      </div>  
-    </div>
+<div id="hrc">
+<img src="https://eliasandellis.github.io/Elias/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg"></img>
+<h1>Section 1, Titled "Biography", Will Give You An Insight Of All Information Related To Me. From My Background, Health, Personality To Other Information Concenring My Appearance.</h1>
+<a href="#">visit</a>
+</div>
+
+<div id="hrc">
+<img src="https://eliasandellis.github.io/Elias/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg"></img>
+<h1>Interests, Activities, Sports, Behaviour, Futur Plans And More. All Of That In Section 2 Titled "Interests".</h1>
+<a href="#">visit</a>
+</div>
+
+<div id="hrc">
+<img src="https://eliasandellis.github.io/Elias/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg"></img>
+<h1>In Section 3, "Achievements", You Will Explore All Of My Academic Achievements, Sports Achievements, Honours And More.</h1>
+<a href="#">visit</a>
+</div>
+
+<div id="hrc">
+<img src="https://eliasandellis.github.io/Elias/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg"></img>
+<h1>Curious How Many Languages I Speak And How I Use Them ?! Click The Image And Find That Out In Section 4 "Spoken Languages".</h1>
+<a href="#">visit</a>
+</div>
+
+<div id="hrc">
+<img src="https://eliasandellis.github.io/Elias/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg"></img>
+<h1>Section 5, Titled "Awards", Represents All Kinds Of Certificates, Medals, And Badges Which I Have Been Collecting Since Ever.</h1>
+<a href="#">visit</a>
+</div>
+
+<div id="hrc">
+<img src="https://eliasandellis.github.io/Elias/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg"></img>
+<h1>All Mankind Has Got Values, Which We Use To Achieve Success In Our Lives. Section 6, "Efficiency", Opens Your Eyes On My Values That I Always Use, And Answers Your Question Why Choosing Me ?!</h1>
+<a href="#">visit</a>
+</div>
+
+<div id="hrc">
+<img src="https://eliasandellis.github.io/Elias/sophia-h-gue-8PEr4R2yFJQ-unsplash.jpg"></img>
+<h1>About This Site" Is Set As Title Of The Last But Not Least Section 7, Which Provides Information Related To This Website, Answering Different Questions Such As Who Created It ?! With Whom ?! What For ?!</h1>
+<a href="#">visit</a>
+</div>
 
 <div id="sce">
 <h1>End of section</h1>
