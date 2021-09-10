@@ -1023,17 +1023,25 @@ footer a:hover{
   color: #C60821;
 text-decoration: line-through;
 }
-#scl{
-color: #f6f68;
+#scb, #sce{
 display: flex;
-padding: 7.5em 2em 7.5em 5em;
-margin: 4.19em 0 0 0;
 width: 100%;
+}
+#scb{
+background-color: #f6f6f8;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23212121' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+color: #212121;
+padding: 7.5em 2em 7.5em 5em;
+margin: 3.8em 0 5em 0;
+}
+#sce{
 background-color: #212121;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23f6f6f8' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
-
+padding: 7.5em 2em 7.5em 5em;
+margin: 4.19em 0 0 0;
+color: #f6f68;
 }
-#scl h1{
+#scb h1, #sce h1{
 font-size: 2.75em;
 font-weight: 900;
 margin: 0 6em 0 0;
@@ -1041,14 +1049,14 @@ width: 50%;
 font-family: 'Arvo', serif;
 text-decoration: underline;
 }
-#scl p{
+#scb p, #sce p{
 font-size: 2em;
 font-weight: 0;
 text-align: left;
 width: 70%;
 font-family: 'Arvo', serif;
 }
-#scl b{
+#scb b, #sce b{
 font-weight: 900;
 font-size: 120%;
 text-decoration: underline;
@@ -1112,6 +1120,12 @@ z-index: 10;
 	top: 100%;
 	height: 2.5em;
 	background-color: #f6f6f8;
+}
+#scb .explosion::before {
+background-color: #212121;
+}
+#sce .explosion::before {
+background-color: #f6f6f8;
 }
 @keyframes explosion {
 	0% {
@@ -1225,11 +1239,68 @@ z-index: 10;
 <div class="brnch">
   <a href="#">
   <ul>
-<li id="m2">your Privacy</li>
+<li id="m2">Thy Privacy</li>
+  </ul>
+  </a>
+  </div>
+<div class="brnch">
+  <a href="#">
+  <ul>
+<li id="m2">Thy safety</li>
   </ul>
   </a>
   </div>
 </div>
+
+<div id="scb">
+<h1>Welcome to my horizon</h1>
+<p>Before we even start, I am really glad that one of your great people made it till here. <br><b>Cheers for that!!!</b><br>This website is composed of many related pages concerning everything about me. It might seem a bit large, but still, it will save you loads of time.</p>
+
+
+<div class="firework" id="firework1">
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+</div>
+<div class="firework" id="firework2">
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+</div>
+<div class="firework" id="firework3">
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+	<div class="explosion"></div>
+</div>
+</div>
+
 
 <div class="wrapper2">
 <div class="main_container">
@@ -1315,7 +1386,7 @@ All mankind has got values, which we use to achieve success in our lives. Sectio
       </div>  
     </div>
 
-<div id="scl">
+<div id="sce">
 <h1>End of section</h1>
 <p>Seems like you have fully completd this section.<br><b>Cheers for that !</b><br>We shall meet together again in <b>where you are going.</b></p>
 
