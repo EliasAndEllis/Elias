@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Elias' Horizon302</title>
+<title>Elias' Horizon</title>
 <meta charset="UTF-8">
 <meta name="description" content="Welcome to my horizon, here, you will learn everything about me.">
   <meta name="keywords" content="Elias, Harvard, Stanford, Yale, Columbia University, Pen University, NY University">
@@ -127,7 +127,7 @@ pointer-events: none;
 }
 .alert{
   padding: .75em;
-  background-color: #27B376;
+  background-color: #008c45;
   color: #f6f6f8;
   opacity: 1;
   transition: opacity 0.6s;
@@ -142,10 +142,11 @@ font-family: 'Marvel', sans-serif;
 }
 
 .alert.success {
-background-color: #BF212F;
+background-color: #cd212a;
 }
 .alert.info {
-background-color: #254B96;
+background-color: #f4f5f0;
+color: #212121;
 }
 .alert.warning {
 background-color: #FAA73F;
@@ -166,7 +167,15 @@ background-color: #FAA73F;
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-
+.alert.success strong{
+color: #f6f6f8;
+}
+.alert.info strong{
+color: #212121;
+}
+.alert.info .closebtn{
+color: #212121;
+}
 .closebtn:hover {
   color: #4C4856;
 }
@@ -176,8 +185,9 @@ font-size: 1.525em;
 margin: 0 .2em 0 0;
 font-family: 'Arvo', serif;
 text-decoration: underline;
-color: #000;
+color: #f6f6f8;
 }
+
 .alert a{
 color: #000;
 text-decoration: underline;
