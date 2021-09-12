@@ -983,6 +983,25 @@ padding: 7.5em 2.5em 7.5em 5em;
 margin: 5em 0 0 0;
 color: #f6f68;
 }
+#bkp{
+display: block;
+}
+#bkp a{
+background: #C60821;
+color: #f6f6f8;
+font-weight: 900;
+font-size: 2em;
+padding: .25em .75em;
+margin: 0 0 0 0;
+border-radius: .25em;
+trasition: 1s;
+border: .1em solid #C60821;
+}
+#sce a:hover{
+color: #C60821;
+background: #f6f6f8;
+border: .1em solid #C60821;
+}
 #scb h1, #sce h1{
 font-size: 2.75em;
 font-weight: 900;
@@ -992,6 +1011,7 @@ font-family: 'Arvo', serif;
 text-decoration: underline;
 }
 #scb p, #sce p{
+margin: 0 0 2.5em 0;
 font-size: 2.25em;
 font-weight: 0;
 text-align: left;
@@ -1003,6 +1023,22 @@ font-weight: 900;
 font-size: 112.5%;
 text-decoration: underline;
 font-family: 'Tourney', cursive;
+}
+#bkp a{
+background: #C60821;
+color: #f6f6f8;
+font-weight: 900;
+font-size: 1.75em;
+padding: .25em .75em;
+margin: 0 0 0 15em;
+border-radius: .25em;
+trasition: 1s;
+border: .1em solid #C60821;
+}
+#sce a:hover{
+color: #C60821;
+background: #f6f6f8;
+border: .1em solid #C60821;
 }
 .firework {
 	position: absolute;
@@ -1337,8 +1373,10 @@ background-color: #f6f6f8;
 
 <div id="sce">
 <h1>End of section</h1>
+<div id="bkp">
 <p>Seems like you have fully completd this section.<br><b>Cheers for that !</b><br>We shall meet together again in <b>where you are going.</b></p>
-
+<a href="#">Next</a>
+</div>
 
 <div class="firework" id="firework1">
 	<div class="explosion"></div>
