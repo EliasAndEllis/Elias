@@ -25,13 +25,10 @@
 <link rel="apple-touch-icon" sizes="152x152" href="https://img.icons8.com/color/2048/000000/leprechaun.png">
 <meta name="application-name" content="Elias' horizon">
 <meta name="msapplication-TileImage" content="https://img.icons8.com/color/2048/000000/leprechaun.png">
-<meta name="msapplication-TileColor" content="#61950C">
+<meta name="msapplication-TileColor" content="#4CB050">
 <!-- End of favicon -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Marvel:wght@700&family=Tourney:wght@900&display=swap');
 @font-face {
   font-family: 'Product Sans';
   font-style: normal;
@@ -41,7 +38,13 @@
 *{
 padding: 0;
 margin: 0;
-font-family: Product Sans;
+/*exeptionals*/
+font-family: 'Tourney', cursive;
+/*titles*/
+font-family: 'Arvo', serif;
+/*usual text (p)*/
+font-family: 'Marvel', sans-serif;
+font-family: 'Product Sans';
 z-index: 0;
 list-style: none;
 text-transform: capitalize;
@@ -67,7 +70,7 @@ background-color: #DFDBE5;
 background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M82.42 180h-1.415L0 98.995v-2.827L6.167 90 0 83.833V81.004L81.005 0h2.827L90 6.167 96.167 0H98.996L180 81.005v2.827L173.833 90 180 96.167V98.996L98.995 180h-2.827L90 173.833 83.833 180H82.42zm0-1.414L1.413 97.58 8.994 90l-7.58-7.58L82.42 1.413 90 8.994l7.58-7.58 81.006 81.005-7.58 7.58 7.58 7.58-81.005 81.006-7.58-7.58-7.58 7.58zM175.196 0h-25.832c1.033 2.924 2.616 5.59 4.625 7.868C152.145 9.682 151 12.208 151 15c0 5.523 4.477 10 10 10 1.657 0 3 1.343 3 3v4h16V0h-4.803c.51.883.803 1.907.803 3 0 3.314-2.686 6-6 6s-6-2.686-6-6c0-1.093.292-2.117.803-3h10.394-13.685C161.18.938 161 1.948 161 3v4c-4.418 0-8 3.582-8 8s3.582 8 8 8c2.76 0 5 2.24 5 5v2h4v-4h2v4h4v-4h2v4h2V0h-4.803zm-15.783 0c-.27.954-.414 1.96-.414 3v2.2c-1.25.254-2.414.74-3.447 1.412-1.716-1.93-3.098-4.164-4.054-6.612h7.914zM180 17h-3l2.143-10H180v10zm-30.635 163c-.884-2.502-1.365-5.195-1.365-8 0-13.255 10.748-24 23.99-24H180v32h-30.635zm12.147 0c.5-1.416 1.345-2.67 2.434-3.66l-1.345-1.48c-1.498 1.364-2.62 3.136-3.186 5.14H151.5c-.97-2.48-1.5-5.177-1.5-8 0-12.15 9.84-22 22-22h8v30h-18.488zm13.685 0c-1.037-1.793-2.976-3-5.197-3-2.22 0-4.16 1.207-5.197 3h10.394zM0 148h8.01C21.26 148 32 158.742 32 172c0 2.805-.48 5.498-1.366 8H0v-32zm0 2h8c12.15 0 22 9.847 22 22 0 2.822-.53 5.52-1.5 8h-7.914c-.567-2.004-1.688-3.776-3.187-5.14l-1.346 1.48c1.09.99 1.933 2.244 2.434 3.66H0v-30zm15.197 30c-1.037-1.793-2.976-3-5.197-3-2.22 0-4.16 1.207-5.197 3h10.394zM0 32h16v-4c0-1.657 1.343-3 3-3 5.523 0 10-4.477 10-10 0-2.794-1.145-5.32-2.992-7.134C28.018 5.586 29.6 2.924 30.634 0H0v32zm0-2h2v-4h2v4h4v-4h2v4h4v-2c0-2.76 2.24-5 5-5 4.418 0 8-3.582 8-8s-3.582-8-8-8V3c0-1.052-.18-2.062-.512-3H0v30zM28.5 0c-.954 2.448-2.335 4.683-4.05 6.613-1.035-.672-2.2-1.16-3.45-1.413V3c0-1.04-.144-2.046-.414-3H28.5zM0 17h3L.857 7H0v10zM15.197 0c.51.883.803 1.907.803 3 0 3.314-2.686 6-6 6S4 6.314 4 3c0-1.093.292-2.117.803-3h10.394zM109 115c-1.657 0-3 1.343-3 3v4H74v-4c0-1.657-1.343-3-3-3-5.523 0-10-4.477-10-10 0-2.793 1.145-5.318 2.99-7.132C60.262 93.638 58 88.084 58 82c0-13.255 10.748-24 23.99-24h16.02C111.26 58 122 68.742 122 82c0 6.082-2.263 11.636-5.992 15.866C117.855 99.68 119 102.206 119 105c0 5.523-4.477 10-10 10zm0-2c-2.76 0-5 2.24-5 5v2h-4v-4h-2v4h-4v-4h-2v4h-4v-4h-2v4h-4v-4h-2v4h-4v-2c0-2.76-2.24-5-5-5-4.418 0-8-3.582-8-8s3.582-8 8-8v-4c0-2.64 1.136-5.013 2.946-6.66L72.6 84.86C70.39 86.874 69 89.775 69 93v2.2c-1.25.254-2.414.74-3.447 1.412C62.098 92.727 60 87.61 60 82c0-12.15 9.84-22 22-22h16c12.15 0 22 9.847 22 22 0 5.61-2.097 10.728-5.55 14.613-1.035-.672-2.2-1.16-3.45-1.413V93c0-3.226-1.39-6.127-3.6-8.14l-1.346 1.48C107.864 87.987 109 90.36 109 93v4c4.418 0 8 3.582 8 8s-3.582 8-8 8zM90.857 97L93 107h-6l2.143-10h1.714zM80 99c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm20 0c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6z' fill='%23c60821' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 background-attachment: fixed;
 color: #fff;
-height: 100em;
+height: 200em;
 }
 ::selection {
 background: #C60821;
@@ -129,7 +132,7 @@ pointer-events: none;
 }
 .alert{
   padding: .75em;
-  background-color: #27B376;
+  background-color: #008c45;
   color: #f6f6f8;
   opacity: 1;
   transition: opacity 0.6s;
@@ -139,14 +142,16 @@ visibility: hidden;
 display: none;
 position: relative;
 z-index: 999;
-font-weight: 600;
+font-weight: 900;
+font-family: 'Marvel', sans-serif;
 }
 
 .alert.success {
-background-color: #BF212F;
+background-color: #cd212a;
 }
 .alert.info {
-background-color: #254B96;
+background-color: #f4f5f0;
+color: #212121;
 }
 .alert.warning {
 background-color: #FAA73F;
@@ -167,7 +172,15 @@ background-color: #FAA73F;
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-
+.alert.success strong{
+color: #f6f6f8;
+}
+.alert.info strong{
+color: #212121;
+}
+.alert.info .closebtn{
+color: #212121;
+}
 .closebtn:hover {
   color: #4C4856;
 }
@@ -175,9 +188,9 @@ background-color: #FAA73F;
 font-weight: bold;
 font-size: 1.525em;
 margin: 0 .2em 0 0;
-font-family: 'Tourney', cursive;
+font-family: 'Arvo', serif;
 text-decoration: underline;
-color: #000;
+color: #f6f6f8;
 }
 .alert a{
 color: #000;
@@ -210,7 +223,7 @@ let: 0%;
 }
 .texter a{
 font-size: 1.6em;
-font-weight: bolder;
+font-weight: 900;
 font-family: 'Tourney', cursive;
 text-transform: uppercase;
 color: #212121;
@@ -271,7 +284,7 @@ padding: .39em 0 0 0;
   top: 0;
   left: 0;
   overflow-x: hidden;
-  transition: 0.6s;
+  transition: 0.75s;
 z-index: 500;
 background: #F6F6F8;
 }
@@ -284,7 +297,7 @@ width: 100%;
   font-size: 1.6em;
   color: #C60821;
   display: block;
-  transition: 0.4s;
+  transition: .75s;
   padding: 1em 0 1em 1em;
   width: 100%;
 text-decoration: none;
@@ -301,7 +314,8 @@ text-decoration: line-through;
 }
 .brnch li{
     display: block;
-font-family: 'Tourney', cursive;
+font-family: 'Product Sans';
+font-weight: 900;
 }
 #dwordvar{
 display: flex;
@@ -311,7 +325,7 @@ background: #C60821;
 width: 100%;
 }
 #wordvar{
-font-family: 'Tourney', cursive;
+font-family: 'Arvo', serif;
 padding: 0;
 position: relative;
 left: -35%;
@@ -362,7 +376,7 @@ z-index: 200;
 
    padding: .4em 1.2em;
 
-   border-radius: 50vw 50vw;
+   border-radius: 13em 13em;
 
    box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
 
@@ -385,7 +399,8 @@ border: .06em solid gray;
 
    color: #212121;
 
-   transition: 1s;
+   transition: .75s;
+font-family: 'Marvel', sans-serif;
 }
 .links:hover {
 
@@ -399,6 +414,7 @@ border: .06em solid gray;
   content: "|";
 margin: 0 .5em 0 .5em;
 font-size: 1.1em;
+font-family: 'Marvel', sans-serif;
 color: #F6F6F8;
 }
 #dfr{
@@ -406,10 +422,30 @@ border-radius: 0;
 background: #212121;
 }
 #dfr a{
-color: #fff;
+color: #f6f6f8;
 }
-#dfr:hover{
-background: #212121;
+#hrc{
+background: #f6f6f8;
+padding: .75em;
+margin: 1em .75em 0 .75em;
+display: block;
+}
+#hrc img{
+width: 100%;
+height: 20em;
+margin: 0 0 1em 0;
+}
+#hrc h1{
+color: #212121;
+text-align: left;
+font-weight: 900;
+font-size: 1em;
+margin: 0 0 1em 0;
+}
+#hrc h1::first-letter {
+font-size: 150%;
+font-weight: 900;
+color: #C60821;
 }
 footer{
   width: 100%;
@@ -423,8 +459,8 @@ footer .content{
   flex-wrap: wrap;
   justify-content: space-between;
 }
-footer .content p,a{
-  color: #fff;
+footer .content p, footer .content a{
+  font-family: 'Marvel', sans-serif;
 }
 footer .content .box{
   width: 33%;
@@ -452,35 +488,6 @@ footer .content .middle{
 }
 footer .content .middle a{
   line-height: 32px;
-}
-footer .content .right input[type="text"]{
-  height: 45px;
-  width: 100%;
-  outline: none;
-  color: #d9d9d9;
-  background: #000;
-  border-radius: 5px;
-  padding-left: 10px;
-  font-size: 17px;
-  border: 2px solid #222222;
-}
-footer .content .right input[type="submit"]{
-  height: 42px;
-  width: 100%;
-  font-size: 18px;
-  color: #d9d9d9;
-  background: #eb2f06;
-  outline: none;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  margin-top: 12px;
-  border: 2px solid #eb2f06;
-  transition: all 0.3s ease-in-out;
-}
-.content .right input[type="submit"]:hover{
-  background: none;
-  color:  #eb2f06;
 }
 #unibrow img{
 margin: 0 .5em 0 .5em;
@@ -532,7 +539,7 @@ footer .bottom a{
   color: #eb2f06;
 }
 footer a{
-  transition: all 0.3s ease;
+  transition: all .75s ease;
 }
 footer a:hover{
   color: #eb2f06;
@@ -659,15 +666,16 @@ margin: 0 .3em 0 0;
 <style>/*1920×1080*/
 @media only screen and (min-width: 1919px){
 .texter a{
-font-size: 2em;
+font-size: 1.75em;
 padding: 0 0 0 2.5em;
 cursor: pointer;
 }
 .li2{
-width: 4.1em;
+width: 3.5em;
 height: auto;
 position: absolute;
 left: 95%;
+top: 30%;
 cursor: pointer;
 }
 #header{
@@ -685,23 +693,33 @@ top: 0%;
 }
 #erio{
 position: sticky;
-   top: 4.19em;
-   paddng: .7em .5em .7em .5em;
+   top: 3.8em;
+   padding: .5em 0 .5em .5em;
 }
 .links {
-   bx-shaow: 0 0 1.25em -0.625em rgba(0,0,0,0.5);
-   margin: 0 .4em 0 0;
-   font-size: .9em;
-borer: .07em solid #000;
-transition: .5s;
+   margin: 0 .25em 0 0;
+   font-size: 1em;
+transition: .75s;
+padding: .25em .75em .25em .75em;
+font-weight: 900;
+}
+.links:hover{
+border: .00125em solid #f6f6f8;
 }
 #dfr{
-margin: 0 .4em 0 .4em;
+margin: 0 .25em 0 0;
+   font-size: 1em;
+transition: .75s;
+padding: .25em .75em .25em .75em;
+font-weight: 900;
+}
+#dfr a:hover{
+border: 0 solid red;
 }
 #Sch::after{
   content: "|";
-margin: 0 .4em 0 0;
-font-size: 1.1m;
+margin: 0 .25em 0 0;
+font-size: 1em;
 }
 #backtotop{
     position: fixed;
@@ -729,15 +747,15 @@ padding: 0;
 width: 100%;
 }
 .brnch li{
-  font-size: 1.1em;
-  padding: .2em 0 .2em .2em;
-  width: 100%;
-font-family: 'Tourney', cursive;
+  font-size: 1em;
+font-weight: 900;
+  padding: .15em 0 .15em .15em;
+width: 100%;
 }
 #dwordvar{
 display: flex;
-padding: .82em 0 .82em 1em;
-transition: 1s;
+padding: .625em 0 .625em 1em;
+transition: .75s;
 width: 100%;
 }
 #wordvar{
@@ -745,12 +763,12 @@ padding: 0;
 position: relative;
 left: -35%;
 opacity: 0;
-font-size: 2.3em;
+font-size: 2.25em;
 color: #fff;
-transition: 1.5s;
+transition: 1.75s;
 }
 #closebtn {
-  width: 2.3em;
+  width: 2.25em;
 height: auto;
   position: absolute;
 top: .8em;
@@ -761,11 +779,11 @@ cursor: pointer;
 }
 .alert{
   padding: .5em 1em .5em 1em;
-  margin: .3em 3em .3em 3em;
-font-size: 1.3em;
+  margin: .25em 2.5em .25em 2.5em;
+font-size: 1.5em;
 align-items: center;
   justify-content: center;
-line-height: 1.7em;
+line-height: 1.75em;
 font-family: 'Tourney', cursive;
 font-weight: 0;
 }
@@ -777,7 +795,7 @@ font-weight: 900;
 .closebtn {
   margin: 0 0 0 5em;
   font-weight: bolder;
-  font-size: 1.7em;
+font-size: 1.5em;
 align-items: center;
   justify-content: center;
 padding: 0;
@@ -785,30 +803,83 @@ cursor: pointer;
   }
 .alert strong{
 font-weight: 900;
-font-size: 1.2em;
-margin: 0 .2em 0 0;
+font-size: 1.25em;
+margin: 0 .25em 0 0;
 text-decoration: underline;
+width: 1.25em;
 }
 .alert strong::selection {
 background: #fff;
 color: #000;
 font-weight: 900;
 }
+#hra{
+display: flex;
+justify-content: center;
+}
+#hrc{
+background: #f6f6f8;
+padding: 2.5em;
+margin: 2em 2em 0 2em;
+display: block;
+width: 47%;
+}
+#hrc:last-child {
+width: 46.26%;
+}
+#hrc img{
+width: 100%;
+height: 35em;
+margin: 0 0 1em 0;
+}
+#hrc h1{
+color: #212121;
+text-align: left;
+font-weight: 900;
+font-size: 2.5em;
+margin: 0 0 1em 0;
+font-family: 'Marvel', sans-serif;
+}
+#hrc h1::first-letter {
+font-size: 150%;
+font-weight: 900;
+color: #C60821;
+}
+#hrc ul{
+display: inline-flex;
+}
+#hrc ul a{
+background: #C60821;
+color: #f6f6f8;
+font-weight: 900;
+font-size: 1.25em;
+padding: .25em .75em;
+margin: 0 .5em 0 0;
+border-radius: .25em;
+transition: .75s;
+border: .1em solid #C60821;
+}
+#hrc ul a:hover{
+color: #C60821;
+background: #f6f6f8;
+border: .1em solid #C60821;
+}
 footer{
   width: 100%;
-font-size: 1em;
+font-weight: 900;
 word-spacing: 0;
 }
 footer .content{
   max-with: 1350px;
   margin: auto;
-  padding: 2em 3em 2em 3em;
+  padding: 2.5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-footer .content p,a{
+footer .content p, footer .content a{
   color: #757575;
+font-size: 1.25em;
 }
 footer .content .box{
   width: 33%;
@@ -821,7 +892,7 @@ footer .content .topic{
   margin: 0 0 .3em 0;
 }
 footer .content p{
-  text-align: justify;
+  text-align: left;
 }
 footer .content .lower .topic{
   margin: 1em 0 .3em 0;
@@ -833,6 +904,8 @@ footer .content .middle{
   padding: 0 0 0 5em;
 }
 footer .content .middle a{
+line-height: 1em;
+transition: .75s;
   line-height: 0;
 }
 #unibrow img{
@@ -886,45 +959,84 @@ footer .bottom code{
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;
+font-family: 'Marvel', sans-serif;
+font-size: 1.25em;
+transition: .75s;
 }
 footer .bottom code:hover{
   color: #C60821;
 }
 footer a{
-  transition: all .3s ease;
+  transition: all .75s ease;
 }
 footer a:hover{
   color: #C60821;
 text-decoration: line-through;
 }
-#scl{
-color: #212121;
+#scb, #sce{
 display: flex;
-padding: 7.5em 2em 7.5em 5em;
-margin: 4.19em 0 5em 0;
 width: 100%;
+}
+#scb{
 background-color: #f6f6f8;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23212121' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+color: #212121;
+padding: 7.5em 2.5em 7.5em 5em;
+margin: 3.8em 0 5em 0;
 }
-#scl h1{
+#sce{
+background-color: #212121;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23f6f6f8' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+padding: 7.5em 2.5em 7.5em 5em;
+margin: 5em 0 0 0;
+color: #f6f68;
+}
+#sce a:hover{
+color: #C60821;
+background: #f6f6f8;
+border: .05em solid #C60821;
+}
+#scb h1, #sce h1{
 font-size: 2.75em;
 font-weight: 900;
-margin: 0 6em 0 0;
+margin: 0 5em 0 0;
 width: 50%;
 font-family: 'Arvo', serif;
 text-decoration: underline;
 }
-#scl p{
-font-size: 2em;
+#scb p, #sce p{
+margin: 0 0 2.5em 0;
+font-size: 2.25em;
 font-weight: 0;
 text-align: left;
 width: 70%;
-font-family: 'Arvo', serif;
+font-family: 'Product Sans';
 }
-#scl b{
+#scb b, #sce b{
 font-weight: 900;
-font-size: 120%;
+font-size: 112.5%;
 text-decoration: underline;
+font-family: 'Tourney', cursive;
+}
+#bkp{
+display: block;
+}
+#bkp a{
+background: #C60821;
+color: #f6f6f8;
+font-weight: 900;
+font-size: 2em;
+padding: .125em .25em;
+margin: 0 0 0 20em;
+border-radius: .25em;
+border: .05em solid #C60821;
+transition: 1s;
+}
+#sce a:hover{
+color: #C60821;
+background: #f6f6f8;
+border: .05em solid #C60821;
+margin: 0 0 0 21em;
 }
 .firework {
 	position: absolute;
@@ -933,9 +1045,9 @@ z-index: 10;
 .explosion {
 	position: absolute;
 	botm: 0;
-	width: .5em;
+	width: 1em;
 /*original : 4px; */
-	height: 9em;
+	height: 15em;
 	transform-origin: 50% 100%;
 	/* background-color: rgba(0,0,0,.2); */
 	overflow: hidden;
@@ -978,13 +1090,19 @@ z-index: 10;
 }
 
 .explosion::before {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 100%;
 	height: 2.5em;
-	background-color: #000;
+	background-color: red;
+}
+#scb .explosion::before {
+background-color: #212121;
+}
+#sce .explosion::before {
+background-color: #f6f6f8;
 }
 @keyframes explosion {
 	0% {
@@ -1275,7 +1393,7 @@ color: #212121;
 
 <div class="alert success" id="alts">
   <span class="closebtn">&times;</span>  
-  <strong>Warning!</strong>Please Note that some devices and/or some browsers are not compatible with this site. Here's the full list of all devices and/or browsers compatible with it. <a href="#">Check the full list here.</a>
+  <strong>Warning!</strong>Please Note that some devices and/or some browsers are not compatible with this site. Here's the full list of all devices and/or browsers compatible with it. <a href="#" target="_blank">Check the full list here.</a>
 </div>
 
 <!--
@@ -1286,22 +1404,23 @@ color: #212121;
 -->
 <div id="header">
 <ul>
-<li spellcheck="true" class="texter" contentediable="true"><a href="https://eliasandellis.github.io/Elias/Bio">Elias' Biography</a></li>
-<li><a onclick="openNav()" href="#"><img class="li2" src="https://img.icons8.com/ios-filled/2048/000000/menu--v1.png" alt="Menu button - Refresh the page"/></a></li>
+<li spellcheck="true" class="texter" contentediable="true"><a href="https://eliasandellis.github.io/Elias/Horizon">Elias' horizon</a></li>
+<li><a onclick="openNav()"><img class="li2" src="https://img.icons8.com/ios-filled/2048/000000/menu--v1.png" alt="Menu button - Refresh the page"/></a></li>
 </ul>
 </div>
 <div id="erio">
-<span class="links" id="dfr"><a href="#" onclick="closeNav()">Biography</a></span>
+<span class="links" id="dfr"><a onclick="closeNav()">Scroll</a></span>
 <span  id="Sch"></span>
-       <span class="links" id="rly"><a href="#" onclick="closeNav()">Short Essay</a></span>
+       <span class="links" id="rly"><a href="https://eliasandellis.github.io/Elias/Bio" target="_blank" onclick="closeNav()">Bio</a></span>
        <span class="links" id="rly2">
-<a href="#" onclick="closeNav()">Background</a>
+<a href="https://eliasandellis.github.io/Elias/Interests" target="_blank" onclick="closeNav()">Interests</a>
 </span>
-       <span class="links" id="rly3"><a href="#" onclick="closeNav()">Appearance</a></span>
-       <span class="links" id="rly4"><a href="#" onclick="closeNav()">Health</a></span>
-       <span class="links" id="rly5"><a href="#" onclick="closeNav()">Books Read</a></span>
-       <span class="links"><a href="#" onclick="closeNav()">Contact</a></span>
-<span class="links" style="visibility: hidden;"><a href="#" onclick="closeNav()"></a></span>
+       <span class="links" id="rly3"><a href="https://eliasandellis.github.io/Elias/Achievements" target="_blank" onclick="closeNav()">Achievements</a></span>
+       <span class="links" id="rly4"><a href="https://eliasandellis.github.io/Elias/Languages" target="_blank" onclick="closeNav()">Spoken languages</a></span>
+       <span class="links" id="rly5"><a href="https://eliasandellis.github.io/Elias/Awards" target="_blank" onclick="closeNav()">Awards</a></span>
+       <span class="links"><a href="https://eliasandellis.github.io/Elias/Efficiency" target="_blank" onclick="closeNav()">Efficiency</a></span>
+<span class="links"><a href="https://eliasandellis.github.io/Elias/Site" target="_blank" onclick="closeNav()">About This Site</a></span>
+<span class="links" style="visibility: hidden;"><a onclick="closeNav()"></a></span>
 </div>
 <div class="bg"></div>
 <a id="backtotop">
@@ -1314,31 +1433,39 @@ color: #212121;
 </div>
   <hr>
   <div class="brnch">
-  <a href="#">
+  <a href="https://eliasandellis.github.io/Elias/Horizon">
   <ul>
 <li id="m1">Main</li>
   </ul>
   </a>
   </div>
   <div class="brnch">
-  <a href="#">
+  <a href="https://eliasandellis.github.io/Elias/Contact" target="_blank">
   <ul>
 <li id="m2">Contact</li>
   </ul>
   </a>
   </div>
 <div class="brnch">
-  <a href="#">
+  <a href="https://eliasandellis.github.io/Elias/Privacy" target="_blank">
   <ul>
-<li id="m2">your Privacy</li>
+<li id="m2">Thy Privacy</li>
+  </ul>
+  </a>
+  </div>
+<div class="brnch">
+  <a href="https://eliasandellis.github.io/Elias/Safety" target="_blank">
+  <ul>
+<li id="m2">Thy safety</li>
   </ul>
   </a>
   </div>
 </div>
 
-<div id="scl">
-<h1>Welcome to where you're going</h1>
-<p>Thank you for making it till here.<br>This page shall be about my <b>biography</b>, representing valuable topics which will definitely, with no doubt, give you a physical image of my mind, spirit and soul.</p>
+<div id="scb">
+<h1>Welcome to my horizon</h1>
+<p>Before we even start, I am really glad that one of your great people made it till here. <br><b>Cheers for that!!!</b><br>This website is composed of many related pages concerning everything about me. It might seem a bit large, but still, it will save you loads of time.</p>
+
 
 <div class="firework" id="firework1">
 	<div class="explosion"></div>
@@ -1471,14 +1598,14 @@ color: #212121;
        </div>
      </div>
      <div class="middle box">
-       <div class="topic">Paths</div>
+<div class="topic">Paths</div>
        <div><a href="https://eliasandellis.github.io/Elias/Bio" target="_blank">Biography</a></div>
-       <div><a href="#">Interests</a></div>
-       <div><a href="#">Achievements</a></div>
-       <div><a href="#">Spoken Languages</a></div>
-       <div><a href="#">Awards</a></div>
-       <div><a href="#">Efficiency</a></div>
-<div><a href="#">About this site</a></div>
+       <div><a href="https://eliasandellis.github.io/Elias/Interests" target="_blank">Interests</a></div>
+       <div><a href="https://eliasandellis.github.io/Elias/Achievements" target="_blank">Achievements</a></div>
+       <div><a href="https://eliasandellis.github.io/Elias/Languages" target="_blank">Spoken Languages</a></div>
+       <div><a href="https://eliasandellis.github.io/Elias/Awards" target="_blank">Awards</a></div>
+       <div><a href="https://eliasandellis.github.io/Elias/Efficiency" target="_blank">Efficiency</a></div>
+<div><a href="https://eliasandellis.github.io/Elias/Site" target="_blank">About this site</a></div>
      </div>
      <div class="right box">
        <div class="topic">Targets</div>
@@ -1682,7 +1809,7 @@ che.style.top="0vh";
               navbar.style.top="0%";
 function myFunction(x) {
   if (x.matches) { // If media query matches
-    che.style.top= "4.19em";
+    che.style.top= "3.8em";
 }
 else {
    che.style.top= "7.4vh";
