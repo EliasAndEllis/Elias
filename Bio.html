@@ -157,7 +157,7 @@ background-color: #FAA73F;
 }
 .closebtn {
   margin: 0 0 0 1em;
-  color: #f4f5f0,;
+  color: #f4f5f0;
   font-weight: bold;
   float: right;
   font-size: 1.5em;
@@ -459,7 +459,8 @@ footer .content{
   justify-content: space-between;
 }
 footer .content p, footer .content a{
-  font-family: 'Marvel', sans-serif;
+  color: #fff;
+font-family: 'Marvel', sans-serif;
 }
 footer .content .box{
   width: 33%;
@@ -692,7 +693,7 @@ top: 0%;
 }
 #erio{
 position: sticky;
-   top: 3.8em;
+   top: 3.94em;
    padding: .5em 0 .5em .5em;
 }
 .links {
@@ -783,8 +784,6 @@ font-size: 1.5em;
 align-items: center;
   justify-content: center;
 line-height: 1.75em;
-font-family: 'Tourney', cursive;
-font-weight: 0;
 }
 .alert::selection {
 background: #fff;
@@ -905,7 +904,6 @@ footer .content .middle{
 footer .content .middle a{
 line-height: 1em;
 transition: .75s;
-  line-height: 0;
 }
 #unibrow img{
 margn: 0 .5em 0 .5em;
@@ -1793,7 +1791,7 @@ lasScrollTop1 = scrollTop1;
 
 
     <script>
-      var lastScrollTop = 40;
+      var lastScrollTop = 150;
       var navbar = document.getElementById("header");
 var che = document.getElementById("erio");
 window.addEventListener("scroll",function()
@@ -1808,7 +1806,7 @@ che.style.top="0vh";
               navbar.style.top="0%";
 function myFunction(x) {
   if (x.matches) { // If media query matches
-    che.style.top= "3.8em";
+    che.style.top= "3.94em";
 }
 else {
    che.style.top= "7.4vh";
