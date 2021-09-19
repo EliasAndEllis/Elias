@@ -1417,19 +1417,41 @@ font-size: 10em;
 .progress-line.oth span::after{
   content: "10%";
 }
-.skill-bars ul{
-font-weight: 900;
-  font-size: 1.25em;
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 color: #212121;
+}
+
+#customers td, #customers th {
+  border: .1em solid #CACCD6;
+  padding: .5em;
+}
+
+#customers tr:nth-child(3){
+background-color: #f6f6f8;
+}
+
+#customers tr:nth-child(2){
+background-color: #CACCD6;
+}
+
+#customers tr:hover {
+background-color: #676B77;
+}
+
+#customers th {
+  padding: 1em;
+  text-align: left;
+  background-color: #6665ee;
+  color: #f6f6f8;
+}
+#customers ul{
 display: block;
 }
-.skill-bars ul h{
-font-size: 1.5em;
-}
-.skill-bars li{
-list-style-type: disc;
-color: #6665ee;
-margin: 0 0 0 1em;
+#customers li:before{
+content: "-";
 }
 </style>
 </head>
@@ -1597,7 +1619,7 @@ margin: 0 0 0 1em;
 
 <div id="pbb">
 <div id="pih">
-<h2>Background</h2>
+<h2>Background & appearance</h2>
 <img src="https://raw.githubusercontent.com/EliasAndEllis/Elias/master/jonathan-gallegos-_vA2q0-NroU-unsplash.jpg" alt="Background image - refresh the page"></img>
 <img src="https://raw.githubusercontent.com/EliasAndEllis/Elias/master/jonathan-bean-Q5BVSGt9Ljc-unsplash.jpg" alt="Background image - refresh the page"></img>
 </div>
@@ -1723,17 +1745,65 @@ margin: 0 0 0 1em;
 </div>
 </div>
 </div>
+</div>
+
+
+<div id="pbb">
+<div id="pih">
+<h2>physical and mental health</h2>
+<img src="https://raw.githubusercontent.com/EliasAndEllis/Elias/master/jonathan-gallegos-_vA2q0-NroU-unsplash.jpg" alt="Background image - refresh the page"></img>
+<img src="https://raw.githubusercontent.com/EliasAndEllis/Elias/master/jonathan-bean-Q5BVSGt9Ljc-unsplash.jpg" alt="Background image - refresh the page"></img>
+</div>
 <p>suspendisse orci appareat decore primis vix corrumpit sententiae interpretaris platea delicata quaestio cum vidisse tritani deterruisset placerat fames eius autem nonumes faucibus sapien noster brute</p>
- <div class="skill-bars">
+<table id="customers">
+  <tr>
+    <th>illnesses/allergies</th>
+    <th>period of time</th>
+<th>causes</th>
+    <th>symptoms</th>
+<th>medicine</th>
+  </tr>
+  <tr>
+    <td>dust mite allergy</td>
+    <td>late autumn - spring</td>
+<td>
 <ul>
-<h>hair</h>
-<li>curly</li>
-<li>curly</li>
+<li>pollen</li>
+<li>pet hair</li>
+<li>dust mites</li>
 </ul>
+</td>
+    <td>
+<ul>
+<li>Runny nose</li>
+<li>Itchy, red or watery eyes</li>
+<li>Swollen, blue-colored skin under your eyes</li>
+<li>migraine</li>
+</ul>
+</td>
+<td>none (Temporary allergy. Medicine not required)</td>
+  </tr>
+  <tr>
+    <td>migraine</td>
+    <td>the end or the beginning of each season</td>
+    <td>
+<ul>
+<li>weather changes</li>
+<li>hormones</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Being sensitive to light, sound, or smell</li>
+<li>thirst</li>
+</ul>
+</td>
+<td>none (Temporary allergy. Medicine not required)</td>
+  </tr>
+</table>
+
 </div>
 
-
-</div>
 </div>
 
  <footer>
