@@ -1256,6 +1256,11 @@ margin: 0 1.9em 0 0;
 #pbb p{
 margin: 1.25em 0 1.25em 0;
 }
+.skill-bars .bar .info span::selection {
+background: #6665ee;
+color: #f6f6f8;
+font-weight: 900;
+}
 .skill-bars{
   padding: 1.25em;
   width: 100%;
@@ -1423,9 +1428,13 @@ font-size: 10em;
   width: 100%;
 color: #212121;
 }
-
+#customers th::selection, #customers td::selection, #customers li::selection{
+color: #6665ee;
+background: #f6f6f8;
+font-weight: 900;
+}
 #customers td, #customers th {
-  border: .1em solid #CACCD6;
+  border: .1em solid #6665ee;
   padding: .5em;
 }
 
