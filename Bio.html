@@ -87,9 +87,10 @@ text-decoration: none;
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 img{
-color: red;
+color: #C60821;
 font-size: 1em;
 width: 100%;
+font-weight: 900;
 }
 .loader{
   position: fixed;
@@ -1239,6 +1240,9 @@ padding: 2em 2em 2em 2em;
 color: #fff;
 width: 100%;
 }
+#pbb:nth-child(2), #pbb:nth-child(3){
+margin: 0 0 5em 0;
+}
 #pbb img{
 width: 49%;
 height: 30em;
@@ -1348,6 +1352,21 @@ color: #212121;
 .bar .progress-line.oth span{
   width: 10%;
 }
+.bar .progress-line.arc span{
+  width: 2%;
+}
+.bar .progress-line.ext span{
+  width: 90%;
+}
+.bar .progress-line.int span{
+  width: 10%;
+}
+.bar .progress-line.inu span{
+  width: 81%;
+}
+.bar .progress-line.obs span{
+  width: 19%;
+}
 .progress-line span::before{
   position: absolute;
   content: "";
@@ -1421,12 +1440,29 @@ font-size: 10em;
 }
 .progress-line.oth span::after{
   content: "10%";
+}
+.progress-line.arc span::after{
+  content: "2%";
+}
+.progress-line.ext span::after{
+  content: "90%";
+}
+.progress-line.int span::after{
+  content: "10%";
+}
+.progress-line.inu span::after{
+  content: "81%";
+}
+.progress-line.obs span::after{
+  content: "19%";
+}
+.progress-line.oth span::after, .progress-line.arc span::after{
 position: absolute;
   top: 2em;
   right: .25em;
 border-radius: .25em 0 .25em .25em;
 }
-.progress-line.oth span::before{
+.progress-line.oth span::before, .progress-line.arc span::before{
   position: absolute;
   top: 1.6em;
   right: .25em;
@@ -1471,6 +1507,34 @@ display: block;
 }
 #customers li:before{
 content: "-";
+}
+#builders{
+display: flex;
+white-space: nowrap;
+overflow: auto;
+}
+#builders img{
+width: 100%;
+height: 20em;
+margin: 0;
+padding: 0;
+}
+#workers{
+display: block;
+background: #f6f6f8;/*transparent "no background"*/
+margin: 0 1em 0 1em;
+height: 27.5em;
+}
+#workers h2{
+margin: .5em 0 0 0;
+text-decoration: none;
+font-size: 2em;
+color: #64697B;
+}
+#workers h3{
+margin: 0 0 0 0;
+font-size: 2em;
+color: #AEB2AE;
 }
 </style>
 </head>
@@ -1673,7 +1737,7 @@ content: "-";
  <div class="skill-bars">
     <div class="bar">
       <div class="info">
-        <span>olive skin</span>
+        <span>olive skin (Mediterranean skin)</span>
       </div>
       <div class="progress-line oli">
         <span></span>
@@ -1730,7 +1794,7 @@ content: "-";
  <div class="skill-bars">
     <div class="bar">
       <div class="info">
-        <span>height = 183 cm (taller than 85.769% of people in th world)</span>
+        <span>height = 183 cm (taller than 85.769% of people in the world)</span>
       </div>
       <div class="progress-line hei">
         <span></span>
@@ -1827,11 +1891,233 @@ content: "-";
 <td>n/a</td>
 </tr>
 </table>
+<p>fabulas usu tibique hac lectus vivendo omnesque suavitate pro ultricies gubergren atqui inceptos qualisque signiferumque mauris verear tortor sollicitudin consectetuer sem sonet putent purus iriure</p>
+<table id="customers">
+  <tr>
+    <th>mental health</th>
+    <th>mental issues</th>
+<th>causes</th>
+    <th>symptoms</th>
+<th>medicine</th>
+  </tr>
+  <tr>
+    <td>stable (always)</td>
+    <td>none</td>
+<td>n/a</td>
+    <td>n/a</td>
+<td>n/a</td>
+  </tr>
+</table>
+</div>
+
+
+<div id="pbb">
+<div id="pih">
+<h2>personality</h2>
+<img src="https://raw.githubusercontent.com/EliasAndEllis/Elias/master/diana-polekhina-REYb3IaZjj4-unsplash.jpg" alt="Background image - refresh the page"></img>
+<img src="https://raw.githubusercontent.com/EliasAndEllis/Elias/master/sammy-williams-ufgOEVZuHgM-unsplash.jpg" alt="Background image - refresh the page"></img>
+</div>
+<p>suspendisse orci appareat decore primis vix corrumpit sententiae interpretaris platea delicata quaestio cum vidisse tritani deterruisset placerat fames eius autem nonumes faucibus sapien noster brute
+Architect (Intj-a) 3rd rarest personality (men) 1st rarest personality (women) 
+</p>
+ <div class="skill-bars">
+    <div class="bar">
+      <div class="info">
+        <span>only 2% of population on earth has it</span>
+      </div>
+      <div class="progress-line arc">
+        <span></span>
+      </div>
+    </div>
+</div>
+<p>repudiandae sit delicata sumo ubique scelerisque platea adhuc putent urbanitas phasellus rhoncus ligula elementum qui aliquip liber massa torquent dicant voluptaria convenire amet lorem urbanitas</p>
+ <div class="skill-bars">
+    <div class="bar">
+      <div class="info">
+        <span>extraverted (social person)</span>
+      </div>
+      <div class="progress-line ext">
+        <span></span>
+      </div>
+    </div>
+<div class="bar">
+      <div class="info">
+        <span>introverted</span>
+      </div>
+      <div class="progress-line int">
+        <span></span>
+      </div>
+    </div>
+</div>
+<p>iudicabit lorem taciti pretium suspendisse mus expetendis malesuada velit interdum iuvaret molestie venenatis nobis civibus accommodare discere debet ligula oratio aliquip molestie parturient delicata nulla</p>
+ <div class="skill-bars">
+<img src="file:///storage/emulated/0/Download/Cloud_Core_-_Developer_Skills_Network_-_v3.png" alt="Background image - refresh the page"></img>
+    <div class="bar">
+      <div class="info">
+        <span>intuitive</span>
+      </div>
+      <div class="progress-line inu">
+        <span></span>
+      </div>
+    </div>
+<div class="bar">
+      <div class="info">
+        <span>observant</span>
+      </div>
+      <div class="progress-line obs">
+        <span></span>
+      </div>
+    </div>
+</div>
+<p>delicata honestatis harum persius primis leo montes taciti tacimates libris persequeris discere lectus novum natum mediocrem necessitatibus orci eu mandamus porta qualisque lacinia maiestatis tota</p>
+ <div class="skill-bars">
+<img src="file:///storage/emulated/0/Download/Cloud_Core_-_Developer_Skills_Network_-_v3.png" alt="Background image - refresh the page"></img>
+    <div class="bar">
+      <div class="info">
+        <span>thinking</span>
+      </div>
+      <div class="progress-line inu">
+        <span></span>
+      </div>
+    </div>
+<div class="bar">
+      <div class="info">
+        <span>feeling</span>
+      </div>
+      <div class="progress-line obs">
+        <span></span>
+      </div>
+    </div>
+</div>
+<p>delicata honestatis harum persius primis leo montes taciti tacimates libris persequeris discere lectus novum natum mediocrem necessitatibus orci eu mandamus porta qualisque lacinia maiestatis tota</p>
+ <div class="skill-bars">
+<img src="file:///storage/emulated/0/Download/Cloud_Core_-_Developer_Skills_Network_-_v3.png" alt="Background image - refresh the page"></img>
+    <div class="bar">
+      <div class="info">
+        <span>judging</span>
+      </div>
+      <div class="progress-line inu">
+        <span></span>
+      </div>
+    </div>
+<div class="bar">
+      <div class="info">
+        <span>prospecting</span>
+      </div>
+      <div class="progress-line obs">
+        <span></span>
+      </div>
+    </div>
+</div>
+<p>delicata honestatis harum persius primis leo montes taciti tacimates libris persequeris discere lectus novum natum mediocrem necessitatibus orci eu mandamus porta qualisque lacinia maiestatis tota</p>
+ <div class="skill-bars">
+<img src="file:///storage/emulated/0/Download/Cloud_Core_-_Developer_Skills_Network_-_v3.png" alt="Background image - refresh the page"></img>
+    <div class="bar">
+      <div class="info">
+        <span>assertive</span>
+      </div>
+      <div class="progress-line inu">
+        <span></span>
+      </div>
+    </div>
+<div class="bar">
+      <div class="info">
+        <span>turbulent</span>
+      </div>
+      <div class="progress-line obs">
+        <span></span>
+      </div>
+    </div>
+</div>
+<p>numquam falli repudiare maiestatis fabellas inciderint phasellus fabulas veniam nascetur inimicus lectus fugit aliquid instructior scelerisque fastidii suavitate definitionem mutat mediocrem rhoncus appetere neglegentur mauris</p>
+<div id="builders">
+
+<div id="workers">
+<img src="#"></img>
+<h2>seven of nine</h2>
+<h3>star trek: voyager</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+<div id="workers">
+<img src="#"></img>
+<h2>jjvjbv</h2>
+<h3>jjvjbv</h3>
+</div>
+</div>
+
 
 </div>
 
 </div>
-
  <footer>
    <div class="content">
      <div class="left box">
