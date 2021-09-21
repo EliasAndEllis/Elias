@@ -1509,32 +1509,30 @@ content: "-";
 }
 #builders{
 display: flex;
-white-space: nowrap;
 overflow: auto;
-overflow-x: visible;
+overflow-y: hidden;
 }
 #builders::-webkit-scrollbar {
-    width: 1em;  /* Remove scrollbar space */
-height: 1em;
+    width: 0;  /* Remove scrollbar space */
+height: .75em;
 padding: 1em;
-    background: #fff;  /* Optional: just make scrollbar invisible */
+    background: #f6f6f8;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 #builders::-webkit-scrollbar-thumb {
-    Background: #000;
+    Background: #212121;
 }
 #builders img{
 width: 25em;
-height: 30em;
+height: 32.5em;
 margin: 0;
 padding: 0;
-overflow-x: visible;
 }
 #workers{
 display: block;
 background: #f6f6f8;/*transparent "no background"*/
 margin: 0 1em 0 1em;
-height: 37.5em;
+height: 40em;
 width: 25em;
 }
 #workers h2{
