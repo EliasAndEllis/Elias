@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Elias' Biography443</title>
+<title>Elias' Biography500</title>
 <meta charset="UTF-8">
 <meta name="description" content="Welcome to my horizon, here, you will learn everything about me.">
   <meta name="keywords" content="Elias, Harvard, Stanford, Yale, Columbia University, Pen University, NY University">
@@ -53,6 +53,17 @@ box-sizing: border-box;
 html {
     overflow: scroll;
     overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+height: 0;
+padding: 0;
+margin: 0;
+    background: #f6f6f8;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    Background: #f6f6f8;
 }
 body{
 background-color: #DFDBE5;
@@ -360,17 +371,6 @@ background: #212121;
 white-space: nowrap;
 transition: 1s;
 z-index: 200;
-}
-#erio::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-height: 0;
-padding: 0;
-margin: 0;
-    background: #000;  /* Optional: just make scrollbar invisible */
-}
-/* Optional: show position indicator in red */
-#erio::-webkit-scrollbar-thumb {
-    Background: #000;
 }
 .links {
 
@@ -1512,6 +1512,16 @@ display: flex;
 white-space: nowrap;
 overflow: auto;
 overflow-x: visible;
+}
+#builders::-webkit-scrollbar {
+    width: 1em;  /* Remove scrollbar space */
+height: 1em;
+padding: 1em;
+    background: #fff;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+#builders::-webkit-scrollbar-thumb {
+    Background: #000;
 }
 #builders img{
 width: 25em;
