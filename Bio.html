@@ -1237,7 +1237,7 @@ padding: 2em 2em 2em 2em;
 color: #fff;
 width: 100%;
 }
-#pbb:nth-child(2), #pbb:nth-child(3){
+#pbb:nth-child(2), #pbb:nth-child(3), #pbb:nth-child(4), #pbb:nth-child(5){
 margin: 0 0 5em 0;
 }
 #pbb img{
@@ -1364,6 +1364,15 @@ color: #212121;
 .bar .progress-line.obs span{
   width: 19%;
 }
+.bar .progress-line.busi span{
+  width: 55%;
+}
+.bar .progress-line.life span{
+  width: 30%;
+}
+.bar .progress-line.biog span{
+  width: 15%;
+}
 .progress-line span::before{
   position: absolute;
   content: "";
@@ -1453,13 +1462,22 @@ font-size: 10em;
 .progress-line.obs span::after{
   content: "19%";
 }
-.progress-line.oth span::after, .progress-line.arc span::after{
+.progress-line.busi span::after{
+  content: "55%";
+}
+.progress-line.life span::after{
+  content: "30%";
+}
+.progress-line.biog span::after{
+  content: "15%";
+}
+.progress-line.oth span::after, .progress-line.arc span::after, .progress-line.biog span::after{
 position: absolute;
   top: 2em;
   right: .25em;
 border-radius: .25em 0 .25em .25em;
 }
-.progress-line.oth span::before, .progress-line.arc span::before{
+.progress-line.oth span::before, .progress-line.arc span::before, .progress-line.biog span::before{
   position: absolute;
   top: 1.6em;
   right: .25em;
@@ -1471,6 +1489,10 @@ transform: rotate(90deg);
   width: 100%;
 color: #212121;
 }
+#customers img {
+width: 30%;
+height: 10em;
+}
 #customers th::selection, #customers td::selection, #customers li::selection{
 color: #6665ee;
 background: #f6f6f8;
@@ -1481,11 +1503,11 @@ font-weight: 900;
   padding: .5em;
 }
 
-#customers tr:nth-child(3){
+#customers tr:nth-child(3), #customers tr:nth-child(5), #customers tr:nth-child(7), #customers tr:nth-child(9), #customers tr:nth-child(11){
 background-color: #f6f6f8;
 }
 
-#customers tr:nth-child(2), #customers tr:nth-child(4){
+#customers tr:nth-child(2), #customers tr:nth-child(4), #customers tr:nth-child(6), #customers tr:nth-child(8), #customers tr:nth-child(10), #customers tr:nth-child(12){
 background-color: #CACCD6;
 }
 
@@ -1930,8 +1952,8 @@ font-family: 'Marvel', sans-serif;
 <div id="pbb">
 <div id="pih4">
 <h2>personality</h2>
-<img src="https://github.com/EliasAndEllis/Elias/blob/master/avery-evans-NOm4f0xx2bU-unsplash.jpg?raw=true" alt="Background image - refresh the page"></img>
-<img src="https://github.com/EliasAndEllis/Elias/blob/master/alvaro-reyes-qWwpHwip31M-unsplash.jpg?raw=true" alt="Background image - refresh the page"></img>
+<img src="https://raw.githubusercontent.com/EliasAndEllis/Elias/master/harry-pappas-_tt2GYZQpwo-unsplash.jpg" alt="Background image - refresh the page"></img>
+<img src="https://raw.githubusercontent.com/EliasAndEllis/Elias/master/antonio-lapa-HKn3U7bSXsQ-unsplash.jpg" alt="Background image - refresh the page"></img>
 </div>
 <p>suspendisse orci appareat decore primis vix corrumpit sententiae interpretaris platea delicata quaestio cum vidisse tritani deterruisset placerat fames eius autem nonumes faucibus sapien noster brute
 Architect (Intj-a) 3rd rarest personality (men) 1st rarest personality (women) 
@@ -2120,8 +2142,152 @@ Architect (Intj-a) 3rd rarest personality (men) 1st rarest personality (women)
 <h3>breaking bad</h3>
 </div>
 </div>
+</div>
 
 
+<div id="pbb">
+<div id="pih2">
+<h2>Background & appearance</h2>
+<img src="https://github.com/EliasAndEllis/Elias/blob/master/charles-deluvio-hmLTJtzHGJw-unsplash.jpg?raw=true" alt="Background image - refresh the page"></img>
+<img src="https://github.com/EliasAndEllis/Elias/blob/master/fahrul-azmi-cFUZ-6i83vs-unsplash.jpg?raw=true" alt="Background image - refresh the page"></img>
+</div>
+<p>suspendisse orci appareat decore primis vix corrumpit sententiae interpretaris platea delicata quaestio cum vidisse tritani deterruisset placerat fames eius autem nonumes faucibus sapien noster brute</p>
+  <div class="skill-bars">
+    <div class="bar">
+      <div class="info">
+        <span>business (money, strategy, management, team work, investment, selling)</span>
+      </div>
+      <div class="progress-line busi">
+        <span></span>
+      </div>
+    </div>
+<div class="bar">
+      <div class="info">
+        <span>life (discipline, behaviour, manners, charisma, philosophy, success)</span>
+      </div>
+      <div class="progress-line life">
+        <span></span>
+      </div>
+    </div>
+<div class="bar">
+      <div class="info">
+        <span>biography (success & failure stories, influencers, entrepreneurs)</span>
+      </div>
+      <div class="progress-line biog">
+        <span></span>
+      </div>
+    </div>
+</div>
+<p>postea maluisset graecis torquent quod urna euismod omittam porttitor ipsum euismod utroque adipiscing idque theophrastus ridens eripuit hac felis periculis primis autem varius consequat sententiae</p>
+<table id="customers">
+  <tr>
+    <th>book</th>
+<th>name</th>
+    <th>author</th>
+<th>pages</th>
+    <th>label</th>
+  </tr>
+  <tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+<td>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+<img src="/storage/emulated/0/Alarms/61LWeQImM9L.jpg"></img>
+</td>
+    <td>execution - the discipline of getting things done</td>
+<td>larry bossidy & ram charan</td>
+    <td>n/a</td>
+<td>life</td>
+  </tr>
+</table>
 </div>
 
 </div>
