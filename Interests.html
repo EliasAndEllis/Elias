@@ -1640,14 +1640,14 @@ font-family: 'Marvel', sans-serif;
 	width: 2.75em;
 	height: 2.75em;
 	border-radius:50%;
-	border: solid .25em #aaa;
+	border: solid .25em #aaaaaa;
 	transition:all ease 0.3s;
      
 }
 
 #progress-bar-container li.active:before, #progress-bar-container li:hover:before {
-	border:solid .25em #fff;
-	background: #C60821;
+	border:solid .25em #f6f6f8;
+	background: #6665ee;
 }
 
 #progress-bar-container li {
@@ -1655,7 +1655,7 @@ font-family: 'Marvel', sans-serif;
 	float:left;
 	width:20%;
 	text-align:center;
-	color:#aaa;
+	color: #aaaaaa;
 	text-transform:uppercase;
 	font-size: .75em;
 	cursor:pointer;
@@ -1674,7 +1674,7 @@ font-family: 'Marvel', sans-serif;
 }
 
 #progress-bar-container li.active, #progress-bar-container li:hover {
-	color:#444;
+	color:#f6f6f8;
 }
 
 #progress-bar-container li:after {
@@ -1682,7 +1682,7 @@ font-family: 'Marvel', sans-serif;
 	display:block;
 	width: .75em;
 	height: .75em;
-	background:#777;
+	background: #777;
 	margin:auto;
 	border:solid .5em #fff;
 	border-radius:50%;
@@ -1697,13 +1697,13 @@ font-family: 'Marvel', sans-serif;
 }
 
 #progress-bar-container li.active:after {
-	background:#207893;
+	background: #6665ee;
 }
 
 #progress-bar-container #line {
 	width:80%;
 	margin:auto;
-	background: #eee;
+	background: #CACCD6;
 	height: .375em;
 	position:absolute;
 	left:10%;
@@ -1717,8 +1717,7 @@ font-family: 'Marvel', sans-serif;
 	content:" ";
 	width: 0%;
 	height:100%;
-	background: #207893;	 
-	background:pink; 
+	background: #6665ee;	 
 	position:absolute;
 	z-index:2;
 	border-radius: 3.125em;
@@ -1728,7 +1727,7 @@ font-family: 'Marvel', sans-serif;
 #progress-content-section {
 	width:90%;
 	margin: auto;
-	background: brown;
+	background: #CACCD6;
 	border-radius: .5em;
 }
 
@@ -1740,7 +1739,7 @@ margin: auto;
 
 #progress-content-section .section-content h2{
 	font-size: 1.5em;
-	color: red;
+	color: #676B77;
 margin: auto;
 	text-align:center;
 text-decoration: none;
@@ -1748,9 +1747,14 @@ text-decoration: none;
 
 #progress-content-section .section-content p {
 	font-size: 1.25em;
-	color: blue;
+	color: #f6f6f8;
+font-family: 'Marvel', sans-serif;
+font-weight: 900;
 }
-
+#progress-content-section .section-content p::first-letter{
+font-size: 100%;
+color: #f6f6f8;
+}
 #progress-content-section .section-content {
 	display:none;
 	animation: FadeInUp 700ms ease 1;
