@@ -1,30 +1,50 @@
 <!DOCTYPE html>
-<html>
-<body>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Get User Location in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <button>Detect your location</button>
+    <script src="script.js">
+const button = document.querySelector("button");
 
-<p>Click the button to get your coordinates.</p>
+button.addEventListener("click", ()=>{
+    if(navigator.geolocation){
+        button.innerText = "Allow to detect location";
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }else{
+        button.innerText = "Your browser not support";
+    }
+});
 
-<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+function onSuccess(position){
+    button.innerText = "Detecting your location...";
+    let {latitude, longitude} = position.coords;
+    fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=YOUR_API_KEY`)
+    .then(response => response.json()).then(response =>{
+        let allDetails = response.results[0].components;
+        console.table(allDetails);
+        let {county, postcode, country} = allDetails;
+        button.innerText = `${county} ${postcode}, ${country}`;
+    }).catch(()=>{
+        button.innerText = "Something went wrong";
+    });
 }
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+function onError(error){
+    if(error.code == 1){
+        button.innerText = "You denied the request";
+    }else if(error.code == 2){
+        button.innerText = "Location is unavailable";
+    }else{
+        button.innerText = "Something went wrong";
+    }
+    button.setAttribute("disabled", "true");
 }
 </script>
-
-</body>
+  </body>
 </html>
-
