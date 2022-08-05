@@ -49,7 +49,7 @@ box-sizing: border-box;
 text-align: center:
 vertical-align: center;
 }
-hml {
+html {
     overflow: scroll;
     overflow-x: hidden;
 text-align: center:
@@ -73,12 +73,13 @@ width: 100%;
 background: #212121;
 text-align: center:
 vertical-align: center;
+height: 120em;
 }
 #garbage{
 font-family: Arial, Helvetica, sans-serif;
     width:100%;
 position: absolute;
-  top: 25%;
+top: 10em;
 border-collapse: collapse;
 text-align: center:
 z-index: 1000;
@@ -88,21 +89,33 @@ z-index: 1000;
 border-width: 0 .001em .001em .001em;
 border-color: #212121;
   padding: .5em;
-text-align: center:
+text-align: center;
 }
-#garbage tr:nth-child(1), tr:nth-child(3), tr:nth-child(5), tr:nth-child(7), tr:nth-child(9), tr:nth-child(11){
+#garbage tr:nth-child(odd){
 background-color: #f6f6f8;
 }
-#garbage tr:nth-child(2), tr:nth-child(4), tr:nth-child(6), tr:nth-child(8), tr:nth-child(10), tr:nth-child(12){
+#garbage tr:nth-child(even){
 background-color: #CACCD6;
+}
+#garbage tr:first-child{
+background-color: #0CDC80;
+color: white;
+font-weight: 900;
+}
+#garbage tr:last-child{
+background-color: #DA0F3A;
+color: white;
+font-weight: 900;
 }
 #garbage tr:hover{
 background-color: #676B77;
+color: white;
+font-weight: 900;
 }
 #garbage th{
 padding: .5em;
   text-align: center;
-background-color: #6665ee;
+background-color: #910CFC;
   color: #f6f6f8;
 text-transform: uppercase;
 font-weight: 900;
@@ -122,34 +135,62 @@ height: 0;
   left: 0;
 z-index: 0;
 }
+#more1, #more2, #more3, #more4, #more5, #more6, #more7{
+display: none;
+}
+#myBtn1, #myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6, #myBtn7{
+padding: 0;
+margin: 0;
+background: none;
+font-weight: 900;
+border: 0;
+}
+#dots1, #dots2, #dots3, #dots4, #dots5, #dots6, #dots7{
+color: #910CFC;
+font-weight: 900;
+}
 </style>
 </head>
 <body>
 <canvas id='canv'></canvas>
 <table id="garbage" class="table table-striped">
-    <tr  class="bg-info">
-<th data-column="worth" data-order="desc">Worth<b>&#9650</b></th>
-<th data-column="difficulty" data-order="desc">Difficulty<b>&#9650</b></th>
-        <th data-column="name" data-order="desc">Name<b>&#9650</b></th>
-        <th data-column="reason" data-order="desc">Reason<b>&#9650</b></th>
-<th data-column="hometown" data-order="desc">Hometown<b>&#9650</b></th>
-<th data-column="email" data-order="desc">Email<b>&#9650</b></th>
-<th data-column="number" data-order="desc">Number<b>&#9650</b></th>
-<th data-column="instagram" data-order="desc">Instagram<b>&#9650</b></th>
-<th data-column="tiktok" data-order="desc">Tiktok<b>&#9650</b></th>
+    <audio id="audio" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20Oh%20Yeah%20Sound%20Effect.mp3?raw=true"></audio>
+    <audio id="audio2" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20iPhone%20Piano%20Riff%20AlarmRingtone%20Apple%20Sound%20%20Sound%20Effect%20for%20Editing.mp3?raw=true"></audio>
+<tr  class="bg-info">
+<th data-column="worth" data-order="desc" value="PLAY" onclick="play()">Worth<b>&#9650</b></th>
+<th data-column="difficulty" data-order="desc" value="PLAY" onclick="play()">Difficulty<b>&#9650</b></th>
+        <th data-column="name" data-order="desc" value="PLAY" onclick="play()">Name<b>&#9650</b></th>
+        <th data-column="reason" data-order="desc" value="PLAY" onclick="play()">Reason<b>&#9650</b></th>
+<th data-column="hometown" data-order="desc" value="PLAY" onclick="play()">Hometown<b>&#9650</b></th>
+<th data-column="email" data-order="desc" value="PLAY" onclick="play()">Email<b>&#9650</b></th>
+<th data-column="number" data-order="desc" value="PLAY" onclick="play()">Number<b>&#9650</b></th>
+<th data-column="instagram" data-order="desc" value="PLAY" onclick="play()">Instagram<b>&#9650</b></th>
+<th data-column="tiktok" data-order="desc" value="PLAY" onclick="play()">Tiktok<b>&#9650</b></th>
+<th data-column="description" data-order="desc" value="PLAY" onclick="play()">Description<b>&#9650</b></th>
 </tr>
 
-<tbody id="myTable"></tbody>
+<tbody id="myTable" value="PLAY" onclick="play2()"></tbody>
 </table>
 </body>
 <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+function play2() {
+        var audio2 = document.getElementById("audio2");
+        audio2.play();
+      }
+    </script>
+<script>
 	var myArray = [
-	    {'worth':'036677', 'difficulty':'es', 'name':'ney sve', 'reason':'s', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk'},
-	    {'worth':'36677', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk'},
-	    {'worth':'68636677', 'difficulty':'ezs', 'name':'ney steve', 'reason':'jbhh', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk'},
-	    {'worth':'36', 'difficulty':'es', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk'},
-	    {'worth':'377', 'difficulty':'ezs', 'name':'ney stve', 'reason':'x', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk'},
-	    {'worth':'.5', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk'},
+	    {'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots1">...</span><span id="more1">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz1()" id="myBtn1">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots2">...</span><span id="more2">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz2()" id="myBtn2">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots3">...</span><span id="more3">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz3()" id="myBtn3">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots4">...</span><span id="more4">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz4()" id="myBtn4">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots5">...</span><span id="more5">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz5()" id="myBtn5">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots6">...</span><span id="more6">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz6()" id="myBtn6">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots7">...</span><span id="more7">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz7()" id="myBtn7">Read more</button>'},
 	]
 
 	$('th').on('click', function(){
@@ -190,6 +231,7 @@ myArray = myArray.sort((a,b) => a[column] > b[column] ? 1 : -1).sort((a,b)=>b[co
 <td>${data[i].number}</td>
 <td>${data[i].instagram}</td>
 <td>${data[i].tiktok}</td>
+<td>${data[i].description}</td>
 					  </tr>`
 			table.innerHTML += row
 
@@ -197,6 +239,119 @@ myArray = myArray.sort((a,b) => a[column] > b[column] ? 1 : -1).sort((a,b)=>b[co
 		}
 	}
 
+</script>
+<script>
+function myFunctionz1() {
+  var dots1 = document.getElementById("dots1");
+  var moreText1 = document.getElementById("more1");
+  var btnText1 = document.getElementById("myBtn1");
+
+  if (dots1.style.display === "none") {
+    dots1.style.display = "inline";
+    btnText1.innerHTML = "Read more"; 
+    moreText1.style.display = "none";
+  } else {
+    dots1.style.display = "none";
+    btnText1.innerHTML = "Read less"; 
+    moreText1.style.display = "inline";
+}
+}
+
+function myFunctionz2() {
+  var dots2 = document.getElementById("dots2");
+  var moreText2 = document.getElementById("more2");
+  var btnText2 = document.getElementById("myBtn2");
+
+  if (dots2.style.display === "none") {
+    dots2.style.display = "inline";
+    btnText2.innerHTML = "Read more"; 
+    moreText2.style.display = "none";
+  } else {
+    dots2.style.display = "none";
+    btnText2.innerHTML = "Read less"; 
+    moreText2.style.display = "inline";
+}
+}
+
+function myFunctionz3() {
+  var dots3 = document.getElementById("dots3");
+  var moreText3 = document.getElementById("more3");
+  var btnText3 = document.getElementById("myBtn3");
+
+  if (dots3.style.display === "none") {
+    dots3.style.display = "inline";
+    btnText3.innerHTML = "Read more"; 
+    moreText3.style.display = "none";
+  } else {
+    dots3.style.display = "none";
+    btnText3.innerHTML = "Read less"; 
+    moreText3.style.display = "inline";
+}
+}
+
+function myFunctionz4() {
+  var dots4 = document.getElementById("dots4");
+  var moreText4 = document.getElementById("more4");
+  var btnText4 = document.getElementById("myBtn4");
+
+  if (dots4.style.display === "none") {
+    dots4.style.display = "inline";
+    btnText4.innerHTML = "Read more"; 
+    moreText4.style.display = "none";
+  } else {
+    dots4.style.display = "none";
+    btnText4.innerHTML = "Read less"; 
+    moreText4.style.display = "inline";
+}
+}
+
+function myFunctionz5() {
+  var dots5 = document.getElementById("dots5");
+  var moreText5 = document.getElementById("more5");
+  var btnText5 = document.getElementById("myBtn5");
+
+  if (dots5.style.display === "none") {
+    dots5.style.display = "inline";
+    btnText5.innerHTML = "Read more"; 
+    moreText5.style.display = "none";
+  } else {
+    dots5.style.display = "none";
+    btnText5.innerHTML = "Read less"; 
+    moreText5.style.display = "inline";
+}
+}
+
+function myFunctionz6() {
+  var dots6 = document.getElementById("dots6");
+  var moreText6 = document.getElementById("more6");
+  var btnText6 = document.getElementById("myBtn6");
+
+  if (dots6.style.display === "none") {
+    dots6.style.display = "inline";
+    btnText6.innerHTML = "Read more"; 
+    moreText6.style.display = "none";
+  } else {
+    dots6.style.display = "none";
+    btnText6.innerHTML = "Read less"; 
+    moreText6.style.display = "inline";
+}
+}
+
+function myFunctionz7() {
+  var dots7 = document.getElementById("dots7");
+  var moreText7 = document.getElementById("more7");
+  var btnText7 = document.getElementById("myBtn7");
+
+  if (dots7.style.display === "none") {
+    dots7.style.display = "inline";
+    btnText7.innerHTML = "Read more"; 
+    moreText7.style.display = "none";
+  } else {
+    dots7.style.display = "none";
+    btnText7.innerHTML = "Read less"; 
+    moreText7.style.display = "inline";
+}
+}
 </script>
     <script>
 const canvas = document.getElementById('canv');
