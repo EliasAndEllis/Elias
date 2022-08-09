@@ -65,6 +65,11 @@ margin: 0;
 ::-webkit-scrollar-thumb {
     Background: #f6f6f8;
 }
+::selection {
+background: #910CFC;
+color: #fff;
+font-weight: 900;
+}
 body{
 color: white;
 margin: 0;
@@ -87,7 +92,7 @@ font-size: 0.8125em;
 #garbage td, #garbage th{
   border: solid;
 border-width: 0 .001em .001em .001em;
-border-color: #212121;
+border-color: black;
   padding: .1em .3em .1em .3em;
 text-align: center;
 }
@@ -134,18 +139,15 @@ font-weight: 900;
 #garbage tr:first-child{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(12, 220, 128, .5);
+    background-color: rgba(12, 220, 128, .6);
 }
 #garbage tr:last-child{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(218, 15, 58, .5);
-}
-#garbage th{
-background-color: rgba(145, 12, 252, .85);
+    background-color: rgba(218, 15, 58, .6);
 }
 #garbage tr:hover{
-background-color: rgba(103, 107, 119, .85);
+background-color: rgba(0, 0, 0, .01)
 }
 }
 b{
@@ -174,17 +176,17 @@ margin: 0;
 background: none;
 font-weight: 900;
 border: 0;
+tet-decoration: underline;
+color: #97BA92;
 }
 #dots1, #dots2, #dots3, #dots4, #dots5, #dots6, #dots7, #dots8, #dots9{
-color: #910CFC;
-font-weight: 900;
 padding: 0;
 margin: 0;
 display: none;
 }
 li::before{
 content: '-';
-color: black;
+color: #97BA92;
 padding: 0;
 margin: 0;
 }
@@ -193,8 +195,8 @@ margin: 0;
 <body>
 <canvas id='canv'></canvas>
 <table id="garbage" class="table table-striped">
-    <auio id="audio" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20Oh%20Yeah%20Sound%20Effect.mp3?raw=true"></audio>
-    <audo id="audio2" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20iPhone%20Piano%20Riff%20AlarmRingtone%20Apple%20Sound%20%20Sound%20Effect%20for%20Editing.mp3?raw=true"></audio>
+    <audio id="audio" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20Oh%20Yeah%20Sound%20Effect.mp3?raw=true"></audio>
+    <audio id="audio2" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20iPhone%20Piano%20Riff%20AlarmRingtone%20Apple%20Sound%20%20Sound%20Effect%20for%20Editing.mp3?raw=true"></audio>
 <tr  class="bg-info">
 <th data-column="worth" data-order="desc" value="PLAY" onclick="play()">Worth<b>&#9650</b></th>
 <th data-column="difficulty" data-order="desc" value="PLAY" onclick="play()">Difficulty<b>&#9650</b></th>
@@ -224,7 +226,7 @@ function play2() {
     </script>
 <script>
 	var myArray = [
-	    {'worth':'$520', 'difficulty':'easy/medium', 'name':'Yasmine Aglil', 'reason':'money', 'profession':'<ul><li>Uni student</li><span id="dots8">...</span><span id="more8"><li>Model</li><li>Singer</li><li>Actor</li></ul></span><button onclick="myFunctionz8()" id="myBtn8">Read more</button>', 'hometown':'Bouskoura, 🇲🇦', 'email':'yasmineaglil8@gmail.com', 'instagram': '<ul><li>fille_verseau</li><li>/fille_verseau</li></ul>', 'description':'dui postulant<span id="dots1">...</span><span id="more1">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz1()" id="myBtn1">Read more</button>'},
+	    {'worth':'$520', 'difficulty':'easy/medium', 'name':'Yasmine Aglil', 'reason':'money', 'profession':'<ul><li>Uni student</li><span id="dots8">...</span><span id="more8"><li>Model</li><li>Singer</li><li>Actor</li></ul></span><button onclick="myFunctionz8()" id="myBtn8">Read more</button>', 'hometown':'Bouskoura, 🇲🇦', 'email':'yasmineaglil8@gmail.com', 'instagram': '<ul><li>fille_verseau</li><li>/fille_verseau</li></ul>', 'description':'birth: 26th<span id="dots1">...</span><span id="more1"> january</span><br><button onclick="myFunctionz1()" id="myBtn1">Read more</button>'},
 {'worth':'$509', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots2">...</span><span id="more2">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz2()" id="myBtn2">Read more</button>'},
 {'worth':'$507', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots3">...</span><span id="more3">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz3()" id="myBtn3">Read more</button>'},
 {'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots4">...</span><span id="more4">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz4()" id="myBtn4">Read more</button>'},
