@@ -24,6 +24,7 @@
 <meta name="msapplication-TileColor" content="#B6DCFE">
 <!-- End of favicon -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Marvel:wght@700&family=Tourney:wght@900&display=swap');
 @font-face {
@@ -47,6 +48,7 @@ list-style: none;
 box-sizing: border-box;
 text-align: center:
 vertical-align: center;
+transition: .4s;
 }
 htl {
     overflow: scroll;
@@ -105,12 +107,10 @@ background-color: #CACCD6;
 #garbage tr:first-child{
 background-color: #0CDC80;
 color: white;
-font-weight: 900;
 }
 #garbage tr:last-child{
 background-color: #DA0F3A;
 color: white;
-font-weight: 900;
 }
 #garbage tr:hover{
 background-color: #676B77;
@@ -120,7 +120,7 @@ font-weight: 900;
 #garbage th{
 padding: .5em;
   text-align: center;
-background-color: #910CFC;
+background-color: #6C06D8;
   color: #f6f6f8;
 text-transform: uppercase;
 font-weight: 900;
@@ -136,18 +136,19 @@ font-weight: 900;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, .2);
 }
-#garbage tr:first-child{
+#garbage tr:first-child:hover{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(12, 220, 128, .6);
 }
-#garbage tr:last-child{
+#garbage tr:last-child:hover{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(218, 15, 58, .6);
 }
 #garbage tr:hover{
 background-color: rgba(0, 0, 0, .01)
+font-weight: 900;
 }
 }
 b{
@@ -165,12 +166,16 @@ height: 0;
   left: 0;
 z-index: 0;
 }
-#more1, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9{
-display: none;
+li::before{
+content: '-';
+color: #97BA92;
 padding: 0;
 margin: 0;
 }
-#myBtn1, #myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6, #myBtn7, #myBtn8, #myBtn9{
+.moretext1, .moretext2, .moretext3, .moretext4, .moretext5, .moretext6, .moretext7, .moretext8, .moretext9, .moretext10{
+  display: none;
+}
+.moreless-button1, .moreless-button2, .moreless-button3, .moreless-button4, .moreless-button5, .moreless-button6, .moreless-button7, .moreless-button8, .moreless-button9, .moreless-button10{
 padding: 0;
 margin: 0;
 background: none;
@@ -179,24 +184,12 @@ border: 0;
 tet-decoration: underline;
 color: #97BA92;
 }
-#dots1, #dots2, #dots3, #dots4, #dots5, #dots6, #dots7, #dots8, #dots9{
-padding: 0;
-margin: 0;
-display: none;
-}
-li::before{
-content: '-';
-color: #97BA92;
-padding: 0;
-margin: 0;
-}
 </style>
 </head>
 <body>
 <canvas id='canv'></canvas>
 <table id="garbage" class="table table-striped">
-    <audio id="audio" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20Oh%20Yeah%20Sound%20Effect.mp3?raw=true"></audio>
-    <audio id="audio2" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20iPhone%20Piano%20Riff%20AlarmRingtone%20Apple%20Sound%20%20Sound%20Effect%20for%20Editing.mp3?raw=true"></audio>
+    <audo id="audio" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20Oh%20Yeah%20Sound%20Effect.mp3?raw=true"></audio>
 <tr  class="bg-info">
 <th data-column="worth" data-order="desc" value="PLAY" onclick="play()">Worth<b>&#9650</b></th>
 <th data-column="difficulty" data-order="desc" value="PLAY" onclick="play()">Difficulty<b>&#9650</b></th>
@@ -211,7 +204,7 @@ margin: 0;
 <th data-column="description" data-order="desc" value="PLAY" onclick="play()">Description<b>&#9650</b></th>
 </tr>
 
-<tbody id="myTable" value="PLAY" onclick="play2()"></tbody>
+<tbody id="myTable"></tbody>
 </table>
 </body>
 <script>
@@ -219,20 +212,16 @@ margin: 0;
         var audio = document.getElementById("audio");
         audio.play();
       }
-function play2() {
-        var audio2 = document.getElementById("audio2");
-        audio2.play();
-      }
     </script>
 <script>
 	var myArray = [
-	    {'worth':'$520', 'difficulty':'easy/medium', 'name':'Yasmine Aglil', 'reason':'money', 'profession':'<ul><li>Uni student</li><span id="dots8">...</span><span id="more8"><li>Model</li><li>Singer</li><li>Actor</li></ul></span><button onclick="myFunctionz8()" id="myBtn8">Read more</button>', 'hometown':'Bouskoura, 🇲🇦', 'email':'yasmineaglil8@gmail.com', 'instagram': '<ul><li>fille_verseau</li><li>/fille_verseau</li></ul>', 'description':'birth: 26th<span id="dots1">...</span><span id="more1"> january</span><br><button onclick="myFunctionz1()" id="myBtn1">Read more</button>'},
-{'worth':'$509', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots2">...</span><span id="more2">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz2()" id="myBtn2">Read more</button>'},
-{'worth':'$507', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots3">...</span><span id="more3">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz3()" id="myBtn3">Read more</button>'},
-{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots4">...</span><span id="more4">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz4()" id="myBtn4">Read more</button>'},
-{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots5">...</span><span id="more5">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz5()" id="myBtn5">Read more</button>'},
-{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots6">...</span><span id="more6">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz6()" id="myBtn6">Read more</button>'},
-{'worth':'UNKNOWN', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span id="dots7">...</span><span id="more7">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button onclick="myFunctionz7()" id="myBtn7">Read more</button>'},
+	    {'worth':'$520', 'difficulty':'easy/medium', 'name':'Yasmine Aglil', 'reason':'money', 'profession':'<ul><li>Uni student</li><span class="moretext1"><li>Model</li><li>Singer</li><li>Actor</li></ul></span><button class="moreless-button1">Read more</button>', 'hometown':'Bouskoura, 🇲🇦', 'email':'yasmineaglil8@gmail.com', 'instagram': '<ul><li>fille_verseau</li><span class="moretext9"><li>/fille_verseau</li></ul></span><button class="moreless-button9">Read more</button>', 'description':'birth: 26th<span class="moretext2"> january</span><br><button class="moreless-button2">Read more</button>'},
+{'worth':'$509', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext3">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button3">Read more</button>'},
+{'worth':'$507', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext4">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button4">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext5">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button5">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext6">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button6">Read more</button>'},
+{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext7">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button7">Read more</button>'},
+{'worth':'UNKNOWN', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext8">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button8">Read more</button>'},
 	]
 
 	$('th').on('click', function(){
@@ -280,151 +269,93 @@ myArray = myArray.sort((a,b) => a[column] > b[column] ? 1 : -1).sort((a,b)=>b[co
 
 		}
 	}
-</script>
-<script>
-function myFunctionz1() {
-  var dots1 = document.getElementById("dots1");
-  var moreText1 = document.getElementById("more1");
-  var btnText1 = document.getElementById("myBtn1");
 
-  if (dots1.style.display === "none") {
-    dots1.style.display = "none";
-    btnText1.innerHTML = "Read more"; 
-    moreText1.style.display = "none";
+
+
+
+$(".moreless-button1").click(function () {
+  $(".moretext1").slideToggle();
+  if ($(".moreless-button1").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots1.style.display = "none";
-    btnText1.innerHTML = "Read less"; 
-    moreText1.style.display = "inline";
-}
-}
-
-function myFunctionz2() {
-  var dots2 = document.getElementById("dots2");
-  var moreText2 = document.getElementById("more2");
-  var btnText2 = document.getElementById("myBtn2");
-
-  if (dots2.style.display === "none") {
-    dots2.style.display = "none";
-    btnText2.innerHTML = "Read more"; 
-    moreText2.style.display = "none";
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button2").click(function () {
+  $(".moretext2").slideToggle();
+  if ($(".moreless-button2").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots2.style.display = "none";
-    btnText2.innerHTML = "Read less"; 
-    moreText2.style.display = "inline";
-}
-}
-
-function myFunctionz3() {
-  var dots3 = document.getElementById("dots3");
-  var moreText3 = document.getElementById("more3");
-  var btnText3 = document.getElementById("myBtn3");
-
-  if (dots3.style.display === "none") {
-    dots3.style.display = "none";
-    btnText3.innerHTML = "Read more"; 
-    moreText3.style.display = "none";
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button3").click(function () {
+  $(".moretext3").slideToggle();
+  if ($(".moreless-button3").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots3.style.display = "none";
-    btnText3.innerHTML = "Read less"; 
-    moreText3.style.display = "inline";
-}
-}
-
-function myFunctionz4() {
-  var dots4 = document.getElementById("dots4");
-  var moreText4 = document.getElementById("more4");
-  var btnText4 = document.getElementById("myBtn4");
-
-  if (dots4.style.display === "none") {
-    dots4.style.display = "none";
-    btnText4.innerHTML = "Read more"; 
-    moreText4.style.display = "none";
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button4").click(function () {
+  $(".moretext4").slideToggle();
+  if ($(".moreless-button4").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots4.style.display = "none";
-    btnText4.innerHTML = "Read less"; 
-    moreText4.style.display = "inline";
-}
-}
-
-function myFunctionz5() {
-  var dots5 = document.getElementById("dots5");
-  var moreText5 = document.getElementById("more5");
-  var btnText5 = document.getElementById("myBtn5");
-
-  if (dots5.style.display === "none") {
-    dots5.style.display = "none";
-    btnText5.innerHTML = "Read more"; 
-    moreText5.style.display = "none";
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button5").click(function () {
+  $(".moretext5").slideToggle();
+  if ($(".moreless-button5").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots5.style.display = "none";
-    btnText5.innerHTML = "Read less"; 
-    moreText5.style.display = "inline";
-}
-}
-
-function myFunctionz6() {
-  var dots6 = document.getElementById("dots6");
-  var moreText6 = document.getElementById("more6");
-  var btnText6 = document.getElementById("myBtn6");
-
-  if (dots6.style.display === "none") {
-    dots6.style.display = "none";
-    btnText6.innerHTML = "Read more"; 
-    moreText6.style.display = "none";
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button6").click(function () {
+  $(".moretext6").slideToggle();
+  if ($(".moreless-button6").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots6.style.display = "none";
-    btnText6.innerHTML = "Read less"; 
-    moreText6.style.display = "inline";
-}
-}
-
-function myFunctionz7() {
-  var dots7 = document.getElementById("dots7");
-  var moreText7 = document.getElementById("more7");
-  var btnText7 = document.getElementById("myBtn7");
-
-  if (dots7.style.display === "none") {
-    dots7.style.display = "none";
-    btnText7.innerHTML = "Read more"; 
-    moreText7.style.display = "none";
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button7").click(function () {
+  $(".moretext7").slideToggle();
+  if ($(".moreless-button7").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots7.style.display = "none";
-    btnText7.innerHTML = "Read less"; 
-    moreText7.style.display = "inline";
-}
-}
-function myFunctionz8() {
-  var dots8 = document.getElementById("dots8");
-  var moreText8 = document.getElementById("more8");
-  var btnText8 = document.getElementById("myBtn8");
-
-  if (dots8.style.display === "none") {
-    dots8.style.display = "none";
-    btnText8.innerHTML = "Read more"; 
-    moreText8.style.display = "none";
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button8").click(function () {
+  $(".moretext8").slideToggle();
+  if ($(".moreless-button8").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots8.style.display = "none";
-    btnText8.innerHTML = "Read less"; 
-    moreText8.style.display = "inline";
-}
-}
-function myFunctionz9() {
-  var dots9 = document.getElementById("dots9");
-  var moreText9 = document.getElementById("more9");
-  var btnText9 = document.getElementById("myBtn9");
-
-  if (dots9.style.display === "none") {
-    dots9.style.display = "none";
-    btnText9.innerHTML = "Read more"; 
-    moreText9.style.display = "none";
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button9").click(function () {
+  $(".moretext9").slideToggle();
+  if ($(".moreless-button9").text() == "Read more") {
+    $(this).text("Read less");
   } else {
-    dots9.style.display = "none";
-    btnText9.innerHTML = "Read less"; 
-    moreText9.style.display = "inline";
-}
-}
+    $(this).text("Read more");
+  }
+});
+$(".moreless-button10").click(function () {
+  $(".moretext10").slideToggle();
+  if ($(".moreless-button10").text() == "Read more") {
+    $(this).text("Read less");
+  } else {
+    $(this).text("Read more");
+  }
+});
 </script>
     <script>
+        
 const canvas = document.getElementById('canv');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -449,9 +380,9 @@ function matrix () {
   }
 
   ctx.fillStyle = '#0001';
-  ctx.fillRect(0, 0, w, h);
+  ctx.fillRect(0, 0, w, h);  
 
-  ctx.fillStyle = '#00F526';
+  ctx.fillStyle ='#FE00AB';
   ctx.font = '15pt monospace';
 
   ypos.forEach((y, ind) => {
