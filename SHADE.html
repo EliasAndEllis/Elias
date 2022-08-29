@@ -6,10 +6,6 @@
 <meta charset="UTF-8">
 <meta name="description" content="Total winners in The Wheel™ online game">
   <meta name="author" content="SHADE">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="HandheldFriendly" content="true">
     <!-- different favicon -->
 <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://img.icons8.com/external-flat-icon-mangsaabguru-/64/000000/external-devil-halloweens-day-flat-flat-icon-mangsaabguru-.png">
 <link rel="apple-touch-icon" sizes="57x57" href="https://img.icons8.com/external-flat-icon-mangsaabguru-/64/000000/external-devil-halloweens-day-flat-flat-icon-mangsaabguru-.png">
@@ -19,20 +15,24 @@
 <link rel="apple-touch-icon" sizes="120x120" href="https://img.icons8.com/external-flat-icon-mangsaabguru-/64/000000/external-devil-halloweens-day-flat-flat-icon-mangsaabguru-.png">
 <link rel="apple-touch-icon" sizes="144x144" href="https://img.icons8.com/external-flat-icon-mangsaabguru-/64/000000/external-devil-halloweens-day-flat-flat-icon-mangsaabguru-.png">
 <link rel="apple-touch-icon" sizes="152x152" href="https://img.icons8.com/external-flat-icon-mangsaabguru-/64/000000/external-devil-halloweens-day-flat-flat-icon-mangsaabguru-.png">
+<link href="//db.onlinewebfonts.com/c/b4789352e8c600554d90d78d2733cdce?family=John+Wick" rel="stylesheet" type="text/css"/>
 <meta name="application-name" content="Elias' horizon">
 <meta name="msapplication-TileImage" content="https://img.icons8.com/external-flat-icon-mangsaabguru-/64/000000/external-devil-halloweens-day-flat-flat-icon-mangsaabguru-.png">
 <meta name="msapplication-TileColor" content="#B6DCFE">
 <!-- End of favicon -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Marvel:wght@700&family=Tourney:wght@900&display=swap');
-@font-face {
-  font-family: 'Product Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
-}
+
+@import url('http://fonts.cdnfonts.com/css/google-sans');
+
+@import url('http://fonts.cdnfonts.com/css/diablo?styles=15084');
+
+@import url('http://fonts.cdnfonts.com/css/gunfighter-academy');
+
 *{
 margin: 0;
 padding: 0;
@@ -42,7 +42,7 @@ font-family: 'Tourney', cursive;
 font-family: 'Arvo', serif;
 /*usual text (p)*/
 font-family: 'Marvel', sans-serif;
-font-family: 'Product Sans';
+font-family: 'Product Sans', sans-serif;
 z-index: 0;
 list-style: none;
 box-sizing: border-box;
@@ -67,11 +67,6 @@ margin: 0;
 ::-webkit-scrollar-thumb {
     Background: #f6f6f8;
 }
-::selection {
-background: #910CFC;
-color: #fff;
-font-weight: 900;
-}
 body{
 color: white;
 margin: 0;
@@ -81,76 +76,67 @@ text-align: center:
 vertical-align: center;
 height: 120em;
 }
-#garbage{
-font-family: Arial, Helvetica, sans-serif;
-    width:100%;
+table {
+width: 100%;
 position: absolute;
 top: 10em;
 border-collapse: collapse;
-text-align: center:
+text-align: center;
 z-index: 1000;
 font-size: 0.8125em;
 }
-#garbage td, #garbage th{
-  border: solid;
+table td, table th {
+border: solid;
 border-width: 0 .001em .001em .001em;
 border-color: black;
-  padding: .1em .3em .1em .3em;
+padding: .1em .3em .1em .3em;
 text-align: center;
 }
-#garbage tr:nth-child(odd){
+table tr:nth-child(odd) {
 background-color: #f6f6f8;
 }
-#garbage tr:nth-child(even){
+table tr:nth-child(even) {
 background-color: #CACCD6;
 }
-#garbage tr:first-child{
-background-color: #0CDC80;
-color: white;
-}
-#garbage tr:last-child{
-background-color: #DA0F3A;
-color: white;
-}
-#garbage tr:hover{
+table tr:hover {
 background-color: #676B77;
 color: white;
 font-weight: 900;
 }
-#garbage th{
+table th {
 padding: .5em;
-  text-align: center;
+text-align: center;
 background-color: #6C06D8;
-  color: #f6f6f8;
-text-transform: uppercase;
+color: #f6f6f8;
 font-weight: 900;
+font-family: 'Diablo', sans-serif;
 }
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-#garbage tr:nth-child(odd){
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, .1);
-  }
-#garbage tr:nth-child(even){
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, .2);
+table tr:nth-child(odd) {
+-webkit-backdrop-filter: blur(0);
+backdrop-filter: blur(0);
+background-color: rgba(1, 181, 255, .5);
 }
-#garbage tr:first-child:hover{
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(12, 220, 128, .6);
+table tr:nth-child(even) {
+-webkit-backdrop-filter: blur(0);
+backdrop-filter: blur(0);
+background-color: rgba(2, 42, 103, .6);
 }
-#garbage tr:last-child:hover{
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(218, 15, 58, .6);
+table tr:hover {
+        background-color: rgba(0, 0, 0, .01);
+        font-weight: 900;
+      }
+table tr:nth-child(2):hover {
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+background-color: rgba(12, 220, 128, .7);
 }
-#garbage tr:hover{
-background-color: rgba(0, 0, 0, .01)
-font-weight: 900;
-}
-}
+table tr:last-child:hover {
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+background-color: rgba(218, 15, 58, .7);
+      }
+    }
 b{
 display: none;
 visibility: hidden;
@@ -184,29 +170,161 @@ border: 0;
 tet-decoration: underline;
 color: #97BA92;
 }
+::selection {
+background: #fff;
+color: rgb(2, 42, 103);
+font-weight: 900;
+}
 </style>
 </head>
 <body>
 <canvas id='canv'></canvas>
-<table id="garbage" class="table table-striped">
     <audo id="audio" src="https://github.com/EliasAndEllis/Elias/blob/master/9convert.com%20-%20Oh%20Yeah%20Sound%20Effect.mp3?raw=true"></audio>
-<tr  class="bg-info">
-<th data-column="worth" data-order="desc" value="PLAY" onclick="play()">Worth<b>&#9650</b></th>
-<th data-column="difficulty" data-order="desc" value="PLAY" onclick="play()">Difficulty<b>&#9650</b></th>
-        <th data-column="name" data-order="desc" value="PLAY" onclick="play()">Name<b>&#9650</b></th>
-        <th data-column="reason" data-order="desc" value="PLAY" onclick="play()">Reason<b>&#9650</b></th>
-<th data-column="profession" data-order="desc" value="PLAY" onclick="play()">Profession<b>&#9650</b></th>
-<th data-column="hometown" data-order="desc" value="PLAY" onclick="play()">Hometown<b>&#9650</b></th>
-<th data-column="email" data-order="desc" value="PLAY" onclick="play()">Email<b>&#9650</b></th>
-<th data-column="number" data-order="desc" value="PLAY" onclick="play()">Number<b>&#9650</b></th>
-<th data-column="instagram" data-order="desc" value="PLAY" onclick="play()">Instagram<b>&#9650</b></th>
-<th data-column="tiktok" data-order="desc" value="PLAY" onclick="play()">Tiktok<b>&#9650</b></th>
-<th data-column="description" data-order="desc" value="PLAY" onclick="play()">Description<b>&#9650</b></th>
+<table>
+<tr>
+<th>WORTH</th>
+<th>DIFFICULTY</th>
+<th>NAME</th>
+<th>REASON</th>
+<th>PROFESSION</th>
+<th>HOMETOWN</th>
+<th>EMAIL</th>
+<th>NUMBER</th>
+<th>SOCIALS</th>
+<th>DESCRIPTION</th>
+</tr>
+<tr>
+<td>$520</td>
+<td>easy/medium</td>
+<td>Yasmine Aglil</td>
+<td>money</td>
+<td>
+<ul>
+<li>Uni student</li>
+<span class="moretext1">
+<li>Model</li>
+<li>Singer</li>
+<li>Actor</li>
+</span>
+<button class="moreless-button1">Read more</button>
+</ul>
+</td>
+<td>Bouskoura, 🇲🇦</td>
+<td>yasmineaglil8@gmail.com</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>WORTH</td>
+<td>DIFFICULTY</td>
+<td>NAME</td>
+<td>REASON</td>
+<td>PROFESSION</td>
+<td>HOMETOWN</td>
+<td>EMAIL</td>
+<td>NUMBER</td>
+<td>SOCIALS</td>
+<td>DESCRIPTION</td>
+</tr>
+<tr>
+<td>WORTH</td>
+<td>DIFFICULTY</td>
+<td>NAME</td>
+<td>REASON</td>
+<td>PROFESSION</td>
+<td>HOMETOWN</td>
+<td>EMAIL</td>
+<td>NUMBER</td>
+<td>SOCIALS</td>
+<td>DESCRIPTION</td>
+</tr>
+<tr>
+<td>WORTH</td>
+<td>DIFFICULTY</td>
+<td>NAME</td>
+<td>REASON</td>
+<td>PROFESSION</td>
+<td>HOMETOWN</td>
+<td>EMAIL</td>
+<td>NUMBER</td>
+<td>SOCIALS</td>
+<td>DESCRIPTION</td>
+</tr>
+<tr>
+<td>WORTH</td>
+<td>DIFFICULTY</td>
+<td>NAME</td>
+<td>REASON</td>
+<td>PROFESSION</td>
+<td>HOMETOWN</td>
+<td>EMAIL</td>
+<td>NUMBER</td>
+<td>SOCIALS</td>
+<td>DESCRIPTION</td>
+</tr>
+<tr>
+<td>WORTH</td>
+<td>DIFFICULTY</td>
+<td>NAME</td>
+<td>REASON</td>
+<td>PROFESSION</td>
+<td>HOMETOWN</td>
+<td>EMAIL</td>
+<td>NUMBER</td>
+<td>SOCIALS</td>
+<td>DESCRIPTION</td>
+</tr>
+<tr>
+<td>WORTH</td>
+<td>DIFFICULTY</td>
+<td>NAME</td>
+<td>REASON</td>
+<td>PROFESSION</td>
+<td>HOMETOWN</td>
+<td>EMAIL</td>
+<td>NUMBER</td>
+<td>SOCIALS</td>
+<td>DESCRIPTION</td>
 </tr>
 
-<tbody id="myTable"></tbody>
-</table>
-</body>
+    </table>
+
+
+
+
+
+
+<script>
+const tdArr = Array.from(document.querySelectorAll('td')).filter(td => td.innerText == '')
+for(const td of tdArr) td.innerText = "empty cell"
+$(tdArr).css({"color": "#da0f3a", "font-weight": "900", "text-transform": "uppercase", "font-family": "'Gunfighter Academy', sans-serif", "font-size": "50%"});
+</script>
+
 <script>
       function play() {
         var audio = document.getElementById("audio");
@@ -214,65 +332,48 @@ color: #97BA92;
       }
     </script>
 <script>
-	var myArray = [
-	    {'worth':'$520', 'difficulty':'easy/medium', 'name':'Yasmine Aglil', 'reason':'money', 'profession':'<ul><li>Uni student</li><span class="moretext1"><li>Model</li><li>Singer</li><li>Actor</li></ul></span><button class="moreless-button1">Read more</button>', 'hometown':'Bouskoura, 🇲🇦', 'email':'yasmineaglil8@gmail.com', 'instagram': '<ul><li>fille_verseau</li><span class="moretext9"><li>/fille_verseau</li></ul></span><button class="moreless-button9">Read more</button>', 'description':'birth: 26th<span class="moretext2"> january</span><br><button class="moreless-button2">Read more</button>'},
-{'worth':'$509', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext3">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button3">Read more</button>'},
-{'worth':'$507', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext4">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button4">Read more</button>'},
-{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext5">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button5">Read more</button>'},
-{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext6">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button6">Read more</button>'},
-{'worth':'3667', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext7">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button7">Read more</button>'},
-{'worth':'UNKNOWN', 'difficulty':'ezs', 'name':'ney steve', 'reason':'sx', 'hometown':'hbghjg 65 st', 'email':'4456@gmail', 'number':'+86677', 'instagram': 'insta', 'tiktok': 'tktk', 'description':'dui postulant<span class="moretext8">pellentesque alterum pertinax iisque alterum nonumes euripidis tota convenire nihil facilisis splendide qui iudicabit inimicus fastidii ante maiestatis rutrum tamquam ei suscipiantur urbanitas veniam interpretaris</span><br><button class="moreless-button8">Read more</button>'},
-	]
-
-	$('th').on('click', function(){
-		var column = $(this).data('column')
-		var order = $(this).data('order')
-		var text = $(this).html()
-		text = text.substring(0, text.length - 1)
-
-		if(order == 'desc'){
-			$(this).data('order', "asc")
-myArray = myArray.sort((a,b) => a[column] < b[column] ? 1 : -1).sort((a,b)=>a[column] - b[column])
-text += '&#9660'
-}
-else{
-			
- 		 $(this).data('order', "desc")
-myArray = myArray.sort((a,b) => a[column] > b[column] ? 1 : -1).sort((a,b)=>b[column] - a[column])
-			text += '&#9650'
-
-		}
-		$(this).html(text)
-		buildTable(myArray)
-	})
-
-	buildTable(myArray)
-
-	function buildTable(data){
-		var table = document.getElementById('myTable')
-		table.innerHTML = ''
-		for (var i = 0; i < data.length; i++){
-			var row = `<tr>
-<td>${data[i].worth}</td>
-<td>${data[i].difficulty}</td>
-<td>${data[i].name}</td>
-<td>${data[i].reason}</td>
-<td>${data[i].profession}</td>
-<td>${data[i].hometown}</td>
-<td>${data[i].email}</td>
-<td>${data[i].number}</td>
-<td>${data[i].instagram}</td>
-<td>${data[i].tiktok}</td>
-<td>${data[i].description}</td>
-					  </tr>`
-			table.innerHTML += row
-
-		}
-	}
+$(document).ready(function () {
+                $('th').each(function (col) {
+                    $(this).hover(
+                            function () {
+                                $(this).addClass('focus');
+                            },
+                            function () {
+                                $(this).removeClass('focus');
+                            }
+                    );
+                    $(this).click(function () {
+                        if ($(this).is('.asc')) {
+                            $(this).removeClass('asc');
+                            $(this).addClass('desc selected');
+                            sortOrder = -1;
+                        } else {
+                            $(this).addClass('asc selected');
+                            $(this).removeClass('desc');
+                            sortOrder = 1;
+                        }
+                        $(this).siblings().removeClass('asc selected');
+                        $(this).siblings().removeClass('desc selected');
+                        var arrData = $('table').find('tbody >tr:has(td)').get();
+                        arrData.sort(function (a, b) {
+                            var val1 = $(a).children('td').eq(col).text().toUpperCase();
+                            var val2 = $(b).children('td').eq(col).text().toUpperCase();
+                            if ($.isNumeric(val1) && $.isNumeric(val2))
+                                return sortOrder == 1 ? val1 - val2 : val2 - val1;
+                            else
+                                return (val1 < val2) ? -sortOrder : (val1 > val2) ? sortOrder : 0;
+                        });
+                        $.each(arrData, function (index, row) {
+                            $('tbody').append(row);
+                        });
+                    });
+                });
+            });
+</script>
 
 
 
-
+<script>
 $(".moreless-button1").click(function () {
   $(".moretext1").slideToggle();
   if ($(".moreless-button1").text() == "Read more") {
@@ -396,4 +497,5 @@ function matrix () {
 
 setInterval(matrix, 50);
 </script>
+</body>
 </html>
