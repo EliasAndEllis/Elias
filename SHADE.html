@@ -33,6 +33,8 @@
 
 @import url('http://fonts.cdnfonts.com/css/gunfighter-academy');
 
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap');
+
 *{
 margin: 0;
 padding: 0;
@@ -41,14 +43,17 @@ font-family: 'Tourney', cursive;
 /*titles*/
 font-family: 'Arvo', serif;
 /*usual text (p)*/
-font-family: 'Marvel', sans-serif;
+font-faily: 'Marvel', sans-serif;
 font-family: 'Product Sans', sans-serif;
+font-family: 'Marvel', sans-serif;
 z-index: 0;
 list-style: none;
 box-sizing: border-box;
 text-align: center:
 vertical-align: center;
 transition: .4s;
+text-transform: uppercase;
+font-weight: 900;
 }
 htl {
     overflow: scroll;
@@ -117,10 +122,20 @@ table tr:nth-child(odd) {
 backdrop-filter: blur(0);
 background-color: rgba(1, 181, 255, .5);
 }
+table tr:nth-child(odd):hover{
+-webkit-backdrop-filter: blur(0);
+backdrop-filter: blur(0);
+background-color: rgba(254, 1, 143, .3);
+}
 table tr:nth-child(even) {
 -webkit-backdrop-filter: blur(0);
 backdrop-filter: blur(0);
 background-color: rgba(2, 42, 103, .6);
+}
+table tr:nth-child(even):hover{
+-webkit-backdrop-filter: blur(0);
+backdrop-filter: blur(0);
+background-color: rgba(254, 1, 143, .3);
 }
 table tr:hover {
         background-color: rgba(0, 0, 0, .01);
@@ -175,6 +190,9 @@ background: #fff;
 color: rgb(2, 42, 103);
 font-weight: 900;
 }
+table td:nth-child(7){
+text-transform: none;
+}
 </style>
 </head>
 <body>
@@ -214,7 +232,12 @@ font-weight: 900;
 <td></td>
 <td>
 <ul>
-<li></li>
+<li>Ins1</li>
+<span class="moretext2">
+https://www.instagram.com/fille_verseau
+<li>Ins2 https://www.instagram.com/fille_verseau_fans</li>
+</span>
+<button class="moreless-button2">Read more</button>
 </ul>
 </td>
 <td></td>
